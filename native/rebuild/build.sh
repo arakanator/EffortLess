@@ -77,7 +77,11 @@ meson install -C build
 cp build/meson-info/intro-buildoptions.json build/meson-logs/meson-log.txt "$work/records/"
 "$prefix/bin/mpv.exe" --no-config --version > "$work/records/mpv-version.txt" 2>&1
 "$prefix/bin/mpv.exe" --no-config --vo=help > "$work/records/video-outputs.txt" 2>&1
-grep -qi d3d11 "$work/records/video-outputs.txt"
+grep -qi gpu-next "$work/records/video-outputs.txt"
+"$prefix/bin/mpv.exe" --no-config --gpu-context=help > "$work/records/video-contexts.txt" 2>&1
+grep -qi d3d11 "$work/records/video-contexts.txt"
+"$prefix/bin/mpv.exe" --no-config --ao=help > "$work/records/audio-outputs.txt" 2>&1
+grep -qi wasapi "$work/records/audio-outputs.txt"
 cd "$repo"
 python native/rebuild/collect.py --prefix "$prefix" --mpv-source "$work/mpv" --ffmpeg-source "$work/ffmpeg" --output "$work/result"
 cp -r "$work/records" "$work/result/records"

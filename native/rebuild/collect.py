@@ -221,9 +221,14 @@ def main():
     records = [collect_package(name, output) for name in sorted(packages)]
     for name in ("mpv", "ffmpeg"):
         source = native(getattr(args, name + "_source"))
-        destination = output / "sources" / "custom" / name
-        shutil.copytree(source, destination,
-                        ignore=shutil.ignore_patterns(".git", "build", "*.o", "*.a", "*.dll", "*.exe", "*.pdb"))
+        destination = output / "sources" / "custom" / (name + ".tar")
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        # Archive the exact Git input; do not follow generated build symlinks or
+        # accidentally collect object files. Generated configuration is in records.
+        run("git", "-C", str(source), "diff", "--exit-code")
+        with destination.open("wb") as stream:
+            subprocess.run(["git", "-C", str(source), "archive", "--format=tar",
+                            "--prefix=" + name + "/", "HEAD"], stdout=stream, check=True)
     manifest = {"status": "candidate; parent review and nested-source audit required",
                 "nativeLicenseRoute": "LGPL-compatible; no GPL/nonfree FFmpeg",
                 "dlls": dlls, "packages": records,
