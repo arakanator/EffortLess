@@ -32,3 +32,9 @@ package graph, including Microsoft binary license terms, WinUI/Windows ML notice
 and WebView2 terms. NUGET-NOTICES.json identifies each package, relative file and
 hash. The WindowsAppSDK-LICENSE.txt source MIT text is supplemental and does not
 replace those binary terms. See ../WINDOWS-APP-SDK-REDISTRIBUTION.md.
+
+The targeting pack Microsoft.Windows.SDK.NET.Ref 10.0.26100.57 was additionally
+identified through exact payload-byte matching. Windows-SDK-license.rtf preserves
+the Microsoft-hosted text linked by its package licenseUrl; the notice inventory
+records resolved URL/hash and the still-open redistribution-scope assessment.
+See ../RUNTIME-PROVENANCE-BASELINE.json for the pre-native-rebuild payload mapping.

@@ -1,0 +1,3278 @@
+{
+  "runtime": "10.0.13",
+  "assessment": "Byte provenance only; no compatibility or redistribution certification",
+  "peFiles": [
+    {
+      "file": "clretwrc.dll",
+      "sha256": "dc153acb6c0ae6dd205e4d7f4555dfb67ba45d25af39f8a1475121f6002f2f93",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/clretwrc.dll"
+        }
+      ]
+    },
+    {
+      "file": "clrgc.dll",
+      "sha256": "a882ba84e9628a2ad09508c31bf6f53494892126cd014099d440180a61db086a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/clrgc.dll"
+        }
+      ]
+    },
+    {
+      "file": "clrgcexp.dll",
+      "sha256": "46129052ba8a920ded5688f63eec3472675efe7fb76004991211280cb3fae36b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/clrgcexp.dll"
+        }
+      ]
+    },
+    {
+      "file": "clrjit.dll",
+      "sha256": "2a2332c3c0cb023e71deb356b5fb85ce9045fb8434734dcfe9a7529e427dc858",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/clrjit.dll"
+        }
+      ]
+    },
+    {
+      "file": "coreclr.dll",
+      "sha256": "18eed8c40d05fc455be95d12cc77eacf379265063b15ca84bd7a11cf29078a22",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/coreclr.dll"
+        }
+      ]
+    },
+    {
+      "file": "CoreMessagingXP.dll",
+      "sha256": "72079042dc97f36ac11da1307622887b35fba592c0cfd5c9c984cbf1c075c3f1",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/CoreMessagingXP.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/CoreMessagingXP.dll"
+        }
+      ]
+    },
+    {
+      "file": "createdump.exe",
+      "sha256": "363b481c110ed2657d93211d52199955098d46655f50ca09473cc04a546f175f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/createdump.exe"
+        }
+      ]
+    },
+    {
+      "file": "dcompi.dll",
+      "sha256": "915ae96ed775483cae5230928a91d59ae8625acc05e3e80456c21ef59e847764",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/dcompi.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/dcompi.dll"
+        }
+      ]
+    },
+    {
+      "file": "DirectML.dll",
+      "sha256": "41ab039644c4ec49844f67c430a78f13f03e9632d8d0ee25c8db77cc49ffe114",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ml/1.8.2223",
+          "member": "runtimes-framework/win-x64/native/DirectML.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/DirectML.dll"
+        }
+      ]
+    },
+    {
+      "file": "dwmcorei.dll",
+      "sha256": "4ad4974b75a45a95a6b04c3ab26b1855f8d9d92cc0ebda0f036e03c54b95e4e1",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/dwmcorei.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/dwmcorei.dll"
+        }
+      ]
+    },
+    {
+      "file": "DwmSceneI.dll",
+      "sha256": "2c90541ab2f5b34af90bba4196697b5e57a8e89f49852bfca993dc3681bdb35b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/DwmSceneI.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/DwmSceneI.dll"
+        }
+      ]
+    },
+    {
+      "file": "DWriteCore.dll",
+      "sha256": "599579bd5d0dd27020e5563f9d7908bd9aa5bff4e2df291d06fe5377b233b32a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.dwrite/1.8.25122902",
+          "member": "runtimes-framework/win-x64/native/DWriteCore.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.dwrite/1.8.25122902",
+          "member": "runtimes-framework/win-arm64ec/native/DWriteCore.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/DWriteCore.dll"
+        }
+      ]
+    },
+    {
+      "file": "EffortLess.Core.dll",
+      "sha256": "c784c2dc2fd37ffa0261b46326fed6a18ff1f16a92d0c3e3722db6f219c6b3e7",
+      "classification": "original application build",
+      "sources": []
+    },
+    {
+      "file": "EffortLess.dll",
+      "sha256": "c8d64ee6ff3a60b6afb08429f12ac96b28d9b4c565693e6546a8198ec367ade2",
+      "classification": "original application build",
+      "sources": []
+    },
+    {
+      "file": "EffortLess.exe",
+      "sha256": "a3461472c834e4b1d3db863978b36c3faee2bdb43f8dbb79020121765e2dec64",
+      "classification": "original application build",
+      "sources": []
+    },
+    {
+      "file": "hostfxr.dll",
+      "sha256": "2e6bf792d54303a54467102fd873a7d7a993f828e8d19c040e13e428e5f2d9c8",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/hostfxr.dll"
+        }
+      ]
+    },
+    {
+      "file": "hostpolicy.dll",
+      "sha256": "90f9826f48e6416902199dee0fa1954536fe4c5191f5fd44b1bc6de623eb99c8",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/hostpolicy.dll"
+        }
+      ]
+    },
+    {
+      "file": "marshal.dll",
+      "sha256": "bccce5f060c3a41334627feaa0395a910b851f70539c5e246bf2894111c4c8ae",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/marshal.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/marshal.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.CSharp.dll",
+      "sha256": "50e834db03a33fc1056742ad39850bfa4e0169bba810a95df5f2ac17ee2fde1f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/Microsoft.CSharp.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.DiaSymReader.Native.amd64.dll",
+      "sha256": "70e4b89978ce57ef87b28f4921f3140c383b04aa96e7f3bdb3c4ebb898fd8a72",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/Microsoft.DiaSymReader.Native.amd64.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.DirectManipulation.dll",
+      "sha256": "c1d8656a9db7bed3b45e22d5c82b0997d7c4272c1d5edbb03661922b4d7cbd02",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/Microsoft.DirectManipulation.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.DirectManipulation.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Graphics.Display.dll",
+      "sha256": "dd77a9199312acec48a173c3a42ea3f6534b804ed8486c4327589065e1128b83",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/Microsoft.Graphics.Display.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Graphics.Display.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Graphics.Imaging.dll",
+      "sha256": "d96d9abb4daca3463c26591da455109ecaa5f8b7d860107769c3bb6706831d55",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-x64/native/Microsoft.Graphics.Imaging.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-arm64ec/native/Microsoft.Graphics.Imaging.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Graphics.Imaging.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Graphics.Imaging.Projection.dll",
+      "sha256": "a0af93a45d8cb2419e34262e1e764f25a44a39dca797f2749af560730d51e92d",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Graphics.Imaging.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.InputStateManager.dll",
+      "sha256": "e2eb19aac39af4207c3803ec7273d2b6ac0cb8b535e9f2646f515da4067c0059",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/Microsoft.InputStateManager.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.InputStateManager.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.InteractiveExperiences.Projection.dll",
+      "sha256": "cafde206be7fbfbef8bf1ee5ba60eed4ae10c6a0dd10bcfa83e1f63b14432a5f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Internal.FrameworkUdk.dll",
+      "sha256": "d33a23ef972f1286531fa80977ba018fba8616d70836068ce9338c50aeae3f8b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Internal.FrameworkUdk.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.ML.OnnxRuntime.dll",
+      "sha256": "e0d75baa747d96da15dfd002b9983f7ad3df04542ac4647004048f17d908d7ad",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ml/1.8.2223",
+          "member": "lib/net8.0-windows10.0.17763.0/Microsoft.ML.OnnxRuntime.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Security.Authentication.OAuth.Projection.dll",
+      "sha256": "4027edbf0554e97e0c883921565b450cf9ccdbeb924672641c20b0a3bb5be1e6",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Security.Authentication.OAuth.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.UI.Composition.OSSupport.dll",
+      "sha256": "7bbc3f9e8055d0217b38495d29be0b657148781c52cfe1afd4e7359b6ac7eeb2",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/Microsoft.UI.Composition.OSSupport.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.UI.Composition.OSSupport.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.UI.Designer.dll",
+      "sha256": "1eb970e84de208d497029af512116206f1fcb6959640c316dc5b6a548e23801a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/Microsoft.UI.Designer.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.UI.Designer.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.UI.dll",
+      "sha256": "bd017f7b927417a2c67327016556f07e05c7303226b201128cf5475b7d72e976",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/Microsoft.UI.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.UI.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.UI.Input.dll",
+      "sha256": "c50c9b4b3c13ea81cc22479a58c417326f3b2695b23ebd544b4a1d3144a5511d",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/Microsoft.UI.Input.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.UI.Input.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.UI.Windowing.Core.dll",
+      "sha256": "ea63f233e80170dbe1a23b18b0b436b9a98fac15a63ead19d8380fbaf3497cb5",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/Microsoft.UI.Windowing.Core.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.UI.Windowing.Core.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.UI.Windowing.dll",
+      "sha256": "fad2b58cd913ed7591aa5648a59bcb470d903ea5d9951423c54140bd986d8919",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/Microsoft.UI.Windowing.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.UI.Windowing.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.UI.Xaml.Controls.dll",
+      "sha256": "6e41078a44049d0ac8b50dff7ef220cacc7384623b95331bb627620c7749e568",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.UI.Xaml.Controls.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.winui/1.8.260803003",
+          "member": "runtimes-framework/win-x64/native/Microsoft.UI.Xaml.Controls.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.ui.xaml.dll",
+      "sha256": "95f5f5b7cec1ca2fa30580121f5298122e32db96ed5f04d9d1a74224511e5f0c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.ui.xaml.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.winui/1.8.260803003",
+          "member": "runtimes-framework/win-x64/native/Microsoft.ui.xaml.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.UI.Xaml.Internal.dll",
+      "sha256": "82897cc4060173472ef658224cc4e773a670f31c0d2e2db9dbdec9ba2a96b51d",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.UI.Xaml.Internal.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.winui/1.8.260803003",
+          "member": "runtimes-framework/win-x64/native/Microsoft.UI.Xaml.Internal.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.UI.Xaml.Phone.dll",
+      "sha256": "7dff352d1da6b2e4617ac2ba5c909d625de1ce5630deaf3e9c302b4e8bcba77f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.UI.Xaml.Phone.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.winui/1.8.260803003",
+          "member": "runtimes-framework/win-x64/native/Microsoft.UI.Xaml.Phone.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.ui.xaml.resources.19h1.dll",
+      "sha256": "ee616f29aeb1d1bc6db71bdb9c265c4edd9f42c43727ebf24f7c1c717cb0e7ca",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.ui.xaml.resources.19h1.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.winui/1.8.260803003",
+          "member": "runtimes-framework/win-x64/native/Microsoft.ui.xaml.resources.19h1.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.ui.xaml.resources.common.dll",
+      "sha256": "26ba80a0720155e30a0431ef9a6ec9a61ee14e265ecb4e3a58ae4e8e734e52ef",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.ui.xaml.resources.common.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.winui/1.8.260803003",
+          "member": "runtimes-framework/win-x64/native/Microsoft.ui.xaml.resources.common.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.VisualBasic.Core.dll",
+      "sha256": "4579f78dffc991340317264ee67934c8e4b5d9d1456192b59e55974dc9c9511f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/Microsoft.VisualBasic.Core.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.VisualBasic.dll",
+      "sha256": "10d93e64fced1cd163d2cea75575d23f4fa98550d1b8a67ffd80780c12fa08d8",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/Microsoft.VisualBasic.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Web.WebView2.Core.dll",
+      "sha256": "41944932171fc8269bb1c0afdfe1456793a9f6f0caea9f149e88b16bfc25b031",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.web.webview2/1.0.3179.45",
+          "member": "runtimes/win-x64/native_uap/Microsoft.Web.WebView2.Core.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Web.WebView2.Core.Projection.dll",
+      "sha256": "90610ed89f0c14937a863d928aea7fa6aea952fb208f3950bc6976d07b42da89",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.web.webview2/1.0.3179.45",
+          "member": "lib_manual/net8.0-windows10.0.17763.0/Microsoft.Web.WebView2.Core.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Win32.Primitives.dll",
+      "sha256": "56b957b1db34e280cfdbaa9097776934286c79f8c1e07ba3449c3dca75862325",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/Microsoft.Win32.Primitives.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Win32.Registry.dll",
+      "sha256": "be7fdc5568ecb28e23b31115017cfd05d236d28983fca712c3ebc47ed6132b8d",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/Microsoft.Win32.Registry.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AI.AICapabilities.dll",
+      "sha256": "035b0cd0ff27f6c1ae9281a824c82c649fd7cd3ed0f18fbbaa0cea530b066ffb",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-x64/native/Microsoft.Windows.AI.AICapabilities.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-arm64ec/native/Microsoft.Windows.AI.AICapabilities.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Windows.AI.AICapabilities.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AI.ContentSafety.dll",
+      "sha256": "0da9c1fe4baf9329c3d065e84291722367c2c56a94177613164132dd3ee54e40",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-x64/native/Microsoft.Windows.AI.ContentSafety.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-arm64ec/native/Microsoft.Windows.AI.ContentSafety.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Windows.AI.ContentSafety.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AI.ContentSafety.Projection.dll",
+      "sha256": "f66e7b941615d9cf34ea64ec4f2da61f1fabc860766979e3186f419eaeaf6b75",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AI.ContentSafety.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AI.Foundation.Projection.dll",
+      "sha256": "d7163488e079d21f9107f2897877a944bed06b8f5a5dce5327f5ed32a26d3c1e",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AI.Foundation.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AI.Imaging.dll",
+      "sha256": "ad72445f8aff343f062e81101a257f601bd449ad02b2cf9508470b8d59309164",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-x64/native/Microsoft.Windows.AI.Imaging.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-arm64ec/native/Microsoft.Windows.AI.Imaging.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Windows.AI.Imaging.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AI.Imaging.Projection.dll",
+      "sha256": "02032c075a3b4cb0c791d1a60e25350b614b807cec6786810c961ffaefdd81e0",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AI.Imaging.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AI.MachineLearning.dll",
+      "sha256": "a4a8cf88801521f091a9210087b1d0ffc3ff4e271bb29294e0b90ae391e279cd",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ml/1.8.2223",
+          "member": "runtimes-framework/win-x64/native/Microsoft.Windows.AI.MachineLearning.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Windows.AI.MachineLearning.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AI.MachineLearning.Projection.dll",
+      "sha256": "b4955742f470c673efe7c8ac3a4eb6a0e927e5bd46dfd9ffef6e068a22111223",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ml/1.8.2223",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AI.MachineLearning.Projection.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.ml/1.8.2223",
+          "member": "lib/net8.0-windows10.0.17763.0/Microsoft.Windows.AI.MachineLearning.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AI.Projection.dll",
+      "sha256": "0a2d2f7b67d0bec0593f1a47e007b1bafe6081639fe0c1752e6bb3e185490d3c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AI.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AI.Text.dll",
+      "sha256": "1f5b738167ba76e518ca2743c6bdc06dd32461a3fe50ee966f8bcbd7cd8dc0ec",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-x64/native/Microsoft.Windows.AI.Text.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-arm64ec/native/Microsoft.Windows.AI.Text.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Windows.AI.Text.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AI.Text.Projection.dll",
+      "sha256": "45a079ca10ae4cbf7a506d83a1f6a8b37524936483e98ff4a244d23c65fa62c0",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AI.Text.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.ApplicationModel.Background.Projection.dll",
+      "sha256": "d2a60ad1fcdb59208a47d3746fdd4d66b35463eb8f2370cb3a5f81ce0362cc7d",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.ApplicationModel.Background.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll",
+      "sha256": "d757bfdfcfe32b51ae8b7802fa259e71deb33acd897cd0caf2def418f12b026c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes/win-x64/native/Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes/win-arm64ec/native/Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll",
+      "sha256": "e68415adb355d2004fb7c1072c78a25f27e9a12c6ab05562b74950bf0bb10625",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.ApplicationModel.Resources.dll",
+      "sha256": "3d1f52d4b6401b92ce883ae2d900378be82e37e276d6afab9d47d9aabf2a37c4",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes-framework/win-x64/native/Microsoft.Windows.ApplicationModel.Resources.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes-framework/win-arm64ec/native/Microsoft.Windows.ApplicationModel.Resources.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Windows.ApplicationModel.Resources.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.ApplicationModel.Resources.Projection.dll",
+      "sha256": "57f9f9850969bfa116d417e5b811cd87e989d36184026897b732d1418341dfeb",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.ApplicationModel.Resources.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll",
+      "sha256": "2d7359efa69f8aabe7b9e1140716bb3e2a78653c65121118e509d8e75abf62f9",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AppLifecycle.Projection.dll",
+      "sha256": "f2cf6c0e9b7d1b3dcd9f901fb0d1458b9201f7c37b9b784a41f9c367d82a33a8",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AppLifecycle.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AppNotifications.Builder.Projection.dll",
+      "sha256": "61aa83c2cee8cadda7fe8a06446820929cd4f39cc57fdb8151e0214f7975e00a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AppNotifications.Builder.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.AppNotifications.Projection.dll",
+      "sha256": "0042271caceb4722180a022a38df1497389e6ae8f74053943fb57a5178e5f2d3",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AppNotifications.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.BadgeNotifications.Projection.dll",
+      "sha256": "44d11a44bd0054cefb76332a573a540df92a0ff0512e1306839bf01ab4a5300c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.BadgeNotifications.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.Foundation.Projection.dll",
+      "sha256": "5a4815d2c5737767ed5fb525986eda53eb77c1a4088268854b3c20795902abf5",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Foundation.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.Management.Deployment.Projection.dll",
+      "sha256": "943209cd81457808aac04a3f5fa315835b59bd4793a8b32b59ee1fce705bf9af",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Management.Deployment.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.Media.Capture.Projection.dll",
+      "sha256": "e4000d4026a8459080461129f93666b13f869d20cc947fc7a36c9bb09177dc6b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Media.Capture.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.PushNotifications.Projection.dll",
+      "sha256": "acd535111632088cc650cde0cbc50d200ac6e4531c4855bfa9a20d676b2577b1",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.PushNotifications.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.SDK.NET.dll",
+      "sha256": "c633ab241cd09846c2aa409f0bee2026962610404a7bf132c75cbd66b0e5a9f4",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windows.sdk.net.ref/10.0.26100.57",
+          "member": "lib/net8.0/Microsoft.Windows.SDK.NET.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.Security.AccessControl.Projection.dll",
+      "sha256": "d4fae243cfa3786cf3da37dfd31b0325aed139cf79dece5ac58f9aca531455f5",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Security.AccessControl.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.Storage.Pickers.Projection.dll",
+      "sha256": "909d1e9f7ec1cb11e5daf37f3c21b12e3dcc89b1bc143629026adffabddb4152",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Storage.Pickers.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.Storage.Projection.dll",
+      "sha256": "12e976249156f9eeed24e78a303dcb7d66a7ed77d371e922a1e6e3d35cf59991",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Storage.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.System.Power.Projection.dll",
+      "sha256": "f1839898d6e709248ad90aebaa5fcaa6776e65df49ded9c075b616c99cd49e9a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.System.Power.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.System.Projection.dll",
+      "sha256": "6298061927e762478a58ad736d237ec06172b9e316f63735112c3fe4e4694eaf",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.System.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.Widgets.dll",
+      "sha256": "544784d1eee6ef7c18f5208b879403e888cef8abd9dca11ebeccfa9a7de67d47",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Windows.Widgets.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.widgets/1.8.251231004",
+          "member": "runtimes-framework/win-x64/native/Microsoft.Windows.Widgets.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.widgets/1.8.251231004",
+          "member": "runtimes-framework/win-arm64ec/native/Microsoft.Windows.Widgets.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.Widgets.Projection.dll",
+      "sha256": "b7cc844de38d3d363f98b5652b57355aaba8804704b9258ef35dfd5d93488966",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.widgets/1.8.251231004",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Widgets.Projection.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.Workloads.dll",
+      "sha256": "2cf3530a0c2ae585bc343f5422756ac6ee93edaf128db609ce33b9808aeb5d85",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-x64/native/Microsoft.Windows.Workloads.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-arm64ec/native/Microsoft.Windows.Workloads.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Windows.Workloads.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.Windows.Workloads.Resources.dll",
+      "sha256": "3cabef3388f8fb65b72be3e88f031417c5c878de0c31512d386543e152f92c30",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-x64/native/Microsoft.Windows.Workloads.Resources.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-arm64ec/native/Microsoft.Windows.Workloads.Resources.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.Windows.Workloads.Resources.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.WindowsAppRuntime.Bootstrap.dll",
+      "sha256": "280275d5c4d509e85e394ff99bfb271fb0d6426718b1fa0913dce5888f847d14",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes/win-x64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes/win-arm64ec/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.WindowsAppRuntime.Bootstrap.Net.dll",
+      "sha256": "30aee633e05c6f892b119566e1ed0092eb0ccdded3119741b2fda6d81a7fb75c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.WindowsAppRuntime.dll",
+      "sha256": "07ed3f7896fbcfdc0be1c5cdbac2217e6512f3af1846e009336b9a7016f6265c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes-framework/win-x64/native/Microsoft.WindowsAppRuntime.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes-framework/win-arm64ec/native/Microsoft.WindowsAppRuntime.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.WindowsAppRuntime.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.WindowsAppRuntime.Insights.Resource.dll",
+      "sha256": "92772df8eb8cff4d4afd6a41b56a77deb4566fb20828273c6df1591b5713dfe3",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/Microsoft.WindowsAppRuntime.Insights.Resource.dll"
+        }
+      ]
+    },
+    {
+      "file": "Microsoft.WinUI.dll",
+      "sha256": "701854e3c94a9f83cf08b15db0381fcd715f98871d731ad305a0973443129923",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.winui/1.8.260803003",
+          "member": "lib/net6.0-windows10.0.17763.0/Microsoft.WinUI.dll"
+        }
+      ]
+    },
+    {
+      "file": "MRM.dll",
+      "sha256": "d34a9658f2bfa1369149e5e9261db8ba687cc95b57003d0630aef4aa17fafc7e",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes-framework/win-x64/native/MRM.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes-framework/win-arm64ec/native/MRM.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/MRM.dll"
+        }
+      ]
+    },
+    {
+      "file": "mscordaccore.dll",
+      "sha256": "4e2109c88298f0a614aac82b23310b13835673a8e192a6a8b75c25459e591169",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/mscordaccore.dll"
+        }
+      ]
+    },
+    {
+      "file": "mscordaccore_amd64_amd64_10.0.1326.50504.dll",
+      "sha256": "4e2109c88298f0a614aac82b23310b13835673a8e192a6a8b75c25459e591169",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/mscordaccore_amd64_amd64_10.0.1326.50504.dll"
+        }
+      ]
+    },
+    {
+      "file": "mscordbi.dll",
+      "sha256": "0109e6b251ab56b80f6c02a51a92f03f44a9b1ad410f2cf3cf6b7dd6543139a9",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/mscordbi.dll"
+        }
+      ]
+    },
+    {
+      "file": "mscorlib.dll",
+      "sha256": "f696efe065247cff43d01a2b3e77f89c9c8193fae8ae8a0d198e8dbc7d4afce3",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/mscorlib.dll"
+        }
+      ]
+    },
+    {
+      "file": "mscorrc.dll",
+      "sha256": "e57104b778364b49b380d0d7246b523ef63e62d8c8a50a9ec76bdcc874934c66",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/mscorrc.dll"
+        }
+      ]
+    },
+    {
+      "file": "msquic.dll",
+      "sha256": "7b32a336b638570bff7b2f4782ebdc05b8c70fac76fdb412f3e8a3c181c32a61",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/msquic.dll"
+        }
+      ]
+    },
+    {
+      "file": "native/win-x64/libmpv-2.dll",
+      "sha256": "525d5f99a484f0ddca2fd00f3f3e0402733f2218a22be522facbcdf09ea70088",
+      "classification": "native; requires separate verified native build/source manifest",
+      "sources": []
+    },
+    {
+      "file": "native/win-x64/vulkan-1.dll",
+      "sha256": "98bc6e33b384f83e8cc36174ce1ba81357611d0cbe03462e1ca58d0663034039",
+      "classification": "native; requires separate verified native build/source manifest",
+      "sources": []
+    },
+    {
+      "file": "netstandard.dll",
+      "sha256": "4f517955d84669b6c02c83fa5e20e5f9c80d58a0aa1f16967af45db5ccafbfdb",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/netstandard.dll"
+        }
+      ]
+    },
+    {
+      "file": "NpuDetect/NPUDetect.dll",
+      "sha256": "89fadd04c5f41aabc105d35b9cd8356a0d5823560738991aaab5223723c7b504",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-x64/native/NpuDetect/NPUDetect.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-arm64ec/native/NpuDetect/NPUDetect.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/NpuDetect/NPUDetect.dll"
+        }
+      ]
+    },
+    {
+      "file": "onnxruntime.dll",
+      "sha256": "1783a2135b91d2344cef8cb94c52dceaac3cb2431c27418d0cecfbe0a286312c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ml/1.8.2223",
+          "member": "runtimes-framework/win-x64/native/onnxruntime.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/onnxruntime.dll"
+        }
+      ]
+    },
+    {
+      "file": "onnxruntime_providers_shared.dll",
+      "sha256": "9508ce686d280bd685040d2fca16a5a504dfd500ba59531d8fa719c1f50ed036",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ml/1.8.2223",
+          "member": "runtimes-framework/win-x64/native/onnxruntime_providers_shared.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/onnxruntime_providers_shared.dll"
+        }
+      ]
+    },
+    {
+      "file": "PushNotificationsLongRunningTask.ProxyStub.dll",
+      "sha256": "208c62d43cfd3a63ef217330e195a63ff938c8fea8836e38763b7d4df6e93152",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes-framework/win-x64/native/PushNotificationsLongRunningTask.ProxyStub.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes-framework/win-arm64ec/native/PushNotificationsLongRunningTask.ProxyStub.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/PushNotificationsLongRunningTask.ProxyStub.dll"
+        }
+      ]
+    },
+    {
+      "file": "RestartAgent.exe",
+      "sha256": "9ef2e43cb0965762a7265460116bf10fdc718968a66673097c60b0a778195afe",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes-framework/win-x64/native/RestartAgent.exe"
+        },
+        {
+          "package": "microsoft.windowsappsdk.foundation/1.8.260803002",
+          "member": "runtimes-framework/win-arm64ec/native/RestartAgent.exe"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/RestartAgent.exe"
+        }
+      ]
+    },
+    {
+      "file": "SessionHandleIPCProxyStub.dll",
+      "sha256": "00b1460a22820aa0e1e1e50e8265e8f426b282f014126240f1b58f8626673812",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-x64/native/SessionHandleIPCProxyStub.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.ai/1.8.79",
+          "member": "runtimes-framework/win-arm64ec/native/SessionHandleIPCProxyStub.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/SessionHandleIPCProxyStub.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.AppContext.dll",
+      "sha256": "614f3bc1601cf115e6ce5c4fb451eb3b1895eabb8d40702bdaf206f52f767559",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.AppContext.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Buffers.dll",
+      "sha256": "ea79e667c14c6a9b8d3c2945c81f5589cfdeb444492787100f99cd74abe85fa9",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Buffers.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Collections.Concurrent.dll",
+      "sha256": "a94b9fc813235087390540793e0d92dcd86362c26768144cd1ef8aa37b34c66a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Collections.Concurrent.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Collections.dll",
+      "sha256": "ccf9ec3d536d6241c54a874833bf7d2329b9ecc5b8d4298c27af271f0e91b223",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Collections.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Collections.Immutable.dll",
+      "sha256": "0326faaae1cc3dc8f8e47337df7cad81cb844e5e5988e24e405e2316edea040f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Collections.Immutable.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Collections.NonGeneric.dll",
+      "sha256": "a13e2d330938c175d92bf7ef09a39c669c3dff4629319b4366ca71a52ed0dc8b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Collections.NonGeneric.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Collections.Specialized.dll",
+      "sha256": "1b19d86241bb7a033f30946d4556440258d2d88793a26465bccced7d2b44b93c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Collections.Specialized.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.ComponentModel.Annotations.dll",
+      "sha256": "10519351ed44c8519ef28fd57d7668bfb67f771905dd8216706cdcbc8abc93d0",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.ComponentModel.Annotations.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.ComponentModel.DataAnnotations.dll",
+      "sha256": "6c90452506439ba7587afeb2c648eeec5b80c131e16c2f5b2c70a18c3e2bae12",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.ComponentModel.DataAnnotations.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.ComponentModel.dll",
+      "sha256": "98646c7833634bf7ed89cfb44c05701b2965461db8494f46ff7ab6cfaa731763",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.ComponentModel.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.ComponentModel.EventBasedAsync.dll",
+      "sha256": "52b6d020341114450dc3cfa0d5218f8cf841d40e0f729ffc5d5d0164832b0350",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.ComponentModel.EventBasedAsync.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.ComponentModel.Primitives.dll",
+      "sha256": "079cf4a6a2c9ec77b9e03f0222740f9eaf9f5e7359a16fbf3450ad7bc44de321",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.ComponentModel.Primitives.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.ComponentModel.TypeConverter.dll",
+      "sha256": "dc3ec71d1711a23f54a6457ee471693db1d39c400f9f2b2b7d82595d70936dd9",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.ComponentModel.TypeConverter.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Configuration.dll",
+      "sha256": "fc9b3fff09b6dccbbc07fe8225a0cf9df94fceab50b54731caa27969cc9c2e72",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Configuration.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Console.dll",
+      "sha256": "85aa55649526c8b5bec2fe5811d98e33fdf595a69c0fc87d8396626ec33aede7",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Console.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Core.dll",
+      "sha256": "6758af6c57fe08ab2ef3426ab4fb7510c5a7c13948aaedf81339a33d8ee54250",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Core.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Data.Common.dll",
+      "sha256": "bdf5cbb6fa51d4f892685c9027b81d9084130cef2067b8ea887c73e40a731bfb",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Data.Common.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Data.DataSetExtensions.dll",
+      "sha256": "82d72011785a898bc122642d7bae6a6828baef73d47b8acb52d169ffe395f543",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Data.DataSetExtensions.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Data.dll",
+      "sha256": "1be17f4c6bd354f1a5654d9dd30b52a11965d4ac42208d173c73cf9aecb3d8c5",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Data.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Diagnostics.Contracts.dll",
+      "sha256": "9ee7cddce1f941d0c57ac48d35935c86de1b2044f46f9538fc3e3642d43c8f6b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Diagnostics.Contracts.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Diagnostics.Debug.dll",
+      "sha256": "c2cb62b25d91119705029c8e7adbac2aad4ec4123c0c31799c44faab51daeb2c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Diagnostics.Debug.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Diagnostics.DiagnosticSource.dll",
+      "sha256": "00fcb56efba898ec0ddbba14cd7e618486c0e5b09467995d4205bda24184fb9e",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Diagnostics.DiagnosticSource.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Diagnostics.FileVersionInfo.dll",
+      "sha256": "e47370216983b427527b39aaf786b509c29953779ff90a574cce5d3b9542842b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Diagnostics.FileVersionInfo.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Diagnostics.Process.dll",
+      "sha256": "0a616a3b22f0ec2e8c1ccf6e42ff6acc6f91dbd2cfa5274f0b230d04f1363d5c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Diagnostics.Process.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Diagnostics.StackTrace.dll",
+      "sha256": "3fc3b6f82e193945970717a8ca0e354fd785962bbf7390b93e72e450a4c724ee",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Diagnostics.StackTrace.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Diagnostics.TextWriterTraceListener.dll",
+      "sha256": "dd793b20b2c574b4b5b8062c278df04b2d91fb86bc577c839e648030b46bb9e7",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Diagnostics.TextWriterTraceListener.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Diagnostics.Tools.dll",
+      "sha256": "2d638b02eaccdaef5f5af49a93cb368b3c4bd4eaa93f7034d99a2fbfb8268dfc",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Diagnostics.Tools.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Diagnostics.TraceSource.dll",
+      "sha256": "644956324add90895e75e0f6874beeac35713c62beb0bb5c0abb31d4cde7dc76",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Diagnostics.TraceSource.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Diagnostics.Tracing.dll",
+      "sha256": "3f0056355c53a020cb7bc342fa87992f4973e863ef3f0117bfc2c94213b2af06",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Diagnostics.Tracing.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.dll",
+      "sha256": "ed7acc3741a65f68452c1dc958d522b4ab80863b21df79b46a03943fa51b77ee",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Drawing.dll",
+      "sha256": "22a80405468bf2060942deadb320c366c439983a9672b847f51d586efa7d4d60",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Drawing.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Drawing.Primitives.dll",
+      "sha256": "4e50080f27ef47fec351e69a013c352bd0807a84e7fe4e069e2cd9d7b55d8ad1",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Drawing.Primitives.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Dynamic.Runtime.dll",
+      "sha256": "302df5b559287ce390e1a066e58627ee22a32df5b4e9f286c375deb7c31bff8e",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Dynamic.Runtime.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Formats.Asn1.dll",
+      "sha256": "0ad1db4be167f3c0ddc187a2a046f0ed83e70d5cf772550fecbdc82f650a9ee4",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Formats.Asn1.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Formats.Tar.dll",
+      "sha256": "69273eaaeba4bc115883d9d840290d49cfcfad718d7aed55ed72ed1c7b29839c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Formats.Tar.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Globalization.Calendars.dll",
+      "sha256": "c5f326ab1a865e38adf4a6cfdda89f66d931aa82a0a5d8355199ccf675d60414",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Globalization.Calendars.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Globalization.dll",
+      "sha256": "323015a8cfc179b48ca65d855b8c8b7c05d917c761d0c448d91486d8215a3890",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Globalization.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Globalization.Extensions.dll",
+      "sha256": "ba52fca9b1f3ee501daa106c144b3861b6e8b743ffc4af4bf8ec47aa347c8f91",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Globalization.Extensions.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.Compression.Brotli.dll",
+      "sha256": "cc054657eaf168f02f84eae65ff7c241a1622a21039ff9fe2f154ced76d9a8ce",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.Compression.Brotli.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.Compression.dll",
+      "sha256": "ca5125c284ebdab1a4959c8f70d1a4fef5b98f1922fcb3b5024874fddf953a1b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.Compression.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.Compression.FileSystem.dll",
+      "sha256": "fffd597ded2176df766705b5982fa837d532e6cc78525965bda74b93d292e620",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.Compression.FileSystem.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.Compression.Native.dll",
+      "sha256": "da1d5ffb0852b92587a3f8e6c82295b14d1de0944bf963d4b755f86616be1fc0",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/native/System.IO.Compression.Native.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.Compression.ZipFile.dll",
+      "sha256": "fd44eb82ba8bcf8a5f97094970595771c6e11108fc0d1dcaf41d94a3a1935d50",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.Compression.ZipFile.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.dll",
+      "sha256": "c6374a8aa93d7b5937c54e26b7a0dbfa39c7756673c5c0aa0abdf415c4d3a010",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.FileSystem.AccessControl.dll",
+      "sha256": "a87455a818254627457395e85ab4970cc844edf07254456da624a37c99e9a23f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.FileSystem.AccessControl.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.FileSystem.dll",
+      "sha256": "0a24eb1c36225504ee6afdea82e28b5818c9145287305bf093f1fb24d44dc267",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.FileSystem.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.FileSystem.DriveInfo.dll",
+      "sha256": "8dd143cf52229ce0d2d7192028e9f0e17cc2b5937e445a0fb38df42feef09108",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.FileSystem.DriveInfo.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.FileSystem.Primitives.dll",
+      "sha256": "74f3416713e3f607884504d5a5e018e4e49e1e10a81fe71e7ab19327fc6a110d",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.FileSystem.Primitives.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.FileSystem.Watcher.dll",
+      "sha256": "71f003318bef13d6bb42f3472de8d7f48258af0d147f08f556cc07b570803b29",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.FileSystem.Watcher.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.IsolatedStorage.dll",
+      "sha256": "e56218766dd0903aeab3da681740673d896a02af536c8c3fbb05de3fdb925e9a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.IsolatedStorage.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.MemoryMappedFiles.dll",
+      "sha256": "79c1d75fb558c6de834b23b9f6067e380fb7d17c32e16561ebff3ae5ab135ab4",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.MemoryMappedFiles.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.Pipelines.dll",
+      "sha256": "7875941c62c402cbb1f3505883bf87ed74088f18171ff3a66d8c8fa06e511836",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.Pipelines.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.Pipes.AccessControl.dll",
+      "sha256": "37d52473aac237534f3882a2569e347fcc890acf9c3e57f22543d84d8fd5df4f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.Pipes.AccessControl.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.Pipes.dll",
+      "sha256": "9fa574f006f09ff3864023e0d791e1965a843f734018276bd9ddeb8d1abb6069",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.Pipes.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.IO.UnmanagedMemoryStream.dll",
+      "sha256": "6f9d3af10c7b3f51b4af66bbf6dcd20d9842e66ece169468e9ce029c9e84df4c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.IO.UnmanagedMemoryStream.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Linq.AsyncEnumerable.dll",
+      "sha256": "743910e92ed832d96d003461df578633245755cd92dc4859feccf10b03794be7",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Linq.AsyncEnumerable.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Linq.dll",
+      "sha256": "079e0935f903f9e2076225d7bad46518c5b47ac5c0def9643273575d0062f2bd",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Linq.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Linq.Expressions.dll",
+      "sha256": "c9bb446522fbef51debf26cf2a9159eb80d5635cce1501a79d0ec9d378a9b782",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Linq.Expressions.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Linq.Parallel.dll",
+      "sha256": "97373df914325969d116253b271d58971dbbdd3816940dbd6a540f8775130e62",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Linq.Parallel.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Linq.Queryable.dll",
+      "sha256": "17e157aacc2c749ea27ef5cd6668ba270e5438587013e77d9c87837d9659914a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Linq.Queryable.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Memory.dll",
+      "sha256": "5316822e28d6269071aa58e752c8b12f242b2abed0bbc0d0d2e63af6935fcd87",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Memory.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.dll",
+      "sha256": "88766fb8832084e01c60c416aff66baa5fc246f5f9931ed33b498345d8e50d22",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.Http.dll",
+      "sha256": "127361ac77186c2322e2fa5d75aac441c25eab9bd28ccb7799dfc0b06897db59",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.Http.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.Http.Json.dll",
+      "sha256": "e5fc7ac1cf74fae190148cedaab199acdf7be023f9ccd5ada7c74a33acf94c8c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.Http.Json.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.HttpListener.dll",
+      "sha256": "87a4c7afdeba525560ba0d63e53d25ca04e7d3b7f8d92d1ff0be93b7826948a9",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.HttpListener.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.Mail.dll",
+      "sha256": "65b6559e00e3acaf44374a1ac44bb56ab556e6d7e469817cdd9624636c8d3b55",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.Mail.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.NameResolution.dll",
+      "sha256": "daa4ae56e568ad5901678a8997d6ff1584b99b0892981c4ca069cb24058ffb22",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.NameResolution.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.NetworkInformation.dll",
+      "sha256": "9d77279b5c96db317ebc190bddb6d2c6aab99e7ebf8c620c76c1ffb6df122a00",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.NetworkInformation.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.Ping.dll",
+      "sha256": "de1d264c5f39df89d22c2c21033f7b52e23e7ab6add587e7505b7383f330f2cf",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.Ping.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.Primitives.dll",
+      "sha256": "fb9f4515c2731f94694ba47517a5df344c233b1ceb6dbeefd373aeb032e78ede",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.Primitives.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.Quic.dll",
+      "sha256": "d3806a24e04e9e7a080d985be674b5650748a13cb032f609ecbc0c6b17835c0c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.Quic.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.Requests.dll",
+      "sha256": "657761ddb1d4169b958cd83e1bbdbc6481c0a5d20bf91b5f4832500fc7e0d04d",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.Requests.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.Security.dll",
+      "sha256": "464900194cc2d5c405dba28b1b0ab02174fe224c2ea86ddf6ed4e48cea814e72",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.Security.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.ServerSentEvents.dll",
+      "sha256": "bb98698413fd83ccf898fff8d7d5763380f176914657dbe5ab2338716e500ef5",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.ServerSentEvents.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.ServicePoint.dll",
+      "sha256": "3a021dda4d96ab8a5cd22b456083d889f18cd332630760a6bc854d69e312041a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.ServicePoint.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.Sockets.dll",
+      "sha256": "1f097ff565059147be68fdac148db435eaf9c2dd0a6f8248369e818f2cada590",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.Sockets.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.WebClient.dll",
+      "sha256": "1222dcfa31f149796cc0bdc73004e29e3b57dd7eaa11133e5e214eac606bfc9a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.WebClient.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.WebHeaderCollection.dll",
+      "sha256": "441ba7f9eaa01d69dcfc3ba13ae8a23d76586387d5d19e30ce0b607404b365b4",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.WebHeaderCollection.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.WebProxy.dll",
+      "sha256": "49e23f3f467e1eeebb9c26be7737679bdb7678816226e7938553aa684a5d6e9a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.WebProxy.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.WebSockets.Client.dll",
+      "sha256": "1e321f049426f4e1a2d27c742d2a7b335f1dd041793b87011a6e0161c0728d88",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.WebSockets.Client.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Net.WebSockets.dll",
+      "sha256": "a82af566588f39ffb9f59303f537462fe7ab3e4e0557ec7ec375a18651bd833f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Net.WebSockets.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Numerics.dll",
+      "sha256": "c3bafd992b680b545c0ad7fb62cf9b91899783d78d8e2b6da4628a202303c9e6",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Numerics.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Numerics.Tensors.dll",
+      "sha256": "9d96dc759fdb54cbc3c26ee65cfd78ff32e3745f418119cc0811e63d3f29ecb9",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "system.numerics.tensors/9.0.0",
+          "member": "lib/net9.0/System.Numerics.Tensors.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Numerics.Vectors.dll",
+      "sha256": "6a672aafaa521341b1f0897fd82c596a2a77da3f93d06f1d723be7506b18a829",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Numerics.Vectors.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.ObjectModel.dll",
+      "sha256": "99c6aa46d55e7387aa666d875a1f7137afff2d61d0cb5d8e58e4ebb2223849bb",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.ObjectModel.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Private.CoreLib.dll",
+      "sha256": "0a175cdd09067c52f8b2477cfcebf894b2f926d7302e55ae76fc921529662c7b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Private.CoreLib.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Private.DataContractSerialization.dll",
+      "sha256": "30580397c3641a15468cd3347258c5b13c548ac151ba904b6b31ef703b9c3a0a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Private.DataContractSerialization.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Private.Uri.dll",
+      "sha256": "de8a09a693727e8b326103bca2f6b3dd70e13a0ca0ef954aa2d9e060ec4952e0",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Private.Uri.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Private.Xml.dll",
+      "sha256": "724bf135d0c0fdeefcbc01e8a38bc74e8532bf87a5dbbd67e57faeb666d9aa9a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Private.Xml.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Private.Xml.Linq.dll",
+      "sha256": "7a3d2f61956c9e25f886e1e05662cbd2325738cc778ed82dfab76a3e18ea3b56",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Private.Xml.Linq.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Reflection.DispatchProxy.dll",
+      "sha256": "532f8921e2200f2d3ea13549e71ff85e5c2d6f292f44c40ac6e1bec760928b15",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Reflection.DispatchProxy.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Reflection.dll",
+      "sha256": "604f110f2c183925535db2d21eeb9d0e14b02ec3e2ca492acf1a00681d8671d5",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Reflection.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Reflection.Emit.dll",
+      "sha256": "d6e69a63e28c69e47b7e16479d2868fc12bed28e027045149393a0d528ccbb2b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Reflection.Emit.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Reflection.Emit.ILGeneration.dll",
+      "sha256": "43d006580a2a67f00d608e09685c25b93b471f6adafe925eeb0662e5449bb3ca",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Reflection.Emit.ILGeneration.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Reflection.Emit.Lightweight.dll",
+      "sha256": "9f3116a7e4bdcc0ef134da1699eb03458802dd22bbe79a15c3095e2658b30c27",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Reflection.Emit.Lightweight.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Reflection.Extensions.dll",
+      "sha256": "cd552fd8bb3f8a313627677568cbd2e1e251e39e3d8ef04995de285af596257b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Reflection.Extensions.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Reflection.Metadata.dll",
+      "sha256": "4901b7f15d30d6463f08ed4221feb4c3330112240c35d7553490ba99da70c860",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Reflection.Metadata.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Reflection.Primitives.dll",
+      "sha256": "dc7c8ce0276371cc4b8ffd7b819a43aa45ae7d624a113af2c68c430980fa1ba4",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Reflection.Primitives.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Reflection.TypeExtensions.dll",
+      "sha256": "21e9db02782d569548e1ef988b50220ed5912de210681a34130bedda72399e5d",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Reflection.TypeExtensions.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Resources.Reader.dll",
+      "sha256": "2dead871c83fa2668e18ce6f61e76734390115f37789e10c8182a98ca3d3acaa",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Resources.Reader.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Resources.ResourceManager.dll",
+      "sha256": "2e91f4000254ef1f34d7c4ef650a67e2521e381d5a4fa389bd1cbb38aab3ae28",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Resources.ResourceManager.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Resources.Writer.dll",
+      "sha256": "384b3ed914fa9f6055e394d08008ae83735dea2c01c2a15a0e48fb0cf0c7b568",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Resources.Writer.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.CompilerServices.Unsafe.dll",
+      "sha256": "00204d3071f863624d6e7ed323579aadac44191e2fdf7dc5bfe1896a59f48d68",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.CompilerServices.Unsafe.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.CompilerServices.VisualC.dll",
+      "sha256": "5ff614d288b708b70e43e4774a66982e17531fee96c758397cfd1627a06d7ca6",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.CompilerServices.VisualC.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.dll",
+      "sha256": "dc17d00429e6c256e6eeb0140fa9294d819fb6e13c24542fb01c2c3b424dff63",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.Extensions.dll",
+      "sha256": "2acb1faf01e3061bbf84cf60b4de8116a821084d480e568fcbf337cddad44946",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.Extensions.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.Handles.dll",
+      "sha256": "3a12926c9543ca46c4287a8e99be2788275ae58672367af7aff60d52859ded6f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.Handles.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.InteropServices.dll",
+      "sha256": "664d77cc2163f40e80ac0e1ee4ed84b3a5c21c580a277dd63fdd4e448e55a3f7",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.InteropServices.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.InteropServices.JavaScript.dll",
+      "sha256": "d0991a67f0a35c033064806b24223672ac0b418570099e334bb9b8f405f98b9f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.InteropServices.JavaScript.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.InteropServices.RuntimeInformation.dll",
+      "sha256": "5b10a7935d44f9a279df162da405714d4667d044cfa25cdc88dded1fdb0f1d53",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.InteropServices.RuntimeInformation.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.Intrinsics.dll",
+      "sha256": "911598f98b4dd471549f7f6cb4ab3344a41369ceb40db8add049e20c0e31d5b7",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.Intrinsics.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.Loader.dll",
+      "sha256": "20d4d8620db219098a552524303ecf32d0f24ab342e691886c2ddf2d72691114",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.Loader.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.Numerics.dll",
+      "sha256": "47f6d55917ccaafa28480e692bf27e9dd95b5762b2c85398d575f65993bd2293",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.Numerics.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.Serialization.dll",
+      "sha256": "4097d9d333fca666495541a3aa106ef96a2e2c0141c1ae13ae9b18d029a21d82",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.Serialization.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.Serialization.Formatters.dll",
+      "sha256": "c05cf601d384d10051e81b1b14c9c8e921f5acfc9373db19f2d2164b0391f872",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.Serialization.Formatters.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.Serialization.Json.dll",
+      "sha256": "9864b302bf9e2efe92cd1e67398312905a4e96ca6eee4fccf3b5ff27fdf93c1f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.Serialization.Json.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.Serialization.Primitives.dll",
+      "sha256": "d2677e25b164af13d28032b03fd6eb30a4fcc3d9ced4771eaab11cd7d8721216",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.Serialization.Primitives.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Runtime.Serialization.Xml.dll",
+      "sha256": "9f6dd0efbc87ccd8592b34d4f3e834f20661574e8eead3beb73b351feaeed0e6",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Runtime.Serialization.Xml.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.AccessControl.dll",
+      "sha256": "1d6691eee72ab1bd3924d8bc2ece16ff4f7aa1c2cc946d9b01344b55bff9538a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.AccessControl.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.Claims.dll",
+      "sha256": "8c5825424df7ef61430d11292346349ae8d8a238febebe40b5c93a440efc4b83",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.Claims.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.Cryptography.Algorithms.dll",
+      "sha256": "0d32e472ebcf3df90731a8e0c0f2556d54a0dbc6b793ac2a6a252a4da65a31c2",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.Cryptography.Algorithms.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.Cryptography.Cng.dll",
+      "sha256": "5764df594cdfaf851e24c82cb0e416556f308b27b5a7c4a19ba43edf9068f1e9",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.Cryptography.Cng.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.Cryptography.Csp.dll",
+      "sha256": "35fdeda39d810a2c1c1728b6bbaa93ddb4593093de4a80e247d03349f3b56d76",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.Cryptography.Csp.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.Cryptography.dll",
+      "sha256": "39516be3623de208b270c3dd7982ef3b2f56c047c0c0f34466e64b06d4683d80",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.Cryptography.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.Cryptography.Encoding.dll",
+      "sha256": "ad4110ccffde277e12208bcf7809a2bd4ab7964141dd66eb2fa72b22cdd6c4c3",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.Cryptography.Encoding.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.Cryptography.OpenSsl.dll",
+      "sha256": "dbcbd42868c37c0406d31f2b09f8922220c1d1cd48a3f952c7d4629a984ddb01",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.Cryptography.OpenSsl.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.Cryptography.Primitives.dll",
+      "sha256": "57354fd66966f66086e04473d35fab0669b09bef7d096fcaf34d8354fe76cd32",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.Cryptography.Primitives.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.Cryptography.X509Certificates.dll",
+      "sha256": "df29ce12b35fb73bfc1d995c4ac239d581edbab0a29407c7e342392ffdf8cc56",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.Cryptography.X509Certificates.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.dll",
+      "sha256": "30fc328a0ed390d32270515626c8fbce8fbc4dfb98510fbab473fbc64a101dba",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.Principal.dll",
+      "sha256": "8e3d5d135ace4195c0ef7a74ebf3788748d23417aee0496712c02b99daa4be97",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.Principal.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.Principal.Windows.dll",
+      "sha256": "b1982ec754b81e7a114adae32378c943f6eec1cd87f0571f84f8acb94069a49d",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.Principal.Windows.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Security.SecureString.dll",
+      "sha256": "e060eea5223c0c65d2ba658c21ba45fcac7631546da4c6339e67b42c74b2e840",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Security.SecureString.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.ServiceModel.Web.dll",
+      "sha256": "8040bdd3eb52f073e935dd701fb63970b78264136b8c0861f070a398ed406586",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.ServiceModel.Web.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.ServiceProcess.dll",
+      "sha256": "b4b2182496065356838aa3e2b35f610f851b38af182566d6220c1100cfad1e2c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.ServiceProcess.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Text.Encoding.CodePages.dll",
+      "sha256": "fef946f87f73715f86eb3096cc642252425d791c21cf4f3b8f1cfa6e8b0d6d1a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Text.Encoding.CodePages.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Text.Encoding.dll",
+      "sha256": "d2b782ea81f033c69e337bd1a94f6c6e43a7beeb3436538a21ff77b1de9fcfed",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Text.Encoding.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Text.Encoding.Extensions.dll",
+      "sha256": "3ad82156d0ea9fccc99d4d1e66c6cc1b76521e2b0cce5bebe1da103a5b295d47",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Text.Encoding.Extensions.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Text.Encodings.Web.dll",
+      "sha256": "a2c7ef05abc665de9c07dcb600914889d501c8cfa13973bbe3c60c45367bc291",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Text.Encodings.Web.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Text.Json.dll",
+      "sha256": "9f4fd55056a3ccd6aa5f204933f9b8e3da412b060238cbeb8bb2be2fe4046f2a",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Text.Json.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Text.RegularExpressions.dll",
+      "sha256": "320fd9a1cc67028d9e736661764680be4c8fedc4157395a02b4ec02765de0e5b",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Text.RegularExpressions.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Threading.AccessControl.dll",
+      "sha256": "db5d7e9fe38e71f9689b7791d52abc443c76a35130ff32cae44bd138a1ac922c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Threading.AccessControl.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Threading.Channels.dll",
+      "sha256": "538b69cc037ccab32129f3983113f80bed9d4903dc2fdddc134df0c3432b46fb",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Threading.Channels.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Threading.dll",
+      "sha256": "3bb4d100413ff281ea8a70a22216d8d17d4bcb21610be258d948de4ce6b1a8e5",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Threading.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Threading.Overlapped.dll",
+      "sha256": "f33abaf654c04273ff14a54253b5fee66334432318ebbe2cd6a8c97817cfbb84",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Threading.Overlapped.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Threading.Tasks.Dataflow.dll",
+      "sha256": "61807fddfe725fad18e1197fb8fe6580d8cba5ba92317cd07bf5e0ac99a98f62",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Threading.Tasks.Dataflow.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Threading.Tasks.dll",
+      "sha256": "91e8c5ff79baa8a063287e5efcc1029d5e72cd09fedae9e7f03cc636f0e8c551",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Threading.Tasks.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Threading.Tasks.Extensions.dll",
+      "sha256": "e7b0ac7fc7af5c4f11ff7327a6c82263eb8908ea62ff86cb93b0313286c4470c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Threading.Tasks.Extensions.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Threading.Tasks.Parallel.dll",
+      "sha256": "ec96829afef77eeba80bc65c8b6539697d39b68c8114e1a738bec5df17249bcc",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Threading.Tasks.Parallel.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Threading.Thread.dll",
+      "sha256": "96e44539c17ff7578083b2e54a9c735374b0da4341b770b5808655a777668024",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Threading.Thread.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Threading.ThreadPool.dll",
+      "sha256": "9ec37cb7c00b2aa3b6ff51c5b0bbf9cc3c8efc4236a0e8cd859a76c52b8f2037",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Threading.ThreadPool.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Threading.Timer.dll",
+      "sha256": "9980f15602e3d865e4da3085599c89cf9e5dd01d4fdf83220632af24bf8b072e",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Threading.Timer.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Transactions.dll",
+      "sha256": "a134ba152e1041b84fc3dbe2a2c193fdc1fd2775f4122b91133d2d12e1746121",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Transactions.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Transactions.Local.dll",
+      "sha256": "26ebbeb0d587640174ff81307086ae19fe494d6cc56c47e5f5f1c53f319c47c1",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Transactions.Local.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.ValueTuple.dll",
+      "sha256": "d7de7fc8780a35d3cfbba6e2f32a50569628d9088d11e32195ca361a3e142296",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.ValueTuple.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Web.dll",
+      "sha256": "4b1d439f543040f01a240f9f8ea011a6a5311442ab3f2c7364a9c5fde073eb66",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Web.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Web.HttpUtility.dll",
+      "sha256": "58915664ac9ba8dec29d74a9d12c8ee5c4501c305afab59e6fd0a0593b235a1c",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Web.HttpUtility.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Windows.dll",
+      "sha256": "93573613b9fe6493c173844480aa60e8007293246021e3dc40bdd25d782d845f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Windows.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Xml.dll",
+      "sha256": "7b811308ee61840ccc69b447845446030d29c1c66bdb9842ba5a59a1c62a60cb",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Xml.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Xml.Linq.dll",
+      "sha256": "b0a5b461bf71412df3cf98fa49afe230859ac7e7f8872525821bdeccc44fff89",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Xml.Linq.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Xml.ReaderWriter.dll",
+      "sha256": "14ed0e4a1832a085eb655a6725f2dc841b53a08396979609f0814578896857d7",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Xml.ReaderWriter.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Xml.Serialization.dll",
+      "sha256": "8cae84633102182c4b3484ba5b456f63d06bc5d67f4ec9caee9b271edf449b04",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Xml.Serialization.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Xml.XDocument.dll",
+      "sha256": "53dd8fe7a0122362586ca9682f14991e3264e397adbad37ce1535e3f56303047",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Xml.XDocument.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Xml.XmlDocument.dll",
+      "sha256": "bf18c4a123b6344cd11afb199b5013456a99ca216f99ce5be905139dc7cb4319",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Xml.XmlDocument.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Xml.XmlSerializer.dll",
+      "sha256": "99561eff9bae4d95416d791cae17406d77a16c18a43f378c5f1dbb3b021cd235",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Xml.XmlSerializer.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Xml.XPath.dll",
+      "sha256": "e0c2dac51f5f403812f0be7af11a5553ecbf822fee45b516910877df800ff5fa",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Xml.XPath.dll"
+        }
+      ]
+    },
+    {
+      "file": "System.Xml.XPath.XDocument.dll",
+      "sha256": "08f0924b7a65b472b019af1ab9551c129dff8594ef22cbc8c435ab292e8b8d19",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/System.Xml.XPath.XDocument.dll"
+        }
+      ]
+    },
+    {
+      "file": "WebView2Loader.dll",
+      "sha256": "1970ae5e398666304483203dae64f8bc3327811114ae38bb3484ecbce1386b41",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.web.webview2/1.0.3179.45",
+          "member": "runtimes/win-x64/native/WebView2Loader.dll"
+        },
+        {
+          "package": "microsoft.web.webview2/1.0.3179.45",
+          "member": "build/native/x64/WebView2Loader.dll"
+        }
+      ]
+    },
+    {
+      "file": "WindowsAppRuntime.DeploymentExtensions.OneCore.dll",
+      "sha256": "c1911226e08adce52fb3ae55ca90af5fb98e70d8b84609e98820e4be86c624f7",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/WindowsAppRuntime.DeploymentExtensions.OneCore.dll"
+        }
+      ]
+    },
+    {
+      "file": "WindowsAppSdk.AppxDeploymentExtensions.Desktop-EventLog-Instrumentation.dll",
+      "sha256": "60aa271a4ceaf951b2676f0c6e071a53e63b01e0567c96210b5c6db7488418ad",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/WindowsAppSdk.AppxDeploymentExtensions.Desktop-EventLog-Instrumentation.dll"
+        }
+      ]
+    },
+    {
+      "file": "WindowsAppSdk.AppxDeploymentExtensions.Desktop.dll",
+      "sha256": "cd6a6b23cf904b25ac678e68fc8b4a880662ad3ffa0d3803bf2463666c0f3821",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/WindowsAppSdk.AppxDeploymentExtensions.Desktop.dll"
+        }
+      ]
+    },
+    {
+      "file": "WindowsBase.dll",
+      "sha256": "ed60cbca325489cdc1ed615f5f8f63aa213b5ed9fcfda39c58e985a12d12c9fb",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.netcore.app.runtime.win-x64/10.0.13",
+          "member": "runtimes/win-x64/lib/net10.0/WindowsBase.dll"
+        }
+      ]
+    },
+    {
+      "file": "WinRT.Runtime.dll",
+      "sha256": "bcf3a14e8712a90837fc5c0d8c8a24696af2bd7f74e9767597ec81ededfb23db",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windows.sdk.net.ref/10.0.26100.57",
+          "member": "lib/net8.0/WinRT.Runtime.dll"
+        }
+      ]
+    },
+    {
+      "file": "WinUIEdit.dll",
+      "sha256": "66c66a9e08b001bde110c9186f51bd48dd505e57496730079065e160a46aa85f",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/WinUIEdit.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.winui/1.8.260803003",
+          "member": "runtimes-framework/win-x64/native/WinUIEdit.dll"
+        }
+      ]
+    },
+    {
+      "file": "wuceffectsi.dll",
+      "sha256": "fa41b515fe88736b31bdbf02b966b204b5776d5a6f0f5efdd4c6cbc8943ac509",
+      "classification": "exact restored package bytes",
+      "sources": [
+        {
+          "package": "microsoft.windowsappsdk.interactiveexperiences/1.8.260708001",
+          "member": "runtimes-framework/win-x64/native/wuceffectsi.dll"
+        },
+        {
+          "package": "microsoft.windowsappsdk.runtime/1.8.260921001",
+          "member": "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.8.msix!/wuceffectsi.dll"
+        }
+      ]
+    }
+  ],
+  "unmapped": [],
+  "baseline": "Existing private 0.3.0-rc.1 payload, audited before native replacement; not a public release inventory"
+}

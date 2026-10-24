@@ -8,6 +8,8 @@ obj/
 TestResults/
 artifacts/
 .cache/
+__pycache__/
+*.pyc
 native/win-x64/include/
 native/win-x64/*.a
 native/win-x64/*.dll

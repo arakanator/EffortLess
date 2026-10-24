@@ -124,5 +124,14 @@
     "file": "nuget/system.numerics.tensors/9.0.0/THIRD-PARTY-NOTICES.TXT",
     "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
     "source": "https://www.nuget.org/packages/System.Numerics.Tensors/9.0.0"
+  },
+  {
+    "package": "Microsoft.Windows.SDK.NET.Ref/10.0.26100.57",
+    "file": "Windows-SDK-license.rtf",
+    "sha256": "dd07eb178e00c6bba4148457fc00ff77cd4887eb521d504186fe59c9ec8bbe62",
+    "source": "https://aka.ms/WinSDKLicenseURL",
+    "resolvedSource": "https://download.microsoft.com/download/0/F/F/0FF2B061-47DD-4F55-89B6-FD1D8C44F14D/sdk_license.rtf",
+    "retrieved": "2026-10-24",
+    "status": "Package licenseUrl retrieval; SDK redistribution restrictions and exact REDIST scope require review"
   }
 ]

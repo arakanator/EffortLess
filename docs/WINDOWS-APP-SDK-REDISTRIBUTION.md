@@ -52,3 +52,30 @@ the player exposes no AI feature. No SDK file was removed to work around terms.
 Future public packaging must preserve the exact applicable terms/notices in the
 installed files, verify their payload mapping, and resolve compatibility before
 publication. Acquisition of licenses alone does not close that gate.
+
+## Byte-level payload mapping follow-up
+
+Audit-RuntimePayload.py now maps actual payload DLL/EXE SHA-256 values to restored
+NuGet package files, including files inside the x64 runtime framework MSIX. It
+also reads framework downloadDependencies: these targeting/runtime packs are
+missing from the usual libraries inventory. The existing private payload has
+277 PE files: 272 match exact restored package bytes, three are original project
+build outputs and two are separately audited native DLLs. Zero remain unmapped.
+RUNTIME-PROVENANCE-BASELINE.json preserves this pre-rebuild baseline, with no
+absolute development paths. Re-run the tool for any replacement release payload;
+the baseline does not certify a future package.
+
+The added targeting pack is Microsoft.Windows.SDK.NET.Ref 10.0.26100.57, providing
+Microsoft.Windows.SDK.NET.dll and WinRT.Runtime.dll. Its nuspec points to
+https://aka.ms/WinSDKLicenseURL, which resolved to the Microsoft-hosted SDK RTF
+license now preserved in third-party/Windows-SDK-license.rtf with URL/hash in the
+notice inventory. This SDK license has REDIST scope and excluded-license
+restrictions; retaining the text does not decide their compatibility or scope.
+
+The GNU Windows runtime FAQ distinguishes permission to link system runtimes
+from bundling their DLLs. Consequently this project will not treat app-local
+Microsoft binary redistribution permission as automatic GPL compatibility:
+https://www.gnu.org/licenses/gpl-faq.en.html#WindowsRuntimeAndGPL
+A framework-dependent installation through Microsoft's supported runtime
+installer is a technical alternative, not an automatic legal determination
+that every WinUI component qualifies for GPL's system-library exception.
