@@ -213,3 +213,19 @@ recorded abbreviated force-pushed revision did not return a recoverable object.
 Thus the original DLL's corresponding-source closure remains incomplete; the
 authorized replacement build remains the active route. No message was sent to
 upstream and no unverified binary was published.
+
+## Approved Windows runtime licensing route
+
+The owner explicitly approved the reviewed Windows-runtime additional permission
+on October 24, 2026. It is now in ADDITIONAL-PERMISSION.md, alongside the unchanged
+GPL-3.0-or-later license text. Its scope is original EffortLess code only. It
+does not grant exceptions for upstream GPL dependencies or relicense Microsoft
+binaries. Packaging preserves the permission and exact third-party terms.
+
+The combined installer route consequently requires an audited LGPL-compatible
+native dependency configuration. mpv documents an LGPL mode; disabled upstream
+features include Linux X11/VDPAU, OSS/JACK, DVD/CDDA/DVB and legacy Direct3D, rather
+than this player's D3D11 HWND, Windows audio or local media features. Build flags
+alone do not establish the transitive license; FFmpeg and all linked/copied
+components must meet the same route. Complete regression and real playback
+validation remain required before accepting a replacement.

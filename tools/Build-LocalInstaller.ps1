@@ -55,6 +55,7 @@ try {
     }
     Copy-Item -LiteralPath (Join-Path $taskRepository 'docs\third-party') -Destination (Join-Path $taskPayload 'third-party') -Recurse
     Copy-Item -LiteralPath (Join-Path $taskRepository 'LICENSE') -Destination (Join-Path $taskPayload 'LICENSE')
+    Copy-Item -LiteralPath (Join-Path $taskRepository 'ADDITIONAL-PERMISSION.md') -Destination (Join-Path $taskPayload 'ADDITIONAL-PERMISSION.md')
     $taskMachineDependency = [ordered]@{
         purpose = 'PRIVATE TEST BUILD / LOCAL DEVELOPMENT DISTRIBUTION; owner-controlled computers only'
         file = 'native/win-x64/vulkan-1.dll'

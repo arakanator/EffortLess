@@ -12,7 +12,9 @@ native HWND renderer and integrated dark XAML strip remain the foundation.
 Feature policy lives in UI-independent Core services and immutable state.
 
 The original application source is licensed under **GPL-3.0-or-later**; see
-[LICENSE](LICENSE). Third-party components retain their own licenses and notices.
+[LICENSE](LICENSE), with the owner-approved [Windows runtime additional
+permission](ADDITIONAL-PERMISSION.md). Third-party components retain their own
+licenses and notices.
 The source license does not establish redistribution rights for the existing
 combined installer. Native binaries, private media and build artifacts are excluded
 from this repository. The existing installer remains for private testing only.

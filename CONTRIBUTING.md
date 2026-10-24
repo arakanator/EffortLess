@@ -2,7 +2,8 @@
 
 Source contributions are welcome. Binary publication remains gated by
 docs/PUBLICATION-AUDIT.md. Original application contributions use GPL-3.0-or-later as described in LICENSE
-and docs/LICENSING.md; third-party materials keep their existing terms.
+and docs/LICENSING.md, including the Windows runtime additional permission in
+ADDITIONAL-PERMISSION.md; third-party materials keep their existing terms.
 
 Preserve the current WinUI/native-HWND renderer and UI-independent Core contracts.
 Keep changes focused, retain theme/video-color separation and profile migration,

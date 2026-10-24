@@ -8,10 +8,17 @@ third-party material, Windows fonts, vendor runtime binaries or their notices.
 Contributors retain their copyrights. Upstream license texts remain verbatim.
 
 The application source license and the redistribution status of a combined
-installer are separate questions. No additional exception to GPL for Microsoft
-libraries is granted here. The system-library/external-component analysis is
-still open; do not infer an exception or claim a compliant installer from this
-file. See WINDOWS-APP-SDK-REDISTRIBUTION.md and PUBLICATION-AUDIT.md.
+installer are separate questions. The owner approved the narrow Windows runtime
+additional permission in ../ADDITIONAL-PERMISSION.md on October 24, 2026. It
+applies only to original EffortLess code, retains the GPL source grant, and does
+not relicense Microsoft components or grant exceptions for third-party GPL code.
+
+The installer route therefore requires an audited LGPL-compatible libmpv/FFmpeg
+configuration with corresponding sources, preserved notices and replacement/
+relinking rights. No GPL-only dependency lacking an applicable exception may be
+silently admitted to this combination. Compiler runtime exceptions must remain
+intact. Full playback parity and runtime redistribution requirements still apply.
+See WINDOWS-APP-SDK-REDISTRIBUTION.md and PUBLICATION-AUDIT.md.
 
 Native binaries are deliberately excluded from Git. Acquisition scripts pin
 upstream archives/hashes for private development; an upstream download link is

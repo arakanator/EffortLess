@@ -93,3 +93,10 @@ WindowsAppSDKSelfContained=false while leaving .NET self-contained. It omits the
 large native app-local WinUI/AI/ML payload but still includes managed projections,
 C#/WinRT and bootstrapper files. This probe is not the release configuration and
 is not a claim that framework-dependent deployment alone resolves licensing.
+
+The owner has now approved ADDITIONAL-PERMISSION.md for original EffortLess code.
+This supplies an explicit application-level Windows-runtime linking/conveyance
+permission rather than assuming a system-library exception. The corresponding
+installer may not use unexcepted third-party GPL-only native dependencies; the
+authorized next configuration is LGPL-compatible and must be verified as built.
+Microsoft's redistribution conditions and recipient terms still apply separately.
