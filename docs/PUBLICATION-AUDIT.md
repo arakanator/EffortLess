@@ -15,7 +15,9 @@ The existing private installer and working playback architecture remain unchange
 - SHA-256: `7803cdc4fb7f9b7f9ba1e658f3dc18e8f2e625f8a31aeb79aca101d2abf21075`.
 - Existing payload evidence: 531 files, 277 PE files in the import audit. Static
   import checks do not enumerate statically linked libraries or prove licensing.
-- Git has zero commits. There is no previous history to rewrite or upload.
+- Reviewed source is now committed locally. The repository had no prior history;
+  committed files exclude native binaries, installers, private media and caches.
+  The private remote has not yet been created/pushed: CLI browser sign-in is pending.
 
 ## Stop conditions
 
@@ -104,8 +106,8 @@ approval. Version-specific component files and notices still require mapping.
 
 ## Security and privacy audit
 
-The upload-candidate scan used Git's cached/untracked/nonignored file list. There
-are no committed objects/history to expose. Patterns checked GitHub/provider/AWS
+The upload-candidate scan used Git's cached/untracked/nonignored file list. The
+repository originally had no history; its new source commits were inspected. Patterns checked GitHub/provider/AWS
 keys, private-key blocks, literal secret assignments, private Windows user paths,
 binary/encoding exceptions and email addresses. No credential-shaped match or
 private Windows user path was found. After adding exact package notices, 95 email hits are confined to four upstream
