@@ -5,14 +5,14 @@ do not push a public release, attach the current private MSI, or enable automate
 release uploads. The current local version is 0.3.0-rc.1.
 
 1. Close native corresponding-source, exact runtime licensing and notice findings.
-   Choose the compatible application license and include its official full text and
-   explicit SPDX designation. Preserve third-party licenses independently.
+   Original application source already uses GPL-3.0-or-later under LICENSE.
+   Verify combined-installer compatibility; preserve third-party licenses independently.
 2. Review the upload candidate file list and all Git history using a maintained
    secret scanner plus manual inspection. Exclude local histories/logs/media/caches.
    Use a dedicated public-source staging directory if historical documentation is
    unsuitable for upload. Keep the local working project intact.
-3. Inspect the authenticated owner's EffortLess repository and preserve any existing
-   history. Create it private if absent. Do not publish unreviewed commits/binaries.
+3. Reuse https://github.com/arakanator/EffortLess (currently private) and preserve
+   existing history. Push reviewed changes; do not publish unreviewed commits/binaries.
 4. Set semantic application/MSI versions in Directory.Build.props. Never overwrite
    an existing published tag or asset with different bytes; preserve prior releases.
 5. Restore and strictly build EffortLess.sln Release x64 on Windows with the pinned
