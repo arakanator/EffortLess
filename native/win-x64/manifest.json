@@ -1,20 +1,3096 @@
 {
-  "release": "20261003",
-  "builder": "shinchiro/mpv-winbuild-cmake",
-  "builderSourceRevision": "05a60b3cfd04e3e3b89918f4a27f3dde2935dff2",
-  "builderWorkflowUrl": "https://github.com/shinchiro/mpv-winbuild-cmake/actions/runs/37080134687",
-  "requiredNonWindowsImport": "vulkan-1.dll (observed PE import; not bundled)",
-  "sourceUrl": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/tag/20261003",
-  "upstreamBuilderListing": "https://mpv.io/installation/",
-  "archive": "mpv-dev-x86_64-20261003-git-3186d369f9.7z",
-  "archiveUrl": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20261003/mpv-dev-x86_64-20261003-git-3186d369f9.7z",
-  "archiveSha256": "b8c2d656c1584d5f08196fcee5c2d0783d1f76021897c4e0b3cc30f94c79522e",
-  "dllSha256": "525d5f99a484f0ddca2fd00f3f3e0402733f2218a22be522facbcdf09ea70088",
-  "mpvVersion": "mpv v0.41.0-1092-g3186d369f",
-  "mpvSourceRevision": "3186d369f9",
-  "clientApi": "2.5",
-  "architecture": "baseline x86_64 (not x86_64-v3)",
-  "licenseTreatment": "GPL local development artifact; release recipe enables GPL/version3 FFmpeg. Distribution requires owner license choice, complete corresponding sources/build configuration and all dependency notices.",
-  "copyrightUrl": "https://github.com/mpv-player/mpv/blob/3186d369f9/Copyright",
-  "licenseUrl": "https://github.com/mpv-player/mpv/blob/3186d369f9/LICENSE.GPL"
+  "status": "Parent-reviewed native sources, dependency closure and application regression suite",
+  "nativeLicenseRoute": "LGPL-compatible; no GPL/nonfree FFmpeg",
+  "dlls": [
+    {
+      "file": "libmpv-2.dll",
+      "sha256": "d14a2846eb904088d9138d79c8a227fe74aa486b24e841608cea4697431b1954",
+      "imports": [
+        "ADVAPI32.dll",
+        "AVRT.dll",
+        "GDI32.dll",
+        "IMM32.dll",
+        "KERNEL32.dll",
+        "OPENGL32.dll",
+        "SHCORE.dll",
+        "SHELL32.dll",
+        "USER32.dll",
+        "UxTheme.dll",
+        "VERSION.dll",
+        "api-ms-win-core-path-l1-1-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "avcodec-62.dll",
+        "avdevice-62.dll",
+        "avfilter-11.dll",
+        "avformat-62.dll",
+        "avutil-60.dll",
+        "dwmapi.dll",
+        "libass-9.dll",
+        "libiconv-2.dll",
+        "libjpeg-8.dll",
+        "liblcms2-2.dll",
+        "libplacebo-360.dll",
+        "libshaderc_shared.dll",
+        "libspirv-cross-c-shared.dll",
+        "libuchardet.dll",
+        "ntdll.dll",
+        "ole32.dll",
+        "swresample-6.dll",
+        "swscale-9.dll",
+        "zlib1.dll"
+      ],
+      "package": null,
+      "customSource": "mpv"
+    },
+    {
+      "file": "zlib1.dll",
+      "sha256": "8ae7aeb0467763a1e271cd831ca8e2f7fd101602adb9923100ea26c6be2a559b",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-zlib",
+      "customSource": null
+    },
+    {
+      "file": "swscale-9.dll",
+      "sha256": "718dbc8c05f434b38243ef21fb293307b892602c4af40054b211344c7c3377b0",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "avutil-60.dll"
+      ],
+      "package": null,
+      "customSource": "ffmpeg"
+    },
+    {
+      "file": "avutil-60.dll",
+      "sha256": "a5e957c1c8a4ca9c31129ac43496e119ee23c0afcd7d374387f7c4067e7ba9b8",
+      "imports": [
+        "KERNEL32.dll",
+        "USER32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "bcrypt.dll",
+        "libwinpthread-1.dll"
+      ],
+      "package": null,
+      "customSource": "ffmpeg"
+    },
+    {
+      "file": "libwinpthread-1.dll",
+      "sha256": "d837ef67644c195210daebe7612ccebebc47773f66085eeedd4892800dac8634",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libwinpthread",
+      "customSource": null
+    },
+    {
+      "file": "swresample-6.dll",
+      "sha256": "4e822a95d4b924364326cb6ab60deeac3b067fba4493a0aa55202ec995932a64",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "avutil-60.dll"
+      ],
+      "package": null,
+      "customSource": "ffmpeg"
+    },
+    {
+      "file": "libuchardet.dll",
+      "sha256": "75f34913b3c3fe264c4471a47f4f3e3a14fed397824122936f1ba40a7712a7a4",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libgcc_s_seh-1.dll",
+        "libstdc++-6.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-uchardet",
+      "customSource": null
+    },
+    {
+      "file": "libstdc++-6.dll",
+      "sha256": "4e4822dc4aaa99383f581dae7ab9464ae89346c5ca742f7efbcdebe20b0fe7b5",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libgcc_s_seh-1.dll",
+        "libwinpthread-1.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libstdc++",
+      "customSource": null
+    },
+    {
+      "file": "libgcc_s_seh-1.dll",
+      "sha256": "791ebf66e99c7c1b4ed3666468cec45a0172b4c8942ac6c84c3e9cab3e1b5270",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "libwinpthread-1.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libgcc",
+      "customSource": null
+    },
+    {
+      "file": "libspirv-cross-c-shared.dll",
+      "sha256": "bc4bdcf63b9bbf60777bc10340050ae6edfbb3be3faf3fa636af53ecf7d2bbc8",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libgcc_s_seh-1.dll",
+        "libstdc++-6.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-spirv-cross",
+      "customSource": null
+    },
+    {
+      "file": "libshaderc_shared.dll",
+      "sha256": "331df8a45983735b823c893a9b872c3414af6eadca9fa189d0b6dfe97960b3cf",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-shaderc",
+      "customSource": null
+    },
+    {
+      "file": "libplacebo-360.dll",
+      "sha256": "8eb2c3fe24a124d9dbf0383d60ac7dde6c0dd5607b2451cad0d924271e46d5b8",
+      "imports": [
+        "KERNEL32.dll",
+        "SHLWAPI.dll",
+        "USER32.dll",
+        "VERSION.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libdovi.dll",
+        "libgcc_s_seh-1.dll",
+        "liblcms2-2.dll",
+        "libshaderc_shared.dll",
+        "libspirv-cross-c-shared.dll",
+        "libstdc++-6.dll",
+        "vulkan-1.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libplacebo",
+      "customSource": null
+    },
+    {
+      "file": "vulkan-1.dll",
+      "sha256": "31862137c4179dcdbba782760f3e401f9fb526477947079d7f63987864f9b0eb",
+      "imports": [
+        "ADVAPI32.dll",
+        "CFGMGR32.dll",
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-vulkan-loader",
+      "customSource": null
+    },
+    {
+      "file": "liblcms2-2.dll",
+      "sha256": "03314471fadd04cdd63c108472ff85d058903d236a0356c14eda363f0e1ccb65",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-lcms2",
+      "customSource": null
+    },
+    {
+      "file": "libdovi.dll",
+      "sha256": "75988509f0d2166e2060ed548913bd7b34556bc16b3f9a02469de1dd2347a7fb",
+      "imports": [
+        "KERNEL32.dll",
+        "USERENV.dll",
+        "WS2_32.dll",
+        "api-ms-win-core-synch-l1-2-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "bcryptprimitives.dll",
+        "ntdll.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libdovi",
+      "customSource": null
+    },
+    {
+      "file": "libjpeg-8.dll",
+      "sha256": "c63acd5a3231725aa96aa35444b74cd8d607a6fbdab1dd18b0e0ada7e39476d4",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libjpeg-turbo",
+      "customSource": null
+    },
+    {
+      "file": "libiconv-2.dll",
+      "sha256": "94ec68fb8d342b6c91b6b48a8d95092819cdcd006a7166e0b68062f946afd08a",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libiconv",
+      "customSource": null
+    },
+    {
+      "file": "libass-9.dll",
+      "sha256": "cb2b46133b3bd9630384148bd7229e987af9703208d4329fc2215f4170b8dc6b",
+      "imports": [
+        "GDI32.dll",
+        "KERNEL32.dll",
+        "USER32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libfontconfig-1.dll",
+        "libfreetype-6.dll",
+        "libfribidi-0.dll",
+        "libharfbuzz-0.dll",
+        "libiconv-2.dll",
+        "libunibreak-7.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libass",
+      "customSource": null
+    },
+    {
+      "file": "libunibreak-7.dll",
+      "sha256": "f1f4bb5b5bb3dbf8d142df3012f13e4b5b0246565496d43718a6f33321e96283",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libunibreak",
+      "customSource": null
+    },
+    {
+      "file": "libharfbuzz-0.dll",
+      "sha256": "842d73ce2dd9ee506ef68f4d3e9ca29b62c87e34999cd2720505bf3c9d3f575c",
+      "imports": [
+        "DWrite.dll",
+        "GDI32.dll",
+        "KERNEL32.dll",
+        "RPCRT4.dll",
+        "USER32.dll",
+        "USP10.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libfreetype-6.dll",
+        "libgcc_s_seh-1.dll",
+        "libglib-2.0-0.dll",
+        "libgraphite2.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-harfbuzz",
+      "customSource": null
+    },
+    {
+      "file": "libgraphite2.dll",
+      "sha256": "93953e4744bcfce9a7bc439b956544bc213095cb1349c3602a58370f32b25c18",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libgcc_s_seh-1.dll",
+        "libstdc++-6.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-graphite2",
+      "customSource": null
+    },
+    {
+      "file": "libglib-2.0-0.dll",
+      "sha256": "3a1abec0184b238db54399cb9243393d9436d96b8fdb9bd9f2875da207c5b458",
+      "imports": [
+        "ADVAPI32.dll",
+        "KERNEL32.dll",
+        "SHELL32.dll",
+        "USER32.dll",
+        "WS2_32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-process-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libintl-8.dll",
+        "libpcre2-8-0.dll",
+        "ole32.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-glib2",
+      "customSource": null
+    },
+    {
+      "file": "libpcre2-8-0.dll",
+      "sha256": "1f609cde2ce432efb7d2b0c7b84a14a6dbfc9622d1ac1a3cbadf51c5b0b4dada",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-pcre2",
+      "customSource": null
+    },
+    {
+      "file": "libintl-8.dll",
+      "sha256": "0e5a178731e6be6d115442a6ade3df7f03265cd1fc4338f8b6f86a8001cbf582",
+      "imports": [
+        "ADVAPI32.dll",
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libiconv-2.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-gettext-runtime",
+      "customSource": null
+    },
+    {
+      "file": "libfreetype-6.dll",
+      "sha256": "19604dde573cbb8a13053fc231eee99b91cd972e0e9a3e1465f44ad6985e83ee",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libbrotlidec.dll",
+        "libbz2-1.dll",
+        "libharfbuzz-0.dll",
+        "libpng16-16.dll",
+        "zlib1.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-freetype",
+      "customSource": null
+    },
+    {
+      "file": "libpng16-16.dll",
+      "sha256": "28db7a8c6fcc579ce621729d27f1952324cd3a2b4e24da121611bb586346e732",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "zlib1.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libpng",
+      "customSource": null
+    },
+    {
+      "file": "libbz2-1.dll",
+      "sha256": "1790bf6473c9d48db14c1f0ee8124142327556d281299ea2a72ee361118ee01a",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-bzip2",
+      "customSource": null
+    },
+    {
+      "file": "libbrotlidec.dll",
+      "sha256": "c4c987a01597ddf969d93023f933f999a20f285588b0decb4deeb780c9e9cdf8",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libbrotlicommon.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-brotli",
+      "customSource": null
+    },
+    {
+      "file": "libbrotlicommon.dll",
+      "sha256": "7b0047dc16dd92a7932124dfd5a6e698d342f533a15d37d61f710def66091436",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-brotli",
+      "customSource": null
+    },
+    {
+      "file": "libfribidi-0.dll",
+      "sha256": "14bd0ed4c24d0068434bc23cd4f39e8dc0edcf56f2c9996b6fe39b39ffc54673",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-fribidi",
+      "customSource": null
+    },
+    {
+      "file": "libfontconfig-1.dll",
+      "sha256": "be30a200fa4000d0a7a1d3911391969627440148f01d0028a319bcb9fa112202",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-multibyte-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libexpat-1.dll",
+        "libfreetype-6.dll",
+        "libgcc_s_seh-1.dll",
+        "libintl-8.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-fontconfig",
+      "customSource": null
+    },
+    {
+      "file": "libexpat-1.dll",
+      "sha256": "8a10cf7e89524b621d5f74bd4aedc659c47c7ce397d489f323a1065ba695027a",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-expat",
+      "customSource": null
+    },
+    {
+      "file": "avformat-62.dll",
+      "sha256": "be1bc136372e531be4d0daab13a0cb140e48dbf5ee3c125df99053b031d38f4d",
+      "imports": [
+        "CRYPT32.dll",
+        "KERNEL32.dll",
+        "Secur32.dll",
+        "WS2_32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "avcodec-62.dll",
+        "avutil-60.dll",
+        "libiconv-2.dll",
+        "ncrypt.dll",
+        "zlib1.dll"
+      ],
+      "package": null,
+      "customSource": "ffmpeg"
+    },
+    {
+      "file": "avcodec-62.dll",
+      "sha256": "51cbff0f691a9fb18a400ae6ead87920e4b1c71ae8910622d1766ce19bbb46fc",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "avutil-60.dll",
+        "libdav1d-7.dll",
+        "libiconv-2.dll",
+        "libopus-0.dll",
+        "libvorbis-0.dll",
+        "libvorbisenc-2.dll",
+        "libvpx-1.dll",
+        "ole32.dll",
+        "swresample-6.dll",
+        "zlib1.dll"
+      ],
+      "package": null,
+      "customSource": "ffmpeg"
+    },
+    {
+      "file": "libvpx-1.dll",
+      "sha256": "759bb95b0cd6c75bfce910f003b26a2d95ed3c94ef1a20dcfd4c89a0569f2016",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libwinpthread-1.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libvpx",
+      "customSource": null
+    },
+    {
+      "file": "libvorbisenc-2.dll",
+      "sha256": "971cfa7c8866653aae9760a317dc3838e821f3911d9c6a8a8ef90f4a13de798f",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libvorbis-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libvorbis",
+      "customSource": null
+    },
+    {
+      "file": "libvorbis-0.dll",
+      "sha256": "d1b40d7f33171ccb8cd2a238bea36c01176c54de5bf22afae332fb33f26a008f",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "libogg-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libvorbis",
+      "customSource": null
+    },
+    {
+      "file": "libogg-0.dll",
+      "sha256": "2f102fba6f2a49516be85cb2643f6a9ba394dc5657aedb3ea235b6603c12d3d2",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-libogg",
+      "customSource": null
+    },
+    {
+      "file": "libopus-0.dll",
+      "sha256": "e747edad6bf02cf5cdcce417b95be3b7ba108f93df1b024778be5d73fa6dae39",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-opus",
+      "customSource": null
+    },
+    {
+      "file": "libdav1d-7.dll",
+      "sha256": "bbe67862f77c22f6f509684207b5363542e5b52c1a1faa354e12a11d072ad766",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "package": "mingw-w64-ucrt-x86_64-dav1d",
+      "customSource": null
+    },
+    {
+      "file": "avfilter-11.dll",
+      "sha256": "9e6cc474f37f29c42e0b17d0a814b2e5ba5429fcc053e210a8ac0cf71dc37194",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "avcodec-62.dll",
+        "avformat-62.dll",
+        "avutil-60.dll",
+        "swresample-6.dll",
+        "swscale-9.dll"
+      ],
+      "package": null,
+      "customSource": "ffmpeg"
+    },
+    {
+      "file": "avdevice-62.dll",
+      "sha256": "159aa754f04fbcc133ba3ad3531ac9f781ce699ff98da25aa3e60ecead8b4113",
+      "imports": [
+        "AVICAP32.dll",
+        "GDI32.dll",
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "SHLWAPI.dll",
+        "USER32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "avcodec-62.dll",
+        "avfilter-11.dll",
+        "avformat-62.dll",
+        "avutil-60.dll",
+        "ole32.dll"
+      ],
+      "package": null,
+      "customSource": "ffmpeg"
+    }
+  ],
+  "packages": [
+    {
+      "name": "mingw-w64-ucrt-x86_64-brotli",
+      "version": "1.2.1-1",
+      "base": "mingw-w64-brotli",
+      "licenses": [
+        "spdx:MIT"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-brotli-1.2.1-1.src.tar.zst",
+      "sourceSha256": "3dfc69b88a111ef4809928e81d4cb650ea9c7ba5da4ebd1bf28d6effdeeb6bd6",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "e3257d4303fc0aca4c64f702d4c8cd766a321351c5e61927631c30bfdf2e7536",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-brotli/brotli-1.2.1.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libbrotlicommon.dll",
+        "libbrotlidec.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-bzip2",
+      "version": "1.0.8-4",
+      "base": "mingw-w64-bzip2",
+      "licenses": [
+        "custom"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-bzip2-1.0.8-4.src.tar.zst",
+      "sourceSha256": "fd9360917314d1cbccb3cb15ed8450d1e56b8a9f733b606504aba52c52159e54",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "f03a2174034ddd2d96cecd34f617c5f8e2ef86c812b8d2bb3b8875257f2c8bfa",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-bzip2/bzip2-1.0.8.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libbz2-1.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-dav1d",
+      "version": "1.5.4-1",
+      "base": "mingw-w64-dav1d",
+      "licenses": [
+        "spdx:BSD-2-Clause"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-dav1d-1.5.4-1.src.tar.zst",
+      "sourceSha256": "dd7bdbd140996eb26e857c2cfe80d0952641c997a5826c15d5bb204571d2518e",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "ccf26c6f29fd36f5692d57fd5e0fe3becec492e0b875fd5e04f47a9582eb8b37",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-dav1d/dav1d-1.5.4.tar.xz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libdav1d-7.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-expat",
+      "version": "2.9.0-1",
+      "base": "mingw-w64-expat",
+      "licenses": [
+        "spdx:MIT"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-expat-2.9.0-1.src.tar.zst",
+      "sourceSha256": "014a4b1949f65f053a9774712994db89fea290516f1c1849bbbbf7316ee1606b",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "f52364dc874009316e1ee1fe46ee89784594b80d10cbcc1cc856945d575308e0",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-expat/expat-2.9.0.tar.xz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libexpat-1.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-fontconfig",
+      "version": "2.18.3-1",
+      "base": "mingw-w64-fontconfig",
+      "licenses": [
+        "custom"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-fontconfig-2.18.3-1.src.tar.zst",
+      "sourceSha256": "7df65dbf84397f4f71c6aa0bd39fac93f839d6b87f04a935773b69828740230d",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "d0b364f3ee37e3b6f6c136688ce8fa909bb6d8a69df7e08de1aa40870d9e1d60",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-fontconfig/fontconfig-2.18.3.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libfontconfig-1.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-freetype",
+      "version": "2.15.0-1",
+      "base": "mingw-w64-freetype",
+      "licenses": [
+        "spdx:GPL-2.0-or-later OR FTL"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-freetype-2.15.0-1.src.tar.zst",
+      "sourceSha256": "2f09c60b72bd249642d055aa5a34edf2577392e592415f3f4730dd37990b47ad",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "a9a691f71d1a553099c54ca666e611abfb2b4ff08dae24f2a5af72e22a7e5feb",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-freetype/freetype-2.15.0.tar.xz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libfreetype-6.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-fribidi",
+      "version": "1.0.17-1",
+      "base": "mingw-w64-fribidi",
+      "licenses": [
+        "spdx:LGPL-2.1-or-later"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-fribidi-1.0.17-1.src.tar.zst",
+      "sourceSha256": "0f192cf5009fe18e2ac752273de509094cf161106fbedd69f112186e75253850",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "3581ee03cf83a9bb0e98bf688c4f532a29553500e317532d90746de295b0f8a8",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-fribidi/fribidi-1.0.17.tar.xz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libfribidi-0.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-gettext-runtime",
+      "version": "1.0-1",
+      "base": "mingw-w64-gettext",
+      "licenses": [
+        "spdx:GPL-3.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-gettext-1.0-1.src.tar.zst",
+      "sourceSha256": "cca0d0c8f60353faccc5ad40405240014e4a7ccc8b1c6ca9f4626aef3097d26e",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "ba693dda4ac375af76ce481ff3a6e7481286546cc7dc6d56c7021dae34084157",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-gettext/gettext-1.0.tar.lz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libintl-8.dll"
+      ],
+      "componentLicenseAssessment": "LGPL-2.1-or-later libraries; GPL programs excluded"
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-glib2",
+      "version": "2.90.1-1",
+      "base": "mingw-w64-glib2",
+      "licenses": [
+        "spdx:LGPL-2.1-or-later"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-glib2-2.90.1-1.src.tar.zst",
+      "sourceSha256": "ac3bc00e4079e6b51dd0a1fb9ccc420fff033b4e9095e4487dbf6cf01312cee6",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "9a7826349279bcca0c935b01880d812be9de9609aef2205be68fd7a6128c1695",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-glib2/glib-2.90.1.tar.xz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libglib-2.0-0.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-graphite2",
+      "version": "1.3.15-1",
+      "base": "mingw-w64-graphite2",
+      "licenses": [
+        "spdx:LGPL-2.1-or-later"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-graphite2-1.3.15-1.src.tar.zst",
+      "sourceSha256": "eb76ce274c68ea6bad0883144c21e44a803ec94fed9dc0f6584feb0a8415a1d6",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "34ca1f88bff10ef182a6b1c8e5622d5029f13b05748e361af13b552b422ea849",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-graphite2/graphite2-1.3.15.tgz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libgraphite2.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-harfbuzz",
+      "version": "14.6.0-1",
+      "base": "mingw-w64-harfbuzz",
+      "licenses": [
+        "spdx:MIT"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-harfbuzz-14.6.0-1.src.tar.zst",
+      "sourceSha256": "6c02c446b27412717a760eca77ac6ed997b294fdc390a5e5f46760ebda8a7c64",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "8781d486c864bf91f482768cc5bd7267e49331636583d9f855af3974e6378e69",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-harfbuzz/harfbuzz-14.6.0.tar.xz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libharfbuzz-0.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-lcms2",
+      "version": "2.19.1-1",
+      "base": "mingw-w64-lcms2",
+      "licenses": [
+        "spdx:MIT AND GPL-3.0-or-later"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-lcms2-2.19.1-1.src.tar.zst",
+      "sourceSha256": "83414d0d95c5cb2548d3050670694e9efc64304a52190f42bcad951efa038b41",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "144518cc80679f7bcc1d31b5dd7ec92e8737a1d8162014e30c8c1c181f47a156",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-lcms2/lcms2-2.19.1.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "liblcms2-2.dll"
+      ],
+      "componentLicenseAssessment": "MIT core; separate GPL fast-float/threaded plugins excluded"
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libass",
+      "version": "0.17.5-1",
+      "base": "mingw-w64-libass",
+      "licenses": [
+        "spdx:ISC"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-libass-0.17.5-1.src.tar.zst",
+      "sourceSha256": "4a68edae2c1454ffcf7cf0a6fccf6930c876caa5fe2422cdb0b34d1fc0f5fb03",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "4385fd47a77784478878f0f03f2d9afa59a5ac71facb7cad1dfe19c555e75762",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-libass/libass-0.17.5.tar.xz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libass-9.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libdovi",
+      "version": "3.4.0-1",
+      "base": "mingw-w64-libdovi",
+      "licenses": [
+        "spdx:MIT"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-libdovi-3.4.0-1.src.tar.zst",
+      "sourceSha256": "50e7303249bd57b9bb543e87e5de4b6331d744b22d2d26861bc8968ee60a70a3",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "fd683eb03572f56db2cbdf0ffc2131bb93a21a0edbbda44862e3ef7eb98ebf00",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-libdovi/libdovi-3.4.0.tar.gz"
+      ],
+      "additionalRustSources": [
+        {
+          "crate": "ab_glyph",
+          "version": "0.2.32",
+          "sha256": "01c0457472c38ea5bd1c3b5ada5e368271cb550be7a4ca4a0b4634e9913f6cc2"
+        },
+        {
+          "crate": "ab_glyph_rasterizer",
+          "version": "0.1.10",
+          "sha256": "366ffbaa4442f4684d91e2cd7c5ea7c4ed8add41959a31447066e279e432b618"
+        },
+        {
+          "crate": "adler2",
+          "version": "2.0.1",
+          "sha256": "320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa"
+        },
+        {
+          "crate": "aho-corasick",
+          "version": "1.1.4",
+          "sha256": "ddd31a130427c27518df266943a5308ed92d4b226cc639f5a8f1002816174301"
+        },
+        {
+          "crate": "anstream",
+          "version": "1.0.0",
+          "sha256": "824a212faf96e9acacdbd09febd34438f8f711fb84e09a8916013cd7815ca28d"
+        },
+        {
+          "crate": "anstyle",
+          "version": "1.0.14",
+          "sha256": "940b3a0ca603d1eade50a4846a2afffd5ef57a9feac2c0e2ec2e14f9ead76000"
+        },
+        {
+          "crate": "anstyle-parse",
+          "version": "1.0.0",
+          "sha256": "52ce7f38b242319f7cabaa6813055467063ecdc9d355bbb4ce0c68908cd8130e"
+        },
+        {
+          "crate": "anstyle-query",
+          "version": "1.1.5",
+          "sha256": "40c48f72fd53cd289104fc64099abca73db4166ad86ea0b4341abe65af83dadc"
+        },
+        {
+          "crate": "anstyle-wincon",
+          "version": "3.0.11",
+          "sha256": "291e6a250ff86cd4a820112fb8898808a366d8f9f58ce16d1f538353ad55747d"
+        },
+        {
+          "crate": "anyhow",
+          "version": "1.0.102",
+          "sha256": "7f202df86484c868dbad7eaa557ef785d5c66295e41b460ef922eca0723b842c"
+        },
+        {
+          "crate": "assert_cmd",
+          "version": "2.2.2",
+          "sha256": "2aa3a22042e45de04255c7bf3626e239f450200fd0493c1e382263544b20aea6"
+        },
+        {
+          "crate": "assert_fs",
+          "version": "1.1.3",
+          "sha256": "a652f6cb1f516886fcfee5e7a5c078b9ade62cfcb889524efe5a64d682dd27a9"
+        },
+        {
+          "crate": "autocfg",
+          "version": "1.5.0",
+          "sha256": "c08606f8c3cbf4ce6ec8e28fb0014a2c086708fe954eaa885384a6165172e7e8"
+        },
+        {
+          "crate": "bitflags",
+          "version": "1.3.2",
+          "sha256": "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
+        },
+        {
+          "crate": "bitflags",
+          "version": "2.11.1",
+          "sha256": "c4512299f36f043ab09a583e57bceb5a5aab7a73db1805848e8fef3c9e8c78b3"
+        },
+        {
+          "crate": "bitstream-io",
+          "version": "4.10.0",
+          "sha256": "7eff00be299a18769011411c9def0d827e8f2d7bf0c3dbf53633147a8867fd1f"
+        },
+        {
+          "crate": "bitvec",
+          "version": "1.0.1",
+          "sha256": "1bc2832c24239b0141d5674bb9174f9d68a8b5b3f2753311927c172ca46f7e9c"
+        },
+        {
+          "crate": "bitvec_helpers",
+          "version": "4.0.2",
+          "sha256": "52e5938870db620c26a8f329f5735aa3450cedd30f4a4bb98475b1b076d8edae"
+        },
+        {
+          "crate": "bstr",
+          "version": "1.12.1",
+          "sha256": "63044e1ae8e69f3b5a92c736ca6269b8d12fa7efe39bf34ddb06d102cf0e2cab"
+        },
+        {
+          "crate": "bumpalo",
+          "version": "3.20.2",
+          "sha256": "5d20789868f4b01b2f2caec9f5c4e0213b41e3e5702a50157d699ae31ced2fcb"
+        },
+        {
+          "crate": "bytemuck",
+          "version": "1.25.0",
+          "sha256": "c8efb64bd706a16a1bdde310ae86b351e4d21550d98d056f22f8a7f7a2183fec"
+        },
+        {
+          "crate": "byteorder",
+          "version": "1.5.0",
+          "sha256": "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b"
+        },
+        {
+          "crate": "cc",
+          "version": "1.2.62",
+          "sha256": "a1dce859f0832a7d088c4f1119888ab94ef4b5d6795d1ce05afb7fe159d79f98"
+        },
+        {
+          "crate": "cfg-if",
+          "version": "1.0.4",
+          "sha256": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801"
+        },
+        {
+          "crate": "clap",
+          "version": "4.6.1",
+          "sha256": "1ddb117e43bbf7dacf0a4190fef4d345b9bad68dfc649cb349e7d17d28428e51"
+        },
+        {
+          "crate": "clap_builder",
+          "version": "4.6.0",
+          "sha256": "714a53001bf66416adb0e2ef5ac857140e7dc3a0c48fb28b2f10762fc4b5069f"
+        },
+        {
+          "crate": "clap_derive",
+          "version": "4.6.1",
+          "sha256": "f2ce8604710f6733aa641a2b3731eaa1e8b3d9973d5e3565da11800813f997a9"
+        },
+        {
+          "crate": "clap_lex",
+          "version": "1.1.0",
+          "sha256": "c8d4a3bb8b1e0c1050499d1815f5ab16d04f0959b233085fb31653fbfc9d98f9"
+        },
+        {
+          "crate": "color_quant",
+          "version": "1.1.0",
+          "sha256": "3d7b894f5411737b7867f4827955924d7c254fc9f4d91a6aad6b097804b1018b"
+        },
+        {
+          "crate": "colorchoice",
+          "version": "1.0.5",
+          "sha256": "1d07550c9036bf2ae0c684c4297d503f838287c83c53686d05370d0e139ae570"
+        },
+        {
+          "crate": "console",
+          "version": "0.16.3",
+          "sha256": "d64e8af5551369d19cf50138de61f1c42074ab970f74e99be916646777f8fc87"
+        },
+        {
+          "crate": "core-foundation",
+          "version": "0.9.4",
+          "sha256": "91e195e091a93c46f7102ec7818a2aa394e1e1771c3ab4825963fa03e45afb8f"
+        },
+        {
+          "crate": "core-foundation-sys",
+          "version": "0.8.7",
+          "sha256": "773648b94d0e5d620f64f280777445740e61fe701025087ec8b57f45c791888b"
+        },
+        {
+          "crate": "core-graphics",
+          "version": "0.23.2",
+          "sha256": "c07782be35f9e1140080c6b96f0d44b739e2278479f64e02fdab4e32dfd8b081"
+        },
+        {
+          "crate": "core-graphics-types",
+          "version": "0.1.3",
+          "sha256": "45390e6114f68f718cc7a830514a96f903cccd70d02a8f6d9f643ac4ba45afaf"
+        },
+        {
+          "crate": "core-text",
+          "version": "20.1.0",
+          "sha256": "c9d2790b5c08465d49f8dc05c8bcae9fea467855947db39b0f8145c091aaced5"
+        },
+        {
+          "crate": "crc",
+          "version": "3.4.0",
+          "sha256": "5eb8a2a1cd12ab0d987a5d5e825195d372001a4094a0376319d5a0ad71c1ba0d"
+        },
+        {
+          "crate": "crc-catalog",
+          "version": "2.5.0",
+          "sha256": "217698eaf96b4a3f0bc4f3662aaa55bdf913cd54d7204591faa790070c6d0853"
+        },
+        {
+          "crate": "crc32fast",
+          "version": "1.5.0",
+          "sha256": "9481c1c90cbf2ac953f07c8d4a58aa3945c425b7185c9154d67a65e4230da511"
+        },
+        {
+          "crate": "crossbeam-deque",
+          "version": "0.8.6",
+          "sha256": "9dd111b7b7f7d55b72c0a6ae361660ee5853c9af73f70c3c2ef6858b950e2e51"
+        },
+        {
+          "crate": "crossbeam-epoch",
+          "version": "0.9.18",
+          "sha256": "5b82ac4a3c2ca9c3460964f020e1402edd5753411d7737aa39c3714ad1b5420e"
+        },
+        {
+          "crate": "crossbeam-utils",
+          "version": "0.8.21",
+          "sha256": "d0a5c400df2834b80a4c3327b3aad3a4c4cd4de0629063962b03235697506a28"
+        },
+        {
+          "crate": "csv",
+          "version": "1.4.0",
+          "sha256": "52cd9d68cf7efc6ddfaaee42e7288d3a99d613d4b50f76ce9827ae0c6e14f938"
+        },
+        {
+          "crate": "csv-core",
+          "version": "0.1.13",
+          "sha256": "704a3c26996a80471189265814dbc2c257598b96b8a7feae2d31ace646bb9782"
+        },
+        {
+          "crate": "darling",
+          "version": "0.20.11",
+          "sha256": "fc7f46116c46ff9ab3eb1597a45688b6715c6e628b5c133e288e709a29bcb4ee"
+        },
+        {
+          "crate": "darling_core",
+          "version": "0.20.11",
+          "sha256": "0d00b9596d185e565c2207a0b01f8bd1a135483d02d9b7b0a54b11da8d53412e"
+        },
+        {
+          "crate": "darling_macro",
+          "version": "0.20.11",
+          "sha256": "fc34b93ccb385b40dc71c6fceac4b2ad23662c7eeb248cf10d529b7e055b6ead"
+        },
+        {
+          "crate": "deranged",
+          "version": "0.5.8",
+          "sha256": "7cd812cc2bc1d69d4764bd80df88b4317eaef9e773c75226407d9bc0876b211c"
+        },
+        {
+          "crate": "derive_builder",
+          "version": "0.20.2",
+          "sha256": "507dfb09ea8b7fa618fcf76e953f4f5e192547945816d5358edffe39f6f94947"
+        },
+        {
+          "crate": "derive_builder_core",
+          "version": "0.20.2",
+          "sha256": "2d5bcf7b024d6835cfb3d473887cd966994907effbe9227e8c8219824d06c4e8"
+        },
+        {
+          "crate": "derive_builder_macro",
+          "version": "0.20.2",
+          "sha256": "ab63b0e2bf4d5928aff72e83a7dace85d7bba5fe12dcc3c5a572d78caffd3f3c"
+        },
+        {
+          "crate": "difflib",
+          "version": "0.4.0",
+          "sha256": "6184e33543162437515c2e2b48714794e37845ec9851711914eec9d308f6ebe8"
+        },
+        {
+          "crate": "dirs",
+          "version": "6.0.0",
+          "sha256": "c3e8aa94d75141228480295a7d0e7feb620b1a5ad9f12bc40be62411e38cce4e"
+        },
+        {
+          "crate": "dirs-sys",
+          "version": "0.5.0",
+          "sha256": "e01a3366d27ee9890022452ee61b2b63a67e6f13f58900b651ff5665f0bb1fab"
+        },
+        {
+          "crate": "dlib",
+          "version": "0.5.3",
+          "sha256": "ab8ecd87370524b461f8557c119c405552c396ed91fc0a8eec68679eab26f94a"
+        },
+        {
+          "crate": "doc-comment",
+          "version": "0.3.4",
+          "sha256": "780955b8b195a21ab8e4ac6b60dd1dbdcec1dc6c51c0617964b08c81785e12c9"
+        },
+        {
+          "crate": "dwrote",
+          "version": "0.11.5",
+          "sha256": "9e1b35532432acc8b19ceed096e35dfa088d3ea037fe4f3c085f1f97f33b4d02"
+        },
+        {
+          "crate": "either",
+          "version": "1.15.0",
+          "sha256": "48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719"
+        },
+        {
+          "crate": "encode_unicode",
+          "version": "1.0.0",
+          "sha256": "34aa73646ffb006b8f5147f3dc182bd4bcb190227ce861fc4a4844bf8e3cb2c0"
+        },
+        {
+          "crate": "equivalent",
+          "version": "1.0.2",
+          "sha256": "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
+        },
+        {
+          "crate": "errno",
+          "version": "0.3.14",
+          "sha256": "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
+        },
+        {
+          "crate": "fastrand",
+          "version": "2.4.1",
+          "sha256": "9f1f227452a390804cdb637b74a86990f2a7d7ba4b7d5693aac9b4dd6defd8d6"
+        },
+        {
+          "crate": "fdeflate",
+          "version": "0.3.7",
+          "sha256": "1e6853b52649d4ac5c0bd02320cddc5ba956bdb407c4b75a2c6b75bf51500f8c"
+        },
+        {
+          "crate": "find-msvc-tools",
+          "version": "0.1.9",
+          "sha256": "5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582"
+        },
+        {
+          "crate": "flate2",
+          "version": "1.1.9",
+          "sha256": "843fba2746e448b37e26a819579957415c8cef339bf08564fe8b7ddbd959573c"
+        },
+        {
+          "crate": "float-cmp",
+          "version": "0.10.0",
+          "sha256": "b09cf3155332e944990140d967ff5eceb70df778b34f77d8075db46e4704e6d8"
+        },
+        {
+          "crate": "float-ord",
+          "version": "0.3.2",
+          "sha256": "8ce81f49ae8a0482e4c55ea62ebbd7e5a686af544c00b9d090bba3ff9be97b3d"
+        },
+        {
+          "crate": "fnv",
+          "version": "1.0.7",
+          "sha256": "3f9eec918d3f24069decb9af1554cad7c880e2da24a9afd88aca000531ab82c1"
+        },
+        {
+          "crate": "foldhash",
+          "version": "0.1.5",
+          "sha256": "d9c4f5dac5e15c24eb999c26181a6ca40b39fe946cbe4c263c7209467bc83af2"
+        },
+        {
+          "crate": "font-kit",
+          "version": "0.14.3",
+          "sha256": "2c7e611d49285d4c4b2e1727b72cf05353558885cc5252f93707b845dfcaf3d3"
+        },
+        {
+          "crate": "foreign-types",
+          "version": "0.5.0",
+          "sha256": "d737d9aa519fb7b749cbc3b962edcf310a8dd1f4b67c91c4f83975dbdd17d965"
+        },
+        {
+          "crate": "foreign-types-macros",
+          "version": "0.2.3",
+          "sha256": "1a5c6c585bc94aaf2c7b51dd4c2ba22680844aba4c687be581871a6f518c5742"
+        },
+        {
+          "crate": "foreign-types-shared",
+          "version": "0.3.1",
+          "sha256": "aa9a19cbb55df58761df49b23516a86d432839add4af60fc256da840f66ed35b"
+        },
+        {
+          "crate": "freetype-sys",
+          "version": "0.20.1",
+          "sha256": "0e7edc5b9669349acfda99533e9e0bcf26a51862ab43b08ee7745c55d28eb134"
+        },
+        {
+          "crate": "funty",
+          "version": "2.0.0",
+          "sha256": "e6d5a32815ae3f33302d95fdcb2ce17862f8c65363dcfd29360480ba1001fc9c"
+        },
+        {
+          "crate": "futures-core",
+          "version": "0.3.32",
+          "sha256": "7e3450815272ef58cec6d564423f6e755e25379b217b0bc688e295ba24df6b1d"
+        },
+        {
+          "crate": "futures-task",
+          "version": "0.3.32",
+          "sha256": "037711b3d59c33004d3856fbdc83b99d4ff37a24768fa1be9ce3538a1cde4393"
+        },
+        {
+          "crate": "futures-util",
+          "version": "0.3.32",
+          "sha256": "389ca41296e6190b48053de0321d02a77f32f8a5d2461dd38762c0593805c6d6"
+        },
+        {
+          "crate": "getrandom",
+          "version": "0.2.17",
+          "sha256": "ff2abc00be7fca6ebc474524697ae276ad847ad0a6b3faa4bcb027e9a4614ad0"
+        },
+        {
+          "crate": "getrandom",
+          "version": "0.4.2",
+          "sha256": "0de51e6874e94e7bf76d726fc5d13ba782deca734ff60d5bb2fb2607c7406555"
+        },
+        {
+          "crate": "globset",
+          "version": "0.4.18",
+          "sha256": "52dfc19153a48bde0cbd630453615c8151bce3a5adfac7a0aebfbf0a1e1f57e3"
+        },
+        {
+          "crate": "globwalk",
+          "version": "0.9.1",
+          "sha256": "0bf760ebf69878d9fd8f110c89703d90ce35095324d1f1edcb595c63945ee757"
+        },
+        {
+          "crate": "hashbrown",
+          "version": "0.15.5",
+          "sha256": "9229cfe53dfd69f0609a49f65461bd93001ea1ef889cd5529dd176593f5338a1"
+        },
+        {
+          "crate": "hashbrown",
+          "version": "0.17.1",
+          "sha256": "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a"
+        },
+        {
+          "crate": "hdr10plus",
+          "version": "2.1.5",
+          "sha256": "70a7bf4009c3d1d1df86a627808200b50b7ca607a2019ce4bae8aef90226d9b6"
+        },
+        {
+          "crate": "heck",
+          "version": "0.5.0",
+          "sha256": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
+        },
+        {
+          "crate": "hevc_parser",
+          "version": "0.6.11",
+          "sha256": "19d181a8f3d9530b912659983a7827a05744eb28740cf739106debfcfeffc852"
+        },
+        {
+          "crate": "id-arena",
+          "version": "2.3.0",
+          "sha256": "3d3067d79b975e8844ca9eb072e16b31c3c1c36928edf9c6789548c524d0d954"
+        },
+        {
+          "crate": "ident_case",
+          "version": "1.0.1",
+          "sha256": "b9e0384b61958566e926dc50660321d12159025e767c18e043daf26b70104c39"
+        },
+        {
+          "crate": "ignore",
+          "version": "0.4.25",
+          "sha256": "d3d782a365a015e0f5c04902246139249abf769125006fbe7649e2ee88169b4a"
+        },
+        {
+          "crate": "image",
+          "version": "0.24.9",
+          "sha256": "5690139d2f55868e080017335e4b94cb7414274c74f1669c84fb5feba2c9f69d"
+        },
+        {
+          "crate": "indexmap",
+          "version": "2.14.0",
+          "sha256": "d466e9454f08e4a911e14806c24e16fba1b4c121d1ea474396f396069cf949d9"
+        },
+        {
+          "crate": "indicatif",
+          "version": "0.18.4",
+          "sha256": "25470f23803092da7d239834776d653104d551bc4d7eacaf31e6837854b8e9eb"
+        },
+        {
+          "crate": "is_terminal_polyfill",
+          "version": "1.70.2",
+          "sha256": "a6cb138bb79a146c1bd460005623e142ef0181e3d0219cb493e02f7d08a35695"
+        },
+        {
+          "crate": "itertools",
+          "version": "0.14.0",
+          "sha256": "2b192c782037fadd9cfa75548310488aabdbf3d2da73885b31bd0abd03351285"
+        },
+        {
+          "crate": "itoa",
+          "version": "1.0.18",
+          "sha256": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682"
+        },
+        {
+          "crate": "jpeg-decoder",
+          "version": "0.3.2",
+          "sha256": "00810f1d8b74be64b13dbf3db89ac67740615d6c891f0e7b6179326533011a07"
+        },
+        {
+          "crate": "js-sys",
+          "version": "0.3.98",
+          "sha256": "67df7112613f8bfd9150013a0314e196f4800d3201ae742489d999db2f979f08"
+        },
+        {
+          "crate": "lazy_static",
+          "version": "1.5.0",
+          "sha256": "bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe"
+        },
+        {
+          "crate": "leb128fmt",
+          "version": "0.1.0",
+          "sha256": "09edd9e8b54e49e587e4f6295a7d29c3ea94d469cb40ab8ca70b288248a81db2"
+        },
+        {
+          "crate": "libc",
+          "version": "0.2.186",
+          "sha256": "68ab91017fe16c622486840e4c83c9a37afeff978bd239b5293d61ece587de66"
+        },
+        {
+          "crate": "libloading",
+          "version": "0.8.9",
+          "sha256": "d7c4b02199fee7c5d21a5ae7d8cfa79a6ef5bb2fc834d6e9058e89c825efdc55"
+        },
+        {
+          "crate": "libredox",
+          "version": "0.1.16",
+          "sha256": "e02f3bb43d335493c96bf3fd3a321600bf6bd07ed34bc64118e9293bdffea46c"
+        },
+        {
+          "crate": "linux-raw-sys",
+          "version": "0.12.1",
+          "sha256": "32a66949e030da00e8c7d4434b251670a91556f4144941d37452769c25d58a53"
+        },
+        {
+          "crate": "log",
+          "version": "0.4.29",
+          "sha256": "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
+        },
+        {
+          "crate": "madvr_parse",
+          "version": "1.0.3",
+          "sha256": "49e4cd460726bbe354ed2b4f7f1d7e8ca74b4266ddbe52932cabf1dbd5db0c6c"
+        },
+        {
+          "crate": "matroska-demuxer",
+          "version": "0.7.0",
+          "sha256": "fb23384e6bf1431427b45e7db9574146e948ef0cd975018693e6f53eb6d44199"
+        },
+        {
+          "crate": "memchr",
+          "version": "2.8.0",
+          "sha256": "f8ca58f447f06ed17d5fc4043ce1b10dd205e060fb3ce5b979b8ed8e59ff3f79"
+        },
+        {
+          "crate": "miniz_oxide",
+          "version": "0.8.9",
+          "sha256": "1fa76a2c86f704bdb222d66965fb3d63269ce38518b83cb0575fca855ebb6316"
+        },
+        {
+          "crate": "no_std_io2",
+          "version": "0.9.4",
+          "sha256": "418abd1b6d34fbf6cae440dc874771b0525a604428704c76e48b29a5e67b8003"
+        },
+        {
+          "crate": "nom",
+          "version": "8.0.0",
+          "sha256": "df9761775871bdef83bee530e60050f7e54b1105350d6884eb0fb4f46c2f9405"
+        },
+        {
+          "crate": "normalize-line-endings",
+          "version": "0.3.0",
+          "sha256": "61807f77802ff30975e01f4f071c8ba10c022052f98b3294119f3e615d13e5be"
+        },
+        {
+          "crate": "num-conv",
+          "version": "0.2.1",
+          "sha256": "c6673768db2d862beb9b39a78fdcb1a69439615d5794a1be50caa9bc92c81967"
+        },
+        {
+          "crate": "num-traits",
+          "version": "0.2.19",
+          "sha256": "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841"
+        },
+        {
+          "crate": "num_threads",
+          "version": "0.1.7",
+          "sha256": "5c7398b9c8b70908f6371f47ed36737907c87c52af34c268fed0bf0ceb92ead9"
+        },
+        {
+          "crate": "once_cell",
+          "version": "1.21.4",
+          "sha256": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50"
+        },
+        {
+          "crate": "once_cell_polyfill",
+          "version": "1.70.2",
+          "sha256": "384b8ab6d37215f3c5301a95a4accb5d64aa607f1fcb26a11b5303878451b4fe"
+        },
+        {
+          "crate": "option-ext",
+          "version": "0.2.0",
+          "sha256": "04744f49eae99ab78e0d5c0b603ab218f515ea8cfe5a456d7629ad883a3b6e7d"
+        },
+        {
+          "crate": "owned_ttf_parser",
+          "version": "0.25.1",
+          "sha256": "36820e9051aca1014ddc75770aab4d68bc1e9e632f0f5627c4086bc216fb583b"
+        },
+        {
+          "crate": "pathfinder_geometry",
+          "version": "0.5.1",
+          "sha256": "0b7b7e7b4ea703700ce73ebf128e1450eb69c3a8329199ffbfb9b2a0418e5ad3"
+        },
+        {
+          "crate": "pathfinder_simd",
+          "version": "0.5.6",
+          "sha256": "4500030c302e4af1d423f36f3b958d1aecb6c04184356ed5a833bf6b60435777"
+        },
+        {
+          "crate": "pin-project-lite",
+          "version": "0.2.17",
+          "sha256": "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd"
+        },
+        {
+          "crate": "pkg-config",
+          "version": "0.3.33",
+          "sha256": "19f132c84eca552bf34cab8ec81f1c1dcc229b811638f9d283dceabe58c5569e"
+        },
+        {
+          "crate": "plotters",
+          "version": "0.3.7",
+          "sha256": "5aeb6f403d7a4911efb1e33402027fc44f29b5bf6def3effcc22d7bb75f2b747"
+        },
+        {
+          "crate": "plotters-backend",
+          "version": "0.3.7",
+          "sha256": "df42e13c12958a16b3f7f4386b9ab1f3e7933914ecea48da7139435263a4172a"
+        },
+        {
+          "crate": "plotters-bitmap",
+          "version": "0.3.7",
+          "sha256": "72ce181e3f6bf82d6c1dc569103ca7b1bd964c60ba03d7e6cdfbb3e3eb7f7405"
+        },
+        {
+          "crate": "png",
+          "version": "0.17.16",
+          "sha256": "82151a2fc869e011c153adc57cf2789ccb8d9906ce52c0b39a6b5697749d7526"
+        },
+        {
+          "crate": "portable-atomic",
+          "version": "1.13.1",
+          "sha256": "c33a9471896f1c69cecef8d20cbe2f7accd12527ce60845ff44c153bb2a21b49"
+        },
+        {
+          "crate": "powerfmt",
+          "version": "0.2.0",
+          "sha256": "439ee305def115ba05938db6eb1644ff94165c5ab5e9420d1c1bcedbba909391"
+        },
+        {
+          "crate": "predicates",
+          "version": "3.1.4",
+          "sha256": "ada8f2932f28a27ee7b70dd6c1c39ea0675c55a36879ab92f3a715eaa1e63cfe"
+        },
+        {
+          "crate": "predicates-core",
+          "version": "1.0.10",
+          "sha256": "cad38746f3166b4031b1a0d39ad9f954dd291e7854fcc0eed52ee41a0b50d144"
+        },
+        {
+          "crate": "predicates-tree",
+          "version": "1.0.13",
+          "sha256": "d0de1b847b39c8131db0467e9df1ff60e6d0562ab8e9a16e568ad0fdb372e2f2"
+        },
+        {
+          "crate": "prettyplease",
+          "version": "0.2.37",
+          "sha256": "479ca8adacdd7ce8f1fb39ce9ecccbfe93a3f1344b3d0d97f20bc0196208f62b"
+        },
+        {
+          "crate": "proc-macro2",
+          "version": "1.0.106",
+          "sha256": "8fd00f0bb2e90d81d1044c2b32617f68fcb9fa3bb7640c23e9c748e53fb30934"
+        },
+        {
+          "crate": "quote",
+          "version": "1.0.45",
+          "sha256": "41f2619966050689382d2b44f664f4bc593e129785a36d6ee376ddf37259b924"
+        },
+        {
+          "crate": "r-efi",
+          "version": "6.0.0",
+          "sha256": "f8dcc9c7d52a811697d2151c701e0d08956f92b0e24136cf4cf27b57a6a0d9bf"
+        },
+        {
+          "crate": "radium",
+          "version": "0.7.0",
+          "sha256": "dc33ff2d4973d518d823d61aa239014831e521c75da58e3df4840d3f47749d09"
+        },
+        {
+          "crate": "redox_users",
+          "version": "0.5.2",
+          "sha256": "a4e608c6638b9c18977b00b475ac1f28d14e84b27d8d42f70e0bf1e3dec127ac"
+        },
+        {
+          "crate": "regex",
+          "version": "1.12.3",
+          "sha256": "e10754a14b9137dd7b1e3e5b0493cc9171fdd105e0ab477f51b72e7f3ac0e276"
+        },
+        {
+          "crate": "regex-automata",
+          "version": "0.4.14",
+          "sha256": "6e1dd4122fc1595e8162618945476892eefca7b88c52820e74af6262213cae8f"
+        },
+        {
+          "crate": "regex-lite",
+          "version": "0.1.9",
+          "sha256": "cab834c73d247e67f4fae452806d17d3c7501756d98c8808d7c9c7aa7d18f973"
+        },
+        {
+          "crate": "regex-syntax",
+          "version": "0.8.10",
+          "sha256": "dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a"
+        },
+        {
+          "crate": "roxmltree",
+          "version": "0.21.1",
+          "sha256": "f1964b10c76125c36f8afe190065a4bf9a87bf324842c05701330bba9f1cacbb"
+        },
+        {
+          "crate": "rustc_version",
+          "version": "0.4.1",
+          "sha256": "cfcb3a22ef46e85b45de6ee7e79d063319ebb6594faafcf1c225ea92ab6e9b92"
+        },
+        {
+          "crate": "rustix",
+          "version": "1.1.4",
+          "sha256": "b6fe4565b9518b83ef4f91bb47ce29620ca828bd32cb7e408f0062e9930ba190"
+        },
+        {
+          "crate": "rustversion",
+          "version": "1.0.22",
+          "sha256": "b39cdef0fa800fc44525c84ccb54a029961a8215f9619753635a9c0d2538d46d"
+        },
+        {
+          "crate": "ryu",
+          "version": "1.0.23",
+          "sha256": "9774ba4a74de5f7b1c1451ed6cd5285a32eddb5cccb8cc655a4e50009e06477f"
+        },
+        {
+          "crate": "same-file",
+          "version": "1.0.6",
+          "sha256": "93fc1dc3aaa9bfed95e02e6eadabb4baf7e3078b0bd1b4d7b6b0b68378900502"
+        },
+        {
+          "crate": "semver",
+          "version": "1.0.28",
+          "sha256": "8a7852d02fc848982e0c167ef163aaff9cd91dc640ba85e263cb1ce46fae51cd"
+        },
+        {
+          "crate": "serde",
+          "version": "1.0.228",
+          "sha256": "9a8e94ea7f378bd32cbbd37198a4a91436180c5bb472411e48b5ec2e2124ae9e"
+        },
+        {
+          "crate": "serde_core",
+          "version": "1.0.228",
+          "sha256": "41d385c7d4ca58e59fc732af25c3983b67ac852c1a25000afe1175de458b67ad"
+        },
+        {
+          "crate": "serde_derive",
+          "version": "1.0.228",
+          "sha256": "d540f220d3187173da220f885ab66608367b6574e925011a9353e4badda91d79"
+        },
+        {
+          "crate": "serde_json",
+          "version": "1.0.149",
+          "sha256": "83fc039473c5595ace860d8c4fafa220ff474b3fc6bfdb4293327f1a37e94d86"
+        },
+        {
+          "crate": "shlex",
+          "version": "1.3.0",
+          "sha256": "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64"
+        },
+        {
+          "crate": "simd-adler32",
+          "version": "0.3.9",
+          "sha256": "703d5c7ef118737c72f1af64ad2f6f8c5e1921f818cdcb97b8fe6fc69bf66214"
+        },
+        {
+          "crate": "slab",
+          "version": "0.4.12",
+          "sha256": "0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5"
+        },
+        {
+          "crate": "strsim",
+          "version": "0.11.1",
+          "sha256": "7da8b5736845d9f2fcb837ea5d9e2628564b3b043a70948a3f0b778838c5fb4f"
+        },
+        {
+          "crate": "syn",
+          "version": "2.0.117",
+          "sha256": "e665b8803e7b1d2a727f4023456bbbbe74da67099c585258af0ad9c5013b9b99"
+        },
+        {
+          "crate": "tap",
+          "version": "1.0.1",
+          "sha256": "55937e1799185b12863d447f42597ed69d9928686b8d88a1df17376a097d8369"
+        },
+        {
+          "crate": "tempfile",
+          "version": "3.27.0",
+          "sha256": "32497e9a4c7b38532efcdebeef879707aa9f794296a4f0244f6f69e9bc8574bd"
+        },
+        {
+          "crate": "terminal_size",
+          "version": "0.4.4",
+          "sha256": "230a1b821ccbd75b185820a1f1ff7b14d21da1e442e22c0863ea5f08771a8874"
+        },
+        {
+          "crate": "termtree",
+          "version": "0.5.1",
+          "sha256": "8f50febec83f5ee1df3015341d8bd429f2d1cc62bcba7ea2076759d315084683"
+        },
+        {
+          "crate": "thiserror",
+          "version": "2.0.18",
+          "sha256": "4288b5bcbc7920c07a1149a35cf9590a2aa808e0bc1eafaade0b80947865fbc4"
+        },
+        {
+          "crate": "thiserror-impl",
+          "version": "2.0.18",
+          "sha256": "ebc4ee7f67670e9b64d05fa4253e753e016c6c95ff35b89b7941d6b856dec1d5"
+        },
+        {
+          "crate": "time",
+          "version": "0.3.47",
+          "sha256": "743bd48c283afc0388f9b8827b976905fb217ad9e647fae3a379a9283c4def2c"
+        },
+        {
+          "crate": "time-core",
+          "version": "0.1.8",
+          "sha256": "7694e1cfe791f8d31026952abf09c69ca6f6fa4e1a1229e18988f06a04a12dca"
+        },
+        {
+          "crate": "time-macros",
+          "version": "0.2.27",
+          "sha256": "2e70e4c5a0e0a8a4823ad65dfe1a6930e4f4d756dcd9dd7939022b5e8c501215"
+        },
+        {
+          "crate": "tinyvec",
+          "version": "1.11.0",
+          "sha256": "3e61e67053d25a4e82c844e8424039d9745781b3fc4f32b8d55ed50f5f667ef3"
+        },
+        {
+          "crate": "ttf-parser",
+          "version": "0.20.0",
+          "sha256": "17f77d76d837a7830fe1d4f12b7b4ba4192c1888001c7164257e4bc6d21d96b4"
+        },
+        {
+          "crate": "ttf-parser",
+          "version": "0.25.1",
+          "sha256": "d2df906b07856748fa3f6e0ad0cbaa047052d4a7dd609e231c4f72cee8c36f31"
+        },
+        {
+          "crate": "unicode-ident",
+          "version": "1.0.24",
+          "sha256": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75"
+        },
+        {
+          "crate": "unicode-width",
+          "version": "0.2.2",
+          "sha256": "b4ac048d71ede7ee76d585517add45da530660ef4390e49b098733c6e897f254"
+        },
+        {
+          "crate": "unicode-xid",
+          "version": "0.2.6",
+          "sha256": "ebc1c04c71510c7f702b52b7c350734c9ff1295c464a03335b00bb84fc54f853"
+        },
+        {
+          "crate": "unit-prefix",
+          "version": "0.5.2",
+          "sha256": "81e544489bf3d8ef66c953931f56617f423cd4b5494be343d9b9d3dda037b9a3"
+        },
+        {
+          "crate": "utf8parse",
+          "version": "0.2.2",
+          "sha256": "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
+        },
+        {
+          "crate": "vergen",
+          "version": "9.1.0",
+          "sha256": "b849a1f6d8639e8de261e81ee0fc881e3e3620db1af9f2e0da015d4382ceaf75"
+        },
+        {
+          "crate": "vergen-gitcl",
+          "version": "9.1.0",
+          "sha256": "77ff3b5300a085d6bcd8fc96a507f706a28ae3814693236c9b409db71a1d15b9"
+        },
+        {
+          "crate": "vergen-lib",
+          "version": "9.1.0",
+          "sha256": "b34a29ba7e9c59e62f229ae1932fb1b8fb8a6fdcc99215a641913f5f5a59a569"
+        },
+        {
+          "crate": "wait-timeout",
+          "version": "0.2.1",
+          "sha256": "09ac3b126d3914f9849036f826e054cbabdc8519970b8998ddaf3b5bd3c65f11"
+        },
+        {
+          "crate": "walkdir",
+          "version": "2.5.0",
+          "sha256": "29790946404f91d9c5d06f9874efddea1dc06c5efe94541a7d6863108e3a5e4b"
+        },
+        {
+          "crate": "wasi",
+          "version": "0.11.1+wasi-snapshot-preview1",
+          "sha256": "ccf3ec651a847eb01de73ccad15eb7d99f80485de043efb2f370cd654f4ea44b"
+        },
+        {
+          "crate": "wasip2",
+          "version": "1.0.3+wasi-0.2.9",
+          "sha256": "20064672db26d7cdc89c7798c48a0fdfac8213434a1186e5ef29fd560ae223d6"
+        },
+        {
+          "crate": "wasip3",
+          "version": "0.4.0+wasi-0.3.0-rc-2026-01-06",
+          "sha256": "5428f8bf88ea5ddc08faddef2ac4a67e390b88186c703ce6dbd955e1c145aca5"
+        },
+        {
+          "crate": "wasm-bindgen",
+          "version": "0.2.121",
+          "sha256": "49ace1d07c165b0864824eee619580c4689389afa9dc9ed3a4c75040d82e6790"
+        },
+        {
+          "crate": "wasm-bindgen-macro",
+          "version": "0.2.121",
+          "sha256": "8e68e6f4afd367a562002c05637acb8578ff2dea1943df76afb9e83d177c8578"
+        },
+        {
+          "crate": "wasm-bindgen-macro-support",
+          "version": "0.2.121",
+          "sha256": "d95a9ec35c64b2a7cb35d3fead40c4238d0940c86d107136999567a4703259f2"
+        },
+        {
+          "crate": "wasm-bindgen-shared",
+          "version": "0.2.121",
+          "sha256": "c4e0100b01e9f0d03189a92b96772a1fb998639d981193d7dbab487302513441"
+        },
+        {
+          "crate": "wasm-encoder",
+          "version": "0.244.0",
+          "sha256": "990065f2fe63003fe337b932cfb5e3b80e0b4d0f5ff650e6985b1048f62c8319"
+        },
+        {
+          "crate": "wasm-metadata",
+          "version": "0.244.0",
+          "sha256": "bb0e353e6a2fbdc176932bbaab493762eb1255a7900fe0fea1a2f96c296cc909"
+        },
+        {
+          "crate": "wasmparser",
+          "version": "0.244.0",
+          "sha256": "47b807c72e1bac69382b3a6fb3dbe8ea4c0ed87ff5629b8685ae6b9a611028fe"
+        },
+        {
+          "crate": "web-sys",
+          "version": "0.3.98",
+          "sha256": "4b572dff8bcf38bad0fa19729c89bb5748b2b9b1d8be70cf90df697e3a8f32aa"
+        },
+        {
+          "crate": "web-time",
+          "version": "1.1.0",
+          "sha256": "5a6580f308b1fad9207618087a65c04e7a10bc77e02c8e84e9b00dd4b12fa0bb"
+        },
+        {
+          "crate": "winapi",
+          "version": "0.3.9",
+          "sha256": "5c839a674fcd7a98952e593242ea400abe93992746761e38641405d28b00f419"
+        },
+        {
+          "crate": "winapi-i686-pc-windows-gnu",
+          "version": "0.4.0",
+          "sha256": "ac3b87c63620426dd9b991e5ce0329eff545bccbbb34f3be09ff6fb6ab51b7b6"
+        },
+        {
+          "crate": "winapi-util",
+          "version": "0.1.11",
+          "sha256": "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
+        },
+        {
+          "crate": "winapi-x86_64-pc-windows-gnu",
+          "version": "0.4.0",
+          "sha256": "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"
+        },
+        {
+          "crate": "windows-link",
+          "version": "0.2.1",
+          "sha256": "f0805222e57f7521d6a62e36fa9163bc891acd422f971defe97d64e70d0a4fe5"
+        },
+        {
+          "crate": "windows-sys",
+          "version": "0.61.2",
+          "sha256": "ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc"
+        },
+        {
+          "crate": "wio",
+          "version": "0.2.2",
+          "sha256": "5d129932f4644ac2396cb456385cbf9e63b5b30c6e8dc4820bdca4eb082037a5"
+        },
+        {
+          "crate": "wit-bindgen",
+          "version": "0.51.0",
+          "sha256": "d7249219f66ced02969388cf2bb044a09756a083d0fab1e566056b04d9fbcaa5"
+        },
+        {
+          "crate": "wit-bindgen",
+          "version": "0.57.1",
+          "sha256": "1ebf944e87a7c253233ad6766e082e3cd714b5d03812acc24c318f549614536e"
+        },
+        {
+          "crate": "wit-bindgen-core",
+          "version": "0.51.0",
+          "sha256": "ea61de684c3ea68cb082b7a88508a8b27fcc8b797d738bfc99a82facf1d752dc"
+        },
+        {
+          "crate": "wit-bindgen-rust",
+          "version": "0.51.0",
+          "sha256": "b7c566e0f4b284dd6561c786d9cb0142da491f46a9fbed79ea69cdad5db17f21"
+        },
+        {
+          "crate": "wit-bindgen-rust-macro",
+          "version": "0.51.0",
+          "sha256": "0c0f9bfd77e6a48eccf51359e3ae77140a7f50b1e2ebfe62422d8afdaffab17a"
+        },
+        {
+          "crate": "wit-component",
+          "version": "0.244.0",
+          "sha256": "9d66ea20e9553b30172b5e831994e35fbde2d165325bec84fc43dbf6f4eb9cb2"
+        },
+        {
+          "crate": "wit-parser",
+          "version": "0.244.0",
+          "sha256": "ecc8ac4bc1dc3381b7f59c34f00b67e18f910c2c0f50015669dde7def656a736"
+        },
+        {
+          "crate": "wyz",
+          "version": "0.5.1",
+          "sha256": "05f360fc0b24296329c78fda852a1e9ae82de9cf7b27dae4b7f62f118f77b9ed"
+        },
+        {
+          "crate": "yeslogic-fontconfig-sys",
+          "version": "6.0.1",
+          "sha256": "1d8b8abf912b9a29ff112e1671c97c33636903d13a69712037190e6805af4f76"
+        },
+        {
+          "crate": "zmij",
+          "version": "1.0.21",
+          "sha256": "b8848ee67ecc8aedbaf3e4122217aff892639231befc6a1b58d29fff4c2cabaa"
+        },
+        {
+          "crate": "aho-corasick",
+          "version": "1.1.4",
+          "sha256": "ddd31a130427c27518df266943a5308ed92d4b226cc639f5a8f1002816174301"
+        },
+        {
+          "crate": "alloca",
+          "version": "0.4.0",
+          "sha256": "e5a7d05ea6aea7e9e64d25b9156ba2fee3fdd659e34e41063cd2fc7cd020d7f4"
+        },
+        {
+          "crate": "anes",
+          "version": "0.1.6",
+          "sha256": "4b46cbb362ab8752921c97e041f5e366ee6297bd428a31275b9fcf1e380f7299"
+        },
+        {
+          "crate": "anstyle",
+          "version": "1.0.14",
+          "sha256": "940b3a0ca603d1eade50a4846a2afffd5ef57a9feac2c0e2ec2e14f9ead76000"
+        },
+        {
+          "crate": "anyhow",
+          "version": "1.0.102",
+          "sha256": "7f202df86484c868dbad7eaa557ef785d5c66295e41b460ef922eca0723b842c"
+        },
+        {
+          "crate": "autocfg",
+          "version": "1.5.0",
+          "sha256": "c08606f8c3cbf4ce6ec8e28fb0014a2c086708fe954eaa885384a6165172e7e8"
+        },
+        {
+          "crate": "bitstream-io",
+          "version": "4.10.0",
+          "sha256": "7eff00be299a18769011411c9def0d827e8f2d7bf0c3dbf53633147a8867fd1f"
+        },
+        {
+          "crate": "bitvec",
+          "version": "1.0.1",
+          "sha256": "1bc2832c24239b0141d5674bb9174f9d68a8b5b3f2753311927c172ca46f7e9c"
+        },
+        {
+          "crate": "bitvec_helpers",
+          "version": "4.0.2",
+          "sha256": "52e5938870db620c26a8f329f5735aa3450cedd30f4a4bb98475b1b076d8edae"
+        },
+        {
+          "crate": "bumpalo",
+          "version": "3.20.2",
+          "sha256": "5d20789868f4b01b2f2caec9f5c4e0213b41e3e5702a50157d699ae31ced2fcb"
+        },
+        {
+          "crate": "cast",
+          "version": "0.3.0",
+          "sha256": "37b2a672a2cb129a2e41c10b1224bb368f9f37a2b16b612598138befd7b37eb5"
+        },
+        {
+          "crate": "cc",
+          "version": "1.2.62",
+          "sha256": "a1dce859f0832a7d088c4f1119888ab94ef4b5d6795d1ce05afb7fe159d79f98"
+        },
+        {
+          "crate": "cfg-if",
+          "version": "1.0.4",
+          "sha256": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801"
+        },
+        {
+          "crate": "ciborium",
+          "version": "0.2.2",
+          "sha256": "42e69ffd6f0917f5c029256a24d0161db17cea3997d185db0d35926308770f0e"
+        },
+        {
+          "crate": "ciborium-io",
+          "version": "0.2.2",
+          "sha256": "05afea1e0a06c9be33d539b876f1ce3692f4afea2cb41f740e7743225ed1c757"
+        },
+        {
+          "crate": "ciborium-ll",
+          "version": "0.2.2",
+          "sha256": "57663b653d948a338bfb3eeba9bb2fd5fcfaecb9e199e87e1eda4d9e8b240fd9"
+        },
+        {
+          "crate": "clap",
+          "version": "4.6.1",
+          "sha256": "1ddb117e43bbf7dacf0a4190fef4d345b9bad68dfc649cb349e7d17d28428e51"
+        },
+        {
+          "crate": "clap_builder",
+          "version": "4.6.0",
+          "sha256": "714a53001bf66416adb0e2ef5ac857140e7dc3a0c48fb28b2f10762fc4b5069f"
+        },
+        {
+          "crate": "clap_lex",
+          "version": "1.1.0",
+          "sha256": "c8d4a3bb8b1e0c1050499d1815f5ab16d04f0959b233085fb31653fbfc9d98f9"
+        },
+        {
+          "crate": "crc",
+          "version": "3.4.0",
+          "sha256": "5eb8a2a1cd12ab0d987a5d5e825195d372001a4094a0376319d5a0ad71c1ba0d"
+        },
+        {
+          "crate": "crc-catalog",
+          "version": "2.5.0",
+          "sha256": "217698eaf96b4a3f0bc4f3662aaa55bdf913cd54d7204591faa790070c6d0853"
+        },
+        {
+          "crate": "criterion",
+          "version": "0.8.2",
+          "sha256": "950046b2aa2492f9a536f5f4f9a3de7b9e2476e575e05bd6c333371add4d98f3"
+        },
+        {
+          "crate": "criterion-plot",
+          "version": "0.8.2",
+          "sha256": "d8d80a2f4f5b554395e47b5d8305bc3d27813bacb73493eb1001e8f76dae29ea"
+        },
+        {
+          "crate": "crossbeam-deque",
+          "version": "0.8.6",
+          "sha256": "9dd111b7b7f7d55b72c0a6ae361660ee5853c9af73f70c3c2ef6858b950e2e51"
+        },
+        {
+          "crate": "crossbeam-epoch",
+          "version": "0.9.18",
+          "sha256": "5b82ac4a3c2ca9c3460964f020e1402edd5753411d7737aa39c3714ad1b5420e"
+        },
+        {
+          "crate": "crossbeam-utils",
+          "version": "0.8.21",
+          "sha256": "d0a5c400df2834b80a4c3327b3aad3a4c4cd4de0629063962b03235697506a28"
+        },
+        {
+          "crate": "crunchy",
+          "version": "0.2.4",
+          "sha256": "460fbee9c2c2f33933d720630a6a0bac33ba7053db5344fac858d4b8952d77d5"
+        },
+        {
+          "crate": "either",
+          "version": "1.15.0",
+          "sha256": "48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719"
+        },
+        {
+          "crate": "equivalent",
+          "version": "1.0.2",
+          "sha256": "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
+        },
+        {
+          "crate": "find-msvc-tools",
+          "version": "0.1.9",
+          "sha256": "5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582"
+        },
+        {
+          "crate": "funty",
+          "version": "2.0.0",
+          "sha256": "e6d5a32815ae3f33302d95fdcb2ce17862f8c65363dcfd29360480ba1001fc9c"
+        },
+        {
+          "crate": "futures-core",
+          "version": "0.3.32",
+          "sha256": "7e3450815272ef58cec6d564423f6e755e25379b217b0bc688e295ba24df6b1d"
+        },
+        {
+          "crate": "futures-task",
+          "version": "0.3.32",
+          "sha256": "037711b3d59c33004d3856fbdc83b99d4ff37a24768fa1be9ce3538a1cde4393"
+        },
+        {
+          "crate": "futures-util",
+          "version": "0.3.32",
+          "sha256": "389ca41296e6190b48053de0321d02a77f32f8a5d2461dd38762c0593805c6d6"
+        },
+        {
+          "crate": "half",
+          "version": "2.7.1",
+          "sha256": "6ea2d84b969582b4b1864a92dc5d27cd2b77b622a8d79306834f1be5ba20d84b"
+        },
+        {
+          "crate": "hashbrown",
+          "version": "0.17.1",
+          "sha256": "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a"
+        },
+        {
+          "crate": "indexmap",
+          "version": "2.14.0",
+          "sha256": "d466e9454f08e4a911e14806c24e16fba1b4c121d1ea474396f396069cf949d9"
+        },
+        {
+          "crate": "itertools",
+          "version": "0.13.0",
+          "sha256": "413ee7dfc52ee1a4949ceeb7dbc8a33f2d6c088194d9f922fb8318faf1f01186"
+        },
+        {
+          "crate": "itoa",
+          "version": "1.0.18",
+          "sha256": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682"
+        },
+        {
+          "crate": "js-sys",
+          "version": "0.3.98",
+          "sha256": "67df7112613f8bfd9150013a0314e196f4800d3201ae742489d999db2f979f08"
+        },
+        {
+          "crate": "libc",
+          "version": "0.2.186",
+          "sha256": "68ab91017fe16c622486840e4c83c9a37afeff978bd239b5293d61ece587de66"
+        },
+        {
+          "crate": "memchr",
+          "version": "2.8.0",
+          "sha256": "f8ca58f447f06ed17d5fc4043ce1b10dd205e060fb3ce5b979b8ed8e59ff3f79"
+        },
+        {
+          "crate": "no_std_io2",
+          "version": "0.9.4",
+          "sha256": "418abd1b6d34fbf6cae440dc874771b0525a604428704c76e48b29a5e67b8003"
+        },
+        {
+          "crate": "num-traits",
+          "version": "0.2.19",
+          "sha256": "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841"
+        },
+        {
+          "crate": "once_cell",
+          "version": "1.21.4",
+          "sha256": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50"
+        },
+        {
+          "crate": "oorandom",
+          "version": "11.1.5",
+          "sha256": "d6790f58c7ff633d8771f42965289203411a5e5c68388703c06e14f24770b41e"
+        },
+        {
+          "crate": "page_size",
+          "version": "0.6.0",
+          "sha256": "30d5b2194ed13191c1999ae0704b7839fb18384fa22e49b57eeaa97d79ce40da"
+        },
+        {
+          "crate": "pin-project-lite",
+          "version": "0.2.17",
+          "sha256": "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd"
+        },
+        {
+          "crate": "plotters",
+          "version": "0.3.7",
+          "sha256": "5aeb6f403d7a4911efb1e33402027fc44f29b5bf6def3effcc22d7bb75f2b747"
+        },
+        {
+          "crate": "plotters-backend",
+          "version": "0.3.7",
+          "sha256": "df42e13c12958a16b3f7f4386b9ab1f3e7933914ecea48da7139435263a4172a"
+        },
+        {
+          "crate": "plotters-svg",
+          "version": "0.3.7",
+          "sha256": "51bae2ac328883f7acdfea3d66a7c35751187f870bc81f94563733a154d7a670"
+        },
+        {
+          "crate": "proc-macro2",
+          "version": "1.0.106",
+          "sha256": "8fd00f0bb2e90d81d1044c2b32617f68fcb9fa3bb7640c23e9c748e53fb30934"
+        },
+        {
+          "crate": "quote",
+          "version": "1.0.45",
+          "sha256": "41f2619966050689382d2b44f664f4bc593e129785a36d6ee376ddf37259b924"
+        },
+        {
+          "crate": "radium",
+          "version": "0.7.0",
+          "sha256": "dc33ff2d4973d518d823d61aa239014831e521c75da58e3df4840d3f47749d09"
+        },
+        {
+          "crate": "rayon",
+          "version": "1.12.0",
+          "sha256": "fb39b166781f92d482534ef4b4b1b2568f42613b53e5b6c160e24cfbfa30926d"
+        },
+        {
+          "crate": "rayon-core",
+          "version": "1.13.0",
+          "sha256": "22e18b0f0062d30d4230b2e85ff77fdfe4326feb054b9783a3460d8435c8ab91"
+        },
+        {
+          "crate": "regex",
+          "version": "1.12.3",
+          "sha256": "e10754a14b9137dd7b1e3e5b0493cc9171fdd105e0ab477f51b72e7f3ac0e276"
+        },
+        {
+          "crate": "regex-automata",
+          "version": "0.4.14",
+          "sha256": "6e1dd4122fc1595e8162618945476892eefca7b88c52820e74af6262213cae8f"
+        },
+        {
+          "crate": "regex-syntax",
+          "version": "0.8.10",
+          "sha256": "dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a"
+        },
+        {
+          "crate": "roxmltree",
+          "version": "0.21.1",
+          "sha256": "f1964b10c76125c36f8afe190065a4bf9a87bf324842c05701330bba9f1cacbb"
+        },
+        {
+          "crate": "rustversion",
+          "version": "1.0.22",
+          "sha256": "b39cdef0fa800fc44525c84ccb54a029961a8215f9619753635a9c0d2538d46d"
+        },
+        {
+          "crate": "same-file",
+          "version": "1.0.6",
+          "sha256": "93fc1dc3aaa9bfed95e02e6eadabb4baf7e3078b0bd1b4d7b6b0b68378900502"
+        },
+        {
+          "crate": "serde",
+          "version": "1.0.228",
+          "sha256": "9a8e94ea7f378bd32cbbd37198a4a91436180c5bb472411e48b5ec2e2124ae9e"
+        },
+        {
+          "crate": "serde_core",
+          "version": "1.0.228",
+          "sha256": "41d385c7d4ca58e59fc732af25c3983b67ac852c1a25000afe1175de458b67ad"
+        },
+        {
+          "crate": "serde_derive",
+          "version": "1.0.228",
+          "sha256": "d540f220d3187173da220f885ab66608367b6574e925011a9353e4badda91d79"
+        },
+        {
+          "crate": "serde_json",
+          "version": "1.0.149",
+          "sha256": "83fc039473c5595ace860d8c4fafa220ff474b3fc6bfdb4293327f1a37e94d86"
+        },
+        {
+          "crate": "shlex",
+          "version": "1.3.0",
+          "sha256": "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64"
+        },
+        {
+          "crate": "slab",
+          "version": "0.4.12",
+          "sha256": "0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5"
+        },
+        {
+          "crate": "syn",
+          "version": "2.0.117",
+          "sha256": "e665b8803e7b1d2a727f4023456bbbbe74da67099c585258af0ad9c5013b9b99"
+        },
+        {
+          "crate": "tap",
+          "version": "1.0.1",
+          "sha256": "55937e1799185b12863d447f42597ed69d9928686b8d88a1df17376a097d8369"
+        },
+        {
+          "crate": "tinytemplate",
+          "version": "1.2.1",
+          "sha256": "be4d6b5f19ff7664e8c98d03e2139cb510db9b0a60b55f8e8709b689d939b6bc"
+        },
+        {
+          "crate": "tinyvec",
+          "version": "1.11.0",
+          "sha256": "3e61e67053d25a4e82c844e8424039d9745781b3fc4f32b8d55ed50f5f667ef3"
+        },
+        {
+          "crate": "unicode-ident",
+          "version": "1.0.24",
+          "sha256": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75"
+        },
+        {
+          "crate": "walkdir",
+          "version": "2.5.0",
+          "sha256": "29790946404f91d9c5d06f9874efddea1dc06c5efe94541a7d6863108e3a5e4b"
+        },
+        {
+          "crate": "wasm-bindgen",
+          "version": "0.2.121",
+          "sha256": "49ace1d07c165b0864824eee619580c4689389afa9dc9ed3a4c75040d82e6790"
+        },
+        {
+          "crate": "wasm-bindgen-macro",
+          "version": "0.2.121",
+          "sha256": "8e68e6f4afd367a562002c05637acb8578ff2dea1943df76afb9e83d177c8578"
+        },
+        {
+          "crate": "wasm-bindgen-macro-support",
+          "version": "0.2.121",
+          "sha256": "d95a9ec35c64b2a7cb35d3fead40c4238d0940c86d107136999567a4703259f2"
+        },
+        {
+          "crate": "wasm-bindgen-shared",
+          "version": "0.2.121",
+          "sha256": "c4e0100b01e9f0d03189a92b96772a1fb998639d981193d7dbab487302513441"
+        },
+        {
+          "crate": "web-sys",
+          "version": "0.3.98",
+          "sha256": "4b572dff8bcf38bad0fa19729c89bb5748b2b9b1d8be70cf90df697e3a8f32aa"
+        },
+        {
+          "crate": "winapi",
+          "version": "0.3.9",
+          "sha256": "5c839a674fcd7a98952e593242ea400abe93992746761e38641405d28b00f419"
+        },
+        {
+          "crate": "winapi-i686-pc-windows-gnu",
+          "version": "0.4.0",
+          "sha256": "ac3b87c63620426dd9b991e5ce0329eff545bccbbb34f3be09ff6fb6ab51b7b6"
+        },
+        {
+          "crate": "winapi-util",
+          "version": "0.1.11",
+          "sha256": "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
+        },
+        {
+          "crate": "winapi-x86_64-pc-windows-gnu",
+          "version": "0.4.0",
+          "sha256": "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"
+        },
+        {
+          "crate": "windows-link",
+          "version": "0.2.1",
+          "sha256": "f0805222e57f7521d6a62e36fa9163bc891acd422f971defe97d64e70d0a4fe5"
+        },
+        {
+          "crate": "windows-sys",
+          "version": "0.61.2",
+          "sha256": "ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc"
+        },
+        {
+          "crate": "wyz",
+          "version": "0.5.1",
+          "sha256": "05f360fc0b24296329c78fda852a1e9ae82de9cf7b27dae4b7f62f118f77b9ed"
+        },
+        {
+          "crate": "zerocopy",
+          "version": "0.8.48",
+          "sha256": "eed437bf9d6692032087e337407a86f04cd8d6a16a37199ed57949d415bd68e9"
+        },
+        {
+          "crate": "zerocopy-derive",
+          "version": "0.8.48",
+          "sha256": "70e3cd084b1788766f53af483dd21f93881ff30d7320490ec3ef7526d203bad4"
+        },
+        {
+          "crate": "zmij",
+          "version": "1.0.21",
+          "sha256": "b8848ee67ecc8aedbaf3e4122217aff892639231befc6a1b58d29fff4c2cabaa"
+        }
+      ],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libdovi.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libgcc",
+      "version": "16.2.0-6",
+      "base": "mingw-w64-gcc",
+      "licenses": [
+        "spdx:GPL-3.0-or-later WITH GCC-exception-3.1 AND GFDL-1.3-or-later"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-gcc-16.2.0-6.src.tar.zst",
+      "sourceSha256": "a901d8afb78438abcff9ed020cd9aa9431db76de1992171c2454c3c07ad289e8",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "80b2497f019977dd9528b1abc8621b1328a0115ab1f724047ccbb56bf323f11d",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-gcc/gcc-16.2.0.tar.xz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": true,
+      "shippedDlls": [
+        "libgcc_s_seh-1.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libiconv",
+      "version": "1.19-1",
+      "base": "mingw-w64-libiconv",
+      "licenses": [
+        "spdx:LGPL-2.1-or-later",
+        "documentation:spdx:GPL-3.0-or-later"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-libiconv-1.19-1.src.tar.zst",
+      "sourceSha256": "74428280c17094da5b702c29b2e1a0abae59556ea5dfdd65705cc8ccc1e000fb",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "9a500f38c2b91808741c62fae746b3e9110b33a1ecf5c30fa0c66dbedddf7e16",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-libiconv/libiconv-1.19.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libiconv-2.dll"
+      ],
+      "componentLicenseAssessment": "LGPL-2.1-or-later libraries; GPL program/documentation excluded"
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libjpeg-turbo",
+      "version": "3.2.0-1",
+      "base": "mingw-w64-libjpeg-turbo",
+      "licenses": [
+        "custom:BSD-like"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-libjpeg-turbo-3.2.0-1.src.tar.zst",
+      "sourceSha256": "98bfbef730e79ca74c88842eb27730db11429dbae4d95e0f5d7859e316026a74",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "7c001d00df557cfee969ad43d37b9c31ae22869e8aac4091a89dc3ae6d95e11d",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-libjpeg-turbo/libjpeg-turbo-3.2.0.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libjpeg-8.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libogg",
+      "version": "1.3.6-1",
+      "base": "mingw-w64-libogg",
+      "licenses": [
+        "spdx:BSD-3-Clause"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-libogg-1.3.6-1.src.tar.zst",
+      "sourceSha256": "af94ea3c4011694b7a68904144ec1ab73c6c649152c78cb93a7df2a6c386b351",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "110a34239e8f122da15e041b2601e2f3c6d4c909d738bdf978700601e0f64449",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-libogg/libogg-1.3.6.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libogg-0.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libplacebo",
+      "version": "7.360.1-2",
+      "base": "mingw-w64-libplacebo",
+      "licenses": [
+        "LGPL2.1"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-libplacebo-7.360.1-2.src.tar.zst",
+      "sourceSha256": "2abe10f1d16981407e8108c5ccb2e13cbeb28ce62f702a4caf1165b732e85bf0",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "ef183923c29475320d75a3b06fff5729172fcfdcefc45b660ed28c41107d4de4",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-libplacebo/libplacebo-v7.360.1.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libplacebo-360.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libpng",
+      "version": "1.6.59-2",
+      "base": "mingw-w64-libpng",
+      "licenses": [
+        "custom"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-libpng-1.6.59-2.src.tar.zst",
+      "sourceSha256": "7f7c029d119427fe7b36be8a79228f831062bedadee1f49c9e0919fe6d7a459a",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "6cc296f5029220e1a226c4bc50294212b20ab8fcabeb00b5a002667f4a882edc",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-libpng/v1.6.59.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libpng16-16.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libstdc++",
+      "version": "16.2.0-6",
+      "base": "mingw-w64-gcc",
+      "licenses": [
+        "spdx:GPL-3.0-or-later WITH GCC-exception-3.1 AND GFDL-1.3-or-later"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-gcc-16.2.0-6.src.tar.zst",
+      "sourceSha256": "a901d8afb78438abcff9ed020cd9aa9431db76de1992171c2454c3c07ad289e8",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "33c5e58a85a538cf843a8672991cce591f0231d66da3b66a57629712d64be17f",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-gcc/gcc-16.2.0.tar.xz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": true,
+      "shippedDlls": [
+        "libstdc++-6.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libunibreak",
+      "version": "7.0-1",
+      "base": "mingw-w64-libunibreak",
+      "licenses": [
+        "spdx:Zlib"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-libunibreak-7.0-1.src.tar.zst",
+      "sourceSha256": "3d51ed18b20deb475c6947ea8fdabb7d6107962e2e6e690de90e5227537728ad",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "de657828b41248a2fd67fa6e8348402a61ef130b0444f1f006c6545c43ad86d8",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-libunibreak/libunibreak-7.0.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libunibreak-7.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libvorbis",
+      "version": "1.3.7-3",
+      "base": "mingw-w64-libvorbis",
+      "licenses": [
+        "custom"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-libvorbis-1.3.7-3.src.tar.zst",
+      "sourceSha256": "429f3219de93435cbaa7737627b3b548ba8917d09c525f2005b9283ac5b39142",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "d013d2c7489b175299f9ea8bd9b70cf456337943b0f13e6eb470beb6c3fc251f",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-libvorbis/libvorbis-1.3.7.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libvorbis-0.dll",
+        "libvorbisenc-2.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libvpx",
+      "version": "1.17.0-1",
+      "base": "mingw-w64-libvpx",
+      "licenses": [
+        "spdx:BSD-3-Clause"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-libvpx-1.17.0-1.src.tar.zst",
+      "sourceSha256": "7b322fffe50501d26bbbb489135e5001f6096da2529ad992c712c00c94bb38dd",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "8ff6919dbb88ea26ce28d22fd81d6f0d6e200cf56a4dd81ffc2d33124fe98024",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-libvpx/libvpx-1.17.0.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libvpx-1.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libwinpthread",
+      "version": "14.0.0.r532.gdbbc8e99d-1",
+      "base": "mingw-w64-winpthreads",
+      "licenses": [
+        "spdx:MIT AND BSD-3-Clause"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-winpthreads-14.0.0.r532.gdbbc8e99d-1.src.tar.zst",
+      "sourceSha256": "79202508d71447ae6cb3dbd434d8045408b8ec7105e4018eb8dddff34be6ff5c",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "caab3068ad48dbefd39d88f7ec39778d1ce452f8e7dda0670344462b598d86ec",
+      "sourceContainsUpstreamArchives": [],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libwinpthread-1.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-opus",
+      "version": "1.6.1-2",
+      "base": "mingw-w64-opus",
+      "licenses": [
+        "spdx:BSD-3-Clause"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-opus-1.6.1-2.src.tar.zst",
+      "sourceSha256": "65af241b547b36a0b1b07561b41f35ea6f8825712a22707005b9e783bd9afc72",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "bb114bcf26225f50f874497ebfd6b8224fff2a20bda3f8ee45cd07ce5f02657b",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-opus/opus-1.6.1.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libopus-0.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-pcre2",
+      "version": "10.49-1",
+      "base": "mingw-w64-pcre2",
+      "licenses": [
+        "spdx:BSD-3-Clause"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-pcre2-10.49-1.src.tar.zst",
+      "sourceSha256": "b02f0d5070b7d7f6db5c8ba9b009f28c1a07b9b52aaf7964dc0c8b098e4088d1",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "63172179db724ac71e2439a7981134c1bcab8049bdddfd349b32b8f76ed52d1e",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-pcre2/pcre2-10.49.tar.bz2"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libpcre2-8-0.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-shaderc",
+      "version": "2026.4-1",
+      "base": "mingw-w64-shaderc",
+      "licenses": [
+        "spdx:Apache-2.0"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-shaderc-2026.4-1.src.tar.zst",
+      "sourceSha256": "7c9df6e89d39cc343aa914b3728d4fbacc35832c5ecda83d54ae386966186e2a",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "a4ad271f76acd2307ed67738770b30d6486bd3c7acff63ba83dd13e56ce9ab82",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-shaderc/shaderc-2026.4.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libshaderc_shared.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-spirv-cross",
+      "version": "1~1.4.363.0-1",
+      "base": "mingw-w64-spirv-cross",
+      "licenses": [
+        "spdx:Apache-2.0"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-spirv-cross-1~1.4.363.0-1.src.tar.zst",
+      "sourceSha256": "2043f9e7e1359edbf1618a59c38a687d47e3a5779844db6adc4f8de78c5e1eed",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "246759d1a8391c67a4180ad4d103a78219182ef7057d70469394fa6c40851187",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-spirv-cross/spirv-cross-1.4.363.0.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libspirv-cross-c-shared.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-uchardet",
+      "version": "0.0.8-2",
+      "base": "mingw-w64-uchardet",
+      "licenses": [
+        "spdx:MPL-1.1"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-uchardet-0.0.8-2.src.tar.zst",
+      "sourceSha256": "6c2636d95eb9b74a248469eb142da431d5b6543ca107fc08f196c73cd81a577c",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "06e007036a2188fde355311d75a67195d9a53d8ea92d56a481991db579436f2c",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-uchardet/uchardet-0.0.8.tar.xz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "libuchardet.dll"
+      ],
+      "componentLicenseAssessment": "LGPL-2.1-or-later alternative, verified upstream source header"
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-vulkan-loader",
+      "version": "1~1.4.363.0-1",
+      "base": "mingw-w64-vulkan-loader",
+      "licenses": [
+        "spdx:Apache-2.0"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-vulkan-loader-1~1.4.363.0-1.src.tar.zst",
+      "sourceSha256": "61ed2ebe6007c464af1687e4ecad93199e9faeb3d8dd4d3c24e5b2576f730c9b",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "065076fe13d39ab97eea4740596426d5ae741b5044e48e1c9495d04835c92dbe",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-vulkan-loader/Vulkan-Loader-1.4.363.0.tar.gz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "vulkan-1.dll"
+      ],
+      "componentLicenseAssessment": null
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-zlib",
+      "version": "1.3.2-3",
+      "base": "mingw-w64-zlib",
+      "licenses": [
+        "spdx:Zlib"
+      ],
+      "sourceUrl": "https://mirror.msys2.org/mingw/sources/mingw-w64-zlib-1.3.2-3.src.tar.zst",
+      "sourceSha256": "4b7839ab2826d3e3d27fe46150d2180a1f561f4d03c9e82aeb4b056180561f00",
+      "signatureVerified": true,
+      "recipeMatchesBuildInfo": true,
+      "binaryPackageSha256": "130e6ef04c654fc2150a177600aa5ed0035087665a893479d2c85ba7485d5704",
+      "sourceContainsUpstreamArchives": [
+        "mingw-w64-zlib/zlib-1.3.2.tar.xz"
+      ],
+      "additionalRustSources": [],
+      "gccRuntimeExceptionVerified": false,
+      "shippedDlls": [
+        "zlib1.dll"
+      ],
+      "componentLicenseAssessment": null
+    }
+  ],
+  "bitIdenticalReproducibilityVerified": false,
+  "nativeReviewCompleted": true,
+  "licenseRoute": "LGPL-compatible",
+  "mpvVersion": "mpv v0.41.0-dev-g41f6a6450 Copyright \u00c2\u00a9 2000-2025 mpv/MPlayer/mplayer2 projects",
+  "dllSha256": "d14a2846eb904088d9138d79c8a227fe74aa486b24e841608cea4697431b1954",
+  "rustRuntimeVersion": "1.97.0",
+  "buildWorkflowUrl": "https://github.com/arakanator/EffortLess/actions/runs/40142336760",
+  "mpvSourceRevision": "41f6a645068483470267271e1d09966ca3b9f413",
+  "ffmpegSourceRevision": "8ae0b34901ba60a802f183ee75a250a9fc3e09a5",
+  "clientApi": "2.3",
+  "sourceArchiveRelativePath": "artifacts/release-candidate/EffortLess-NativeSources-0.3.1-rc.1.zip",
+  "sourceArchiveSha256": "30c27931191b85330bd7348046de6066f4ed311ab9df0299a30ca2b23d7ae5b0",
+  "sourceArchiveUrl": "https://github.com/arakanator/EffortLess/releases/download/v0.3.1-rc.1/EffortLess-NativeSources-0.3.1-rc.1.zip"
 }

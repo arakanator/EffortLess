@@ -29,11 +29,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="..\..\native\win-x64\*.dll;..\..\native\win-x64\*.txt;..\..\native\win-x64\*.json">
+    <!-- Native runtime files are copied verbatim, not indexed as XAML resources.
+         DLL names such as libglib-2.0-0 contain invalid PRI qualifiers. -->
+    <None Include="..\..\native\win-x64\*.dll;..\..\native\win-x64\*.txt;..\..\native\win-x64\*.json">
       <Link>native\win-x64\%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    </None>
   </ItemGroup>
 </Project>
 

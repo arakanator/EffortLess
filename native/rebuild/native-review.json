@@ -1,0 +1,107 @@
+{
+  "workflow": "https://github.com/arakanator/EffortLess/actions/runs/40142336760",
+  "mpvRevision": "41f6a645068483470267271e1d09966ca3b9f413",
+  "ffmpegRevision": "8ae0b34901ba60a802f183ee75a250a9fc3e09a5",
+  "ffmpegGplEnabled": false,
+  "ffmpegNonfreeEnabled": false,
+  "upstreamTests": {
+    "passed": 32,
+    "failed": 0
+  },
+  "applicationNativeRegression": {
+    "passed": 228,
+    "failed": 0,
+    "skipped": 0
+  },
+  "artifactIntegrity": {
+    "artifactFilesHashed": 965,
+    "runtimeDllsVerified": 42,
+    "vendorDllPackageBytesVerified": 34,
+    "licenseAndPlaybackApproval": "separate parent review required"
+  },
+  "staticImportAudit": {
+    "dlls": 42,
+    "unresolved": 0,
+    "wrongArchitecture": 0
+  },
+  "uchardetSourceHeadersWithLgplAlternative": 73,
+  "lcmsGplPluginExportPresent": false,
+  "additionalSourceInputs": [
+    {
+      "base": "mingw-w64-fast_float",
+      "version": "8.2.10-1",
+      "url": "https://mirror.msys2.org/mingw/sources/mingw-w64-fast_float-8.2.10-1.src.tar.zst",
+      "sha256": "a95faba89d5f5796a7d1e3da0f8148011c4cc40a48e19353aac803fe14fb347f",
+      "usedBy": "libplacebo7.360.1-2 BUILDINFO",
+      "signatureVerified": true
+    },
+    {
+      "base": "mingw-w64-xxhash",
+      "version": "0.8.3-2",
+      "url": "https://mirror.msys2.org/mingw/sources/mingw-w64-xxhash-0.8.3-2.src.tar.zst",
+      "sha256": "ffb2ce34d6d7229b6f0cbab9bfb1b1824c6d9b4db44561b580d55e62bec23b54",
+      "usedBy": "libplacebo7.360.1-2 BUILDINFO",
+      "signatureVerified": true
+    },
+    {
+      "base": "mingw-w64-vulkan-headers",
+      "version": "1~1.4.350.1-1",
+      "url": "https://mirror.msys2.org/mingw/sources/mingw-w64-vulkan-headers-1~1.4.350.1-1.src.tar.zst",
+      "sha256": "867eb92c646e8b413edc447646646482d91725fc66988a1860c24b243120cfee",
+      "usedBy": "libplacebo7.360.1-2 BUILDINFO",
+      "signatureVerified": true
+    },
+    {
+      "base": "mingw-w64-spirv-headers",
+      "version": "2~1.4.363.0-1",
+      "url": "https://mirror.msys2.org/mingw/sources/mingw-w64-spirv-headers-2~1.4.363.0-1.src.tar.zst",
+      "sha256": "261200e7faf30b0cdfd8a6987543c3ab62710e8eb29d727313518d3e7c363f07",
+      "usedBy": "shaderc2026.4 BUILDINFO",
+      "signatureVerified": true
+    },
+    {
+      "base": "mingw-w64-glslang",
+      "version": "16.3.0-1",
+      "url": "https://mirror.msys2.org/mingw/sources/mingw-w64-glslang-16.3.0-1.src.tar.zst",
+      "sha256": "948faf9909ad6ff3772077cd97546323415c4bd1164c7775e208bc8645780187",
+      "usedBy": "statically linked shaderc2026.4 BUILDINFO",
+      "signatureVerified": true
+    },
+    {
+      "base": "mingw-w64-spirv-tools",
+      "version": "3~1.4.363.0-1",
+      "url": "https://mirror.msys2.org/mingw/sources/mingw-w64-spirv-tools-3~1.4.363.0-1.src.tar.zst",
+      "sha256": "6110f9257bd8d63da9b8d981c1093fd28f99a7d51c34f067c3a1c5db5e46454a",
+      "usedBy": "statically linked shaderc2026.4 BUILDINFO",
+      "signatureVerified": true
+    },
+    {
+      "base": "mingw-w64-python-glad",
+      "version": "2.0.8-3",
+      "url": "https://mirror.msys2.org/mingw/sources/mingw-w64-python-glad-2.0.8-3.src.tar.zst",
+      "sha256": "98be4ed02dca83b0fec6e80db14441a37bdbfb0d47895f596cc841fffe7e567f",
+      "usedBy": "libplacebo generated OpenGL declarations/loader",
+      "signatureVerified": true
+    },
+    {
+      "base": "mingw-w64-shaderc",
+      "version": "2026.2-1",
+      "url": "https://mirror.msys2.org/mingw/sources/mingw-w64-shaderc-2026.2-1.src.tar.zst",
+      "sha256": "63f8080f99815cdab0ef3d77d724afbf21f8957ce5bd3d287a21527dc0a211b5",
+      "usedBy": "libplacebo build-time shaderc headers",
+      "signatureVerified": true
+    },
+    {
+      "base": "mingw-w64-spirv-cross",
+      "version": "1~1.4.350.1-1",
+      "url": "https://mirror.msys2.org/mingw/sources/mingw-w64-spirv-cross-1~1.4.350.1-1.src.tar.zst",
+      "sha256": "78068f0c207a478a13bb7efdadc5dc4d60f719ec573d90f775606afc7b6bea93",
+      "usedBy": "libplacebo build-time SPIRV-Cross headers",
+      "signatureVerified": true
+    }
+  ],
+  "rustCratesArchived": 228,
+  "rustCompiler": "1.97.0",
+  "bitIdenticalReproductionTested": false,
+  "installedCopyAcceptance": "pending; separate installer gate"
+}

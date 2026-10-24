@@ -16,6 +16,7 @@ public static class MpvNative
     public enum MpvError : int
     {
         Success = 0,
+        OptionNotFound = -5,
         Generic = -20
     }
 

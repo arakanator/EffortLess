@@ -1,0 +1,218 @@
+[
+  {
+    "file": "mingw-w64-fast_float-8.2.10-1/b2814df11bacded3-LICENSE-APACHE",
+    "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06",
+    "sourceArchive": "mingw-w64-fast_float-8.2.10-1.src.tar.zst",
+    "sourceArchiveSha256": "a95faba89d5f5796a7d1e3da0f8148011c4cc40a48e19353aac803fe14fb347f",
+    "upstreamArchiveMember": "mingw-w64-fast_float/fast_float-8.2.10.tar.gz",
+    "noticeMember": "fast_float-8.2.10/LICENSE-APACHE"
+  },
+  {
+    "file": "mingw-w64-fast_float-8.2.10-1/8a9874a95f38c800-LICENSE-BOOST",
+    "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b",
+    "sourceArchive": "mingw-w64-fast_float-8.2.10-1.src.tar.zst",
+    "sourceArchiveSha256": "a95faba89d5f5796a7d1e3da0f8148011c4cc40a48e19353aac803fe14fb347f",
+    "upstreamArchiveMember": "mingw-w64-fast_float/fast_float-8.2.10.tar.gz",
+    "noticeMember": "fast_float-8.2.10/LICENSE-BOOST"
+  },
+  {
+    "file": "mingw-w64-fast_float-8.2.10-1/f873ffe70c056159-LICENSE-MIT",
+    "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6",
+    "sourceArchive": "mingw-w64-fast_float-8.2.10-1.src.tar.zst",
+    "sourceArchiveSha256": "a95faba89d5f5796a7d1e3da0f8148011c4cc40a48e19353aac803fe14fb347f",
+    "upstreamArchiveMember": "mingw-w64-fast_float/fast_float-8.2.10.tar.gz",
+    "noticeMember": "fast_float-8.2.10/LICENSE-MIT"
+  },
+  {
+    "file": "mingw-w64-glslang-16.3.0-1/e71778c34cd6c384-LICENSE.txt",
+    "sha256": "17e70c676e1521ff3e4686f04a2053d93a7e28a33be8de7ec37ab0ff72feb677",
+    "sourceArchive": "mingw-w64-glslang-16.3.0-1.src.tar.zst",
+    "sourceArchiveSha256": "948faf9909ad6ff3772077cd97546323415c4bd1164c7775e208bc8645780187",
+    "upstreamArchiveMember": "mingw-w64-glslang/glslang-16.3.0.tar.gz",
+    "noticeMember": "glslang-16.3.0/LICENSE.txt"
+  },
+  {
+    "file": "mingw-w64-glslang-16.3.0-1/7d6c3ea0c094cfc4-license-checker.cfg",
+    "sha256": "de8a63c8a32c3e003af75e66044248164392365f0178da624947cb1b0f3f8cb4",
+    "sourceArchive": "mingw-w64-glslang-16.3.0-1.src.tar.zst",
+    "sourceArchiveSha256": "948faf9909ad6ff3772077cd97546323415c4bd1164c7775e208bc8645780187",
+    "upstreamArchiveMember": "mingw-w64-glslang/glslang-16.3.0.tar.gz",
+    "noticeMember": "glslang-16.3.0/license-checker.cfg"
+  },
+  {
+    "file": "mingw-w64-python-glad-2.0.8-3/2b282cdcd6a1c566-LICENSE",
+    "sha256": "cbb325cd4ac5bd06717ffa34a322b984f9d285e4c67c8ca1b7380d6ef08c2a77",
+    "sourceArchive": "mingw-w64-python-glad-2.0.8-3.src.tar.zst",
+    "sourceArchiveSha256": "98be4ed02dca83b0fec6e80db14441a37bdbfb0d47895f596cc841fffe7e567f",
+    "upstreamArchiveMember": "mingw-w64-python-glad/glad-2.0.8.tar.gz",
+    "noticeMember": "glad-2.0.8/LICENSE"
+  },
+  {
+    "file": "mingw-w64-shaderc-2026.2-1/8c7295ddd927d023-LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "sourceArchive": "mingw-w64-shaderc-2026.2-1.src.tar.zst",
+    "sourceArchiveSha256": "63f8080f99815cdab0ef3d77d724afbf21f8957ce5bd3d287a21527dc0a211b5",
+    "upstreamArchiveMember": "mingw-w64-shaderc/shaderc-2026.2.tar.gz",
+    "noticeMember": "shaderc-2026.2/LICENSE"
+  },
+  {
+    "file": "mingw-w64-shaderc-2026.2-1/2b56b21b7299d204-license-checker.cfg",
+    "sha256": "ff39f110e4b17c6a2e24eacc14a32674c2c1f2385828bdc23a0399d3475fffc8",
+    "sourceArchive": "mingw-w64-shaderc-2026.2-1.src.tar.zst",
+    "sourceArchiveSha256": "63f8080f99815cdab0ef3d77d724afbf21f8957ce5bd3d287a21527dc0a211b5",
+    "upstreamArchiveMember": "mingw-w64-shaderc/shaderc-2026.2.tar.gz",
+    "noticeMember": "shaderc-2026.2/license-checker.cfg"
+  },
+  {
+    "file": "mingw-w64-shaderc-2026.2-1/2b5affea32be838c-LICENSE.glslang",
+    "sha256": "b5a00e94f058edc87e05978329b55730d8689abe61205d9018443d03de4f07da",
+    "sourceArchive": "mingw-w64-shaderc-2026.2-1.src.tar.zst",
+    "sourceArchiveSha256": "63f8080f99815cdab0ef3d77d724afbf21f8957ce5bd3d287a21527dc0a211b5",
+    "upstreamArchiveMember": "mingw-w64-shaderc/shaderc-2026.2.tar.gz",
+    "noticeMember": "shaderc-2026.2/third_party/LICENSE.glslang"
+  },
+  {
+    "file": "mingw-w64-shaderc-2026.2-1/73a60a8e7b456751-LICENSE.spirv-tools",
+    "sha256": "47e20ce182bc68fab1a0cfb129b03c326aaf4f2b6b7905aa9d376d31018bd29f",
+    "sourceArchive": "mingw-w64-shaderc-2026.2-1.src.tar.zst",
+    "sourceArchiveSha256": "63f8080f99815cdab0ef3d77d724afbf21f8957ce5bd3d287a21527dc0a211b5",
+    "upstreamArchiveMember": "mingw-w64-shaderc/shaderc-2026.2.tar.gz",
+    "noticeMember": "shaderc-2026.2/third_party/LICENSE.spirv-tools"
+  },
+  {
+    "file": "mingw-w64-spirv-cross-1~1.4.350.1-1/841ef6d0da3e0c5f-LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "sourceArchive": "mingw-w64-spirv-cross-1~1.4.350.1-1.src.tar.zst",
+    "sourceArchiveSha256": "78068f0c207a478a13bb7efdadc5dc4d60f719ec573d90f775606afc7b6bea93",
+    "upstreamArchiveMember": "mingw-w64-spirv-cross/spirv-cross-1.4.350.1.tar.gz",
+    "noticeMember": "SPIRV-Cross-vulkan-sdk-1.4.350.1/LICENSE"
+  },
+  {
+    "file": "mingw-w64-spirv-cross-1~1.4.350.1-1/c643029e8c932846-Apache-2.0.txt",
+    "sha256": "44b0a56e80b41a1b0a6bd1292515e806539fd97b30be54c2719e6c763190ab57",
+    "sourceArchive": "mingw-w64-spirv-cross-1~1.4.350.1-1.src.tar.zst",
+    "sourceArchiveSha256": "78068f0c207a478a13bb7efdadc5dc4d60f719ec573d90f775606afc7b6bea93",
+    "upstreamArchiveMember": "mingw-w64-spirv-cross/spirv-cross-1.4.350.1.tar.gz",
+    "noticeMember": "SPIRV-Cross-vulkan-sdk-1.4.350.1/LICENSES/Apache-2.0.txt"
+  },
+  {
+    "file": "mingw-w64-spirv-cross-1~1.4.350.1-1/2b3f66fddd587503-CC-BY-4.0.txt",
+    "sha256": "b89aeb7c2a164a0576786dd2a8b57f2fb628b23981f0a06bd77e2f99a9befa0f",
+    "sourceArchive": "mingw-w64-spirv-cross-1~1.4.350.1-1.src.tar.zst",
+    "sourceArchiveSha256": "78068f0c207a478a13bb7efdadc5dc4d60f719ec573d90f775606afc7b6bea93",
+    "upstreamArchiveMember": "mingw-w64-spirv-cross/spirv-cross-1.4.350.1.tar.gz",
+    "noticeMember": "SPIRV-Cross-vulkan-sdk-1.4.350.1/LICENSES/CC-BY-4.0.txt"
+  },
+  {
+    "file": "mingw-w64-spirv-cross-1~1.4.350.1-1/8cd703c682d714cc-LicenseRef-KhronosFreeUse.txt",
+    "sha256": "fbeaca472f4f70e276dd1106ca5097435967a22ad6c1d8200aef7ad9f70aaf3f",
+    "sourceArchive": "mingw-w64-spirv-cross-1~1.4.350.1-1.src.tar.zst",
+    "sourceArchiveSha256": "78068f0c207a478a13bb7efdadc5dc4d60f719ec573d90f775606afc7b6bea93",
+    "upstreamArchiveMember": "mingw-w64-spirv-cross/spirv-cross-1.4.350.1.tar.gz",
+    "noticeMember": "SPIRV-Cross-vulkan-sdk-1.4.350.1/LICENSES/LicenseRef-KhronosFreeUse.txt"
+  },
+  {
+    "file": "mingw-w64-spirv-cross-1~1.4.350.1-1/2c282080a90d67f7-MIT.txt",
+    "sha256": "8f25018489d6fe0dec34a352314c38dc146247b7de65735790f4398a92afa84b",
+    "sourceArchive": "mingw-w64-spirv-cross-1~1.4.350.1-1.src.tar.zst",
+    "sourceArchiveSha256": "78068f0c207a478a13bb7efdadc5dc4d60f719ec573d90f775606afc7b6bea93",
+    "upstreamArchiveMember": "mingw-w64-spirv-cross/spirv-cross-1.4.350.1.tar.gz",
+    "noticeMember": "SPIRV-Cross-vulkan-sdk-1.4.350.1/LICENSES/MIT.txt"
+  },
+  {
+    "file": "mingw-w64-spirv-headers-2~1.4.363.0-1/2704535bdca051a4-LICENSE",
+    "sha256": "ea43b1de38a6f90c488800d66dec1ed671e68cda530266bc96951fb5b6307613",
+    "sourceArchive": "mingw-w64-spirv-headers-2~1.4.363.0-1.src.tar.zst",
+    "sourceArchiveSha256": "261200e7faf30b0cdfd8a6987543c3ab62710e8eb29d727313518d3e7c363f07",
+    "upstreamArchiveMember": "mingw-w64-spirv-headers/spirv-headers-1.4.363.0.tar.gz",
+    "noticeMember": "SPIRV-Headers-vulkan-sdk-1.4.363.0/LICENSE"
+  },
+  {
+    "file": "mingw-w64-spirv-headers-2~1.4.363.0-1/8f7fd21a02945b51-CC-BY-4.0.txt",
+    "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+    "sourceArchive": "mingw-w64-spirv-headers-2~1.4.363.0-1.src.tar.zst",
+    "sourceArchiveSha256": "261200e7faf30b0cdfd8a6987543c3ab62710e8eb29d727313518d3e7c363f07",
+    "upstreamArchiveMember": "mingw-w64-spirv-headers/spirv-headers-1.4.363.0.tar.gz",
+    "noticeMember": "SPIRV-Headers-vulkan-sdk-1.4.363.0/LICENSES/CC-BY-4.0.txt"
+  },
+  {
+    "file": "mingw-w64-spirv-headers-2~1.4.363.0-1/c0cf097af110c1a3-MIT.txt",
+    "sha256": "6d7c9e9d7d12c8d3753bdb24417b84819ba4d6c2f025c37948113d86dc81eef9",
+    "sourceArchive": "mingw-w64-spirv-headers-2~1.4.363.0-1.src.tar.zst",
+    "sourceArchiveSha256": "261200e7faf30b0cdfd8a6987543c3ab62710e8eb29d727313518d3e7c363f07",
+    "upstreamArchiveMember": "mingw-w64-spirv-headers/spirv-headers-1.4.363.0.tar.gz",
+    "noticeMember": "SPIRV-Headers-vulkan-sdk-1.4.363.0/LICENSES/MIT.txt"
+  },
+  {
+    "file": "mingw-w64-spirv-tools-3~1.4.363.0-1/39b02da7c2163305-LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "sourceArchive": "mingw-w64-spirv-tools-3~1.4.363.0-1.src.tar.zst",
+    "sourceArchiveSha256": "6110f9257bd8d63da9b8d981c1093fd28f99a7d51c34f067c3a1c5db5e46454a",
+    "upstreamArchiveMember": "mingw-w64-spirv-tools/spirv-tools-1.4.363.0.tar.gz",
+    "noticeMember": "SPIRV-Tools-vulkan-sdk-1.4.363.0/LICENSE"
+  },
+  {
+    "file": "mingw-w64-spirv-tools-3~1.4.363.0-1/3acdd61ef52fdec9-LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "sourceArchive": "mingw-w64-spirv-tools-3~1.4.363.0-1.src.tar.zst",
+    "sourceArchiveSha256": "6110f9257bd8d63da9b8d981c1093fd28f99a7d51c34f067c3a1c5db5e46454a",
+    "upstreamArchiveMember": "mingw-w64-spirv-tools/spirv-tools-1.4.363.0.tar.gz",
+    "noticeMember": "SPIRV-Tools-vulkan-sdk-1.4.363.0/utils/vscode/src/lsp/LICENSE"
+  },
+  {
+    "file": "mingw-w64-vulkan-headers-1~1.4.350.1-1/5a10b83ddb682e5f-LICENSE.md",
+    "sha256": "ac24e5ea920e4318e4d02c4086ae51f53cfb03feed06c18df1019e7ada1ec7bc",
+    "sourceArchive": "mingw-w64-vulkan-headers-1~1.4.350.1-1.src.tar.zst",
+    "sourceArchiveSha256": "867eb92c646e8b413edc447646646482d91725fc66988a1860c24b243120cfee",
+    "upstreamArchiveMember": "mingw-w64-vulkan-headers/Vulkan-Headers-1.4.350.1.tar.gz",
+    "noticeMember": "Vulkan-Headers-vulkan-sdk-1.4.350.1/LICENSE.md"
+  },
+  {
+    "file": "mingw-w64-vulkan-headers-1~1.4.350.1-1/e85ebb9b0707c780-Apache-2.0.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "sourceArchive": "mingw-w64-vulkan-headers-1~1.4.350.1-1.src.tar.zst",
+    "sourceArchiveSha256": "867eb92c646e8b413edc447646646482d91725fc66988a1860c24b243120cfee",
+    "upstreamArchiveMember": "mingw-w64-vulkan-headers/Vulkan-Headers-1.4.350.1.tar.gz",
+    "noticeMember": "Vulkan-Headers-vulkan-sdk-1.4.350.1/LICENSES/Apache-2.0.txt"
+  },
+  {
+    "file": "mingw-w64-vulkan-headers-1~1.4.350.1-1/87193ebf5fb386ce-MIT.txt",
+    "sha256": "1ca3502222d967f3be5751c55f6b7ee735b5383909c3b501495f54b216dbf227",
+    "sourceArchive": "mingw-w64-vulkan-headers-1~1.4.350.1-1.src.tar.zst",
+    "sourceArchiveSha256": "867eb92c646e8b413edc447646646482d91725fc66988a1860c24b243120cfee",
+    "upstreamArchiveMember": "mingw-w64-vulkan-headers/Vulkan-Headers-1.4.350.1.tar.gz",
+    "noticeMember": "Vulkan-Headers-vulkan-sdk-1.4.350.1/LICENSES/MIT.txt"
+  },
+  {
+    "file": "mingw-w64-xxhash-0.8.3-2/51f6fe3bfa5abdd7-LICENSE",
+    "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a",
+    "sourceArchive": "mingw-w64-xxhash-0.8.3-2.src.tar.zst",
+    "sourceArchiveSha256": "ffb2ce34d6d7229b6f0cbab9bfb1b1824c6d9b4db44561b580d55e62bec23b54",
+    "upstreamArchiveMember": "mingw-w64-xxhash/xxhash-0.8.3.tar.gz",
+    "noticeMember": "xxHash-0.8.3/LICENSE"
+  },
+  {
+    "file": "mingw-w64-xxhash-0.8.3-2/de238a6c94441263-COPYING",
+    "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+    "sourceArchive": "mingw-w64-xxhash-0.8.3-2.src.tar.zst",
+    "sourceArchiveSha256": "ffb2ce34d6d7229b6f0cbab9bfb1b1824c6d9b4db44561b580d55e62bec23b54",
+    "upstreamArchiveMember": "mingw-w64-xxhash/xxhash-0.8.3.tar.gz",
+    "noticeMember": "xxHash-0.8.3/cli/COPYING"
+  },
+  {
+    "file": "mingw-w64-xxhash-0.8.3-2/7129a28c4b319fee-LICENSE",
+    "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+    "sourceArchive": "mingw-w64-xxhash-0.8.3-2.src.tar.zst",
+    "sourceArchiveSha256": "ffb2ce34d6d7229b6f0cbab9bfb1b1824c6d9b4db44561b580d55e62bec23b54",
+    "upstreamArchiveMember": "mingw-w64-xxhash/xxhash-0.8.3.tar.gz",
+    "noticeMember": "xxHash-0.8.3/tests/bench/LICENSE"
+  },
+  {
+    "file": "mingw-w64-xxhash-0.8.3-2/882033e748f069aa-LICENSE",
+    "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+    "sourceArchive": "mingw-w64-xxhash-0.8.3-2.src.tar.zst",
+    "sourceArchiveSha256": "ffb2ce34d6d7229b6f0cbab9bfb1b1824c6d9b4db44561b580d55e62bec23b54",
+    "upstreamArchiveMember": "mingw-w64-xxhash/xxhash-0.8.3.tar.gz",
+    "noticeMember": "xxHash-0.8.3/tests/collisions/LICENSE"
+  }
+]

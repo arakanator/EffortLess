@@ -20,7 +20,9 @@ def verify(root):
     root = root.resolve()
     count = 0
     for line in (root / 'SHA256SUMS').read_text().splitlines():
-        digest, relative = line.split('  ', 1)
+        digest, relative = line.split(maxsplit=1)
+        # GNU sha256sum on Windows marks binary-mode entries with '*'.
+        relative = relative.removeprefix('*')
         path = (root / relative).resolve()
         if not path.is_relative_to(root) or sha(path) != digest:
             raise ValueError('Artifact hash/path mismatch: ' + relative)

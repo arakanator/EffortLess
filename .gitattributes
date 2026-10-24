@@ -7,3 +7,6 @@ docs/third-party/** -text
 native/win-x64/Copyright.txt -text
 native/win-x64/LICENSE.GPL.txt -text
 native/win-x64/VulkanRT-License.txt -text
+native/win-x64/LICENSE.LGPL.txt -text
+native/win-x64/licenses/** -text
+*.lock text eol=lf

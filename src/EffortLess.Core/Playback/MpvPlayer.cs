@@ -255,14 +255,16 @@ public sealed partial class MpvPlayer : IPlaybackEngine
         SetOption(mpv, "config", "no");
         SetOption(mpv, "input-default-bindings", "no");
         SetOption(mpv, "input-vo-keyboard", "no");
-        SetOption(mpv, "osc", "no");
-        SetOption(mpv, "ytdl", "no");
+        // Scripting-free builds do not register these options. An absent
+        // script is already disabled; all other failures remain fatal.
+        SetOption(mpv, "osc", "no", allowAbsent: true);
+        SetOption(mpv, "ytdl", "no", allowAbsent: true);
     }
 
-    private static void SetOption(IntPtr mpv, string name, string value)
+    private static void SetOption(IntPtr mpv, string name, string value, bool allowAbsent = false)
     {
         MpvNative.MpvError error = MpvNative.mpv_set_option_string(mpv, name, value);
-        if (error != MpvNative.MpvError.Success)
+        if (error != MpvNative.MpvError.Success && !(allowAbsent && error == MpvNative.MpvError.OptionNotFound))
             throw new InvalidOperationException($"option {name}={value} failed ({(int)error}).");
     }
 

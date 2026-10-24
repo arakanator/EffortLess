@@ -1,12 +1,8 @@
 {
-  "purpose": "PRIVATE TEST BUILD / LOCAL DEVELOPMENT DISTRIBUTION",
-  "sourceUrl": "https://sdk.lunarg.com/sdk/download/1.4.341.0/windows/VulkanRT-X64-1.4.341.0-Components.zip",
-  "metadataUrl": "https://vulkan.lunarg.com/sdk/files.json",
-  "version": "1.4.341.0",
-  "archiveSha256": "20571dcc8292b80a47d68bbbfa4094d87044041f50f4e2e1f326a01e3732b226",
-  "dllSha256": "98bc6e33b384f83e8cc36174ce1ba81357611d0cbe03462e1ca58d0663034039",
+  "sourceUrl": "https://github.com/arakanator/EffortLess/actions/runs/40142336760",
+  "dllSha256": "31862137c4179dcdbba782760f3e401f9fb526477947079d7f63987864f9b0eb",
+  "sourcePackage": "mingw-w64-ucrt-x86_64-vulkan-loader",
   "architecture": "x64",
-  "signer": "CN=Microsoft Windows Hardware Compatibility Publisher, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
-  "license": "VulkanRT-License.txt (upstream MIT / Apache-2.0 notices)",
+  "license": "licenses/mingw-w64-ucrt-x86_64-vulkan-loader/vulkan-loader/LICENSE",
   "system32Copy": false
 }
