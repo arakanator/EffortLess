@@ -2,6 +2,7 @@
 
 **Decision: source-only publication approved; public binary installer BLOCKED.**
 The owner authorized public source independently of installer completion.
+Source publication is complete; installer remediation is in progress.
 This is a release-gate report, not a claim of legal compliance or a complete SBOM.
 The existing private installer and working playback architecture remain unchanged.
 
@@ -10,7 +11,9 @@ The existing private installer and working playback architecture remain unchange
 - Connected GitHub account: `arakanator`, verified through the authenticated GitHub
   connector and GitHub CLI. CLI 2.103.2 was installed from official WinGet packaging
   and authorized by the owner. The origin remote is
-  https://github.com/arakanator/EffortLess, created private and pushed successfully.
+  https://github.com/arakanator/EffortLess, initially created private and now public
+  after the owner-authorized source/history audit. Unauthenticated API and raw
+  README access were verified. No release assets exist.
 - Existing application: EffortLess 0.3.0-rc.1; MSI 0.3.0; Windows 11 x64.
 - Private MSI: `EffortLess-Setup-0.3.0-rc.1-x64.msi`; 109,490,967 bytes.
 - SHA-256: `7803cdc4fb7f9b7f9ba1e658f3dc18e8f2e625f8a31aeb79aca101d2abf21075`.
@@ -18,7 +21,7 @@ The existing private installer and working playback architecture remain unchange
   import checks do not enumerate statically linked libraries or prove licensing.
 - Reviewed source is now committed locally. The repository had no prior history;
   committed files exclude native binaries, installers, private media and caches.
-  The private remote contains the reviewed source, tests, resources, scripts and
+  The public source remote contains the reviewed source, tests, resources, scripts and
   notices. No binaries or release assets were uploaded.
 
 ## Stop conditions
@@ -138,12 +141,13 @@ supply it, the next engineering step is an owner-authorized reproducible GPL nat
 build with a complete locked source/notice bundle and feature-parity validation.
 That must not silently replace the current engine. Microsoft binary terms have been collected and .NET notices refreshed;
 finish the remaining combined-installer compatibility review. The original-code license is now applied.
-The private source repository is now created and pushed. Test a fresh release only after the binary gates close,
+The source repository is created, pushed, and public after its independent audit. Test a fresh release only after the binary gates close,
 attach matching binary/source/checksum assets, and only then make it public.
 
 Original application source is now licensed GPL-3.0-or-later; see LICENSING.md.
-No public release tag was created and no repository visibility was changed.
-Phase 1 is complete: https://github.com/arakanator/EffortLess is private and the
+No public release tag or binary release was created. Repository visibility was
+changed to public only after the source/history audit passed.
+Phase 1 is complete: https://github.com/arakanator/EffortLess is public and the
 reviewed source is uploaded. The remote tree and commit were checked against Git.
 Public binary publication remains blocked.
 
@@ -189,3 +193,8 @@ independently of distributing an unverified native/runtime binary. The README
 clearly marks installer verification pending, and no unverified installer asset
 or download link is included. Native rebuild work is newly authorized; the
 old DLL will not be used in a public release.
+
+The pre-replacement Release x64 baseline was rerun after public source publication:
+zero build warnings/errors and 228 passed tests, zero failures/skips. These test
+results still use the old private-development DLL and do not validate a replacement.
+The replacement must independently pass them and real installed playback checks.

@@ -11,7 +11,7 @@ release uploads. The current local version is 0.3.0-rc.1.
    secret scanner plus manual inspection. Exclude local histories/logs/media/caches.
    Use a dedicated public-source staging directory if historical documentation is
    unsuitable for upload. Keep the local working project intact.
-3. Reuse https://github.com/arakanator/EffortLess (currently private) and preserve
+3. Reuse https://github.com/arakanator/EffortLess (source-only public) and preserve
    existing history. Push reviewed changes; do not publish unreviewed commits/binaries.
 4. Set semantic application/MSI versions in Directory.Build.props. Never overwrite
    an existing published tag or asset with different bytes; preserve prior releases.
@@ -27,8 +27,8 @@ release uploads. The current local version is 0.3.0-rc.1.
    attach the tested installer, matching complete corresponding-source archives,
    build inputs/patches, manifest, notices and SHA-256 checksums. Upstream homepage
    links alone are not a corresponding-source distribution mechanism.
-9. Verify the source/license and exact downloaded asset checksums. Make the repo
-   public and publish the draft only after all gates pass. Test unauthenticated
+9. Verify the source/license and exact downloaded asset checksums. Keep the source repository public; publish the draft release only after all
+   binary gates pass. Test unauthenticated
    repository/release/download access. Document clean-machine testing limitations.
 
 CI may build and test on Windows, but must not automatically publish untested or
