@@ -15,6 +15,12 @@ export PKG_CONFIG_PATH="$prefix/lib/pkgconfig:$MINGW_PREFIX/lib/pkgconfig"
 export LIBRARY_PATH="$prefix/lib:$MINGW_PREFIX/lib"
 export C_INCLUDE_PATH="$prefix/include:$MINGW_PREFIX/include"
 export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH"
+export CCACHE_DIR="$repo/.cache/native-ccache"
+export CCACHE_BASEDIR="$repo"
+export CCACHE_COMPILERCHECK=content
+ccache --max-size=2G
+export CC='ccache gcc'
+export CXX='ccache g++'
 
 source_checkout() {
     local name="$1" url="$2" revision="$3"
@@ -41,12 +47,14 @@ cd "$work/ffmpeg"
 ffmpeg_options=(
     --prefix="$prefix" --target-os=mingw32 --arch=x86_64
     --enable-shared --disable-static --disable-doc --disable-debug
+    '--cc=ccache gcc' '--cxx=ccache g++'
     --disable-gpl --disable-nonfree --enable-version3 --disable-autodetect
     --enable-libdav1d --enable-libopus --enable-libvpx --enable-libvorbis
     --enable-zlib --enable-iconv
     --enable-schannel --enable-d3d11va --enable-dxva2 --disable-ffplay
     "--extra-cflags=-O2 -ffile-prefix-map=$work=."
     --extra-ldflags=-Wl,--no-insert-timestamp
+    --extra-libs=-liconv
 )
 printf '%q ' ./configure "${ffmpeg_options[@]}" > "$work/records/ffmpeg-options.sh"
 ./configure "${ffmpeg_options[@]}"
@@ -56,6 +64,7 @@ grep -qx '#define CONFIG_VERSION3 1' config.h
 grep -qx '#define CONFIG_PNG_ENCODER 1' config_components.h
 grep -qx '#define CONFIG_H264_DECODER 1' config_components.h
 grep -qx '#define CONFIG_HEVC_DECODER 1' config_components.h
+cp config.h config_components.h ffbuild/config.mak ffbuild/config.log "$work/records/"
 make -j"$(nproc)"
 make install
 cp config.h ffbuild/config.mak ffbuild/config.log "$work/records/"
