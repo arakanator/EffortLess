@@ -165,10 +165,11 @@ def collect_package(name, output):
         upper = label.upper()
         # OR permits selecting a compatible branch; AND with GPL-only does not.
         if re.search(r"(?<!L)GPL", upper) and not gcc_exception:
-            if not (" OR " in upper and " AND " not in upper and re.search(r"MIT|BSD|APACHE|ISC|LGPL", upper)):
+            if not (" OR " in upper and " AND " not in upper and re.search(r"MIT|BSD|APACHE|ISC|LGPL|FTL", upper)):
                 raise RuntimeError("GPL-only package needs component-level assessment: " + name + " " + label)
         if not re.search(r"LGPL|GPL|MIT|BSD|APACHE|ISC|ZLIB|FTL|MPL|X11|UNICODE|CC0|BSL|UNLICENSE|PUBLIC", upper):
-            if not (upper == "CUSTOM" and "Permission is hereby granted" in evidence):
+            if not ((upper == "CUSTOM" and "Permission is hereby granted" in evidence) or
+                    (gcc_exception and "GFDL" in upper)):
                 raise RuntimeError("Unsupported license evidence: " + name + " " + label)
     if not labels:
         raise RuntimeError("Missing license metadata: " + name)
