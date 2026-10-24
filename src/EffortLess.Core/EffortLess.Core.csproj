@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>EffortLess.Core</AssemblyName>
+    <RootNamespace>EffortLess.Core</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="EffortLess.Core.Tests" />
+  </ItemGroup>
+</Project>

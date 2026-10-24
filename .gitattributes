@@ -1,0 +1,7 @@
+* text=auto
+# Preserve upstream license bytes so recorded SHA-256 values survive cloning.
+LICENSE -text
+docs/third-party/** -text
+native/win-x64/Copyright.txt -text
+native/win-x64/LICENSE.GPL.txt -text
+native/win-x64/VulkanRT-License.txt -text

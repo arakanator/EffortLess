@@ -1,0 +1,163 @@
+<Window x:Class="EffortLess.App.MainWindow"
+
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+ <Grid x:Name="Root" Background="{ThemeResource PlayerShellBrush}" RequestedTheme="Dark" Loaded="Root_Loaded" AllowDrop="True" DragOver="Root_DragOver" Drop="Root_Drop">
+
+  <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+
+  <Grid x:Name="PlayerHeader" Height="{StaticResource PlayerHeaderHeight}" Padding="{StaticResource PlayerHeaderPadding}" ColumnSpacing="{StaticResource PlayerSmallSpacing}">
+
+   <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/><ColumnDefinition x:Name="CaptionInset" Width="Auto"/></Grid.ColumnDefinitions>
+
+   <StackPanel x:Name="Brand" Grid.Column="0" Orientation="Horizontal" Spacing="{StaticResource PlayerSmallSpacing}" VerticalAlignment="Center"><FontIcon Glyph="&#xE768;" FontFamily="Segoe Fluent Icons" Foreground="{ThemeResource PlayerAccentBrush}"/><TextBlock x:Name="BrandLabel" Text="EffortLess" Style="{StaticResource PlayerBrandLabel}"/></StackPanel>
+
+   <Grid x:Name="TitleDragRegion" Grid.Column="1" Background="Transparent" Margin="{StaticResource PlayerTitleMargin}"><TextBlock x:Name="StatusText" Text="Video" Style="{StaticResource PlayerLabel}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center"/></Grid>
+
+
+   <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="{StaticResource PlayerSmallSpacing}" VerticalAlignment="Center"><Button x:Name="LeftPanelToggle" Style="{StaticResource PlayerIconButton}" Click="LeftPanelToggle_Click" AutomationProperties.Name="Collapse library panel" ToolTipService.ToolTip="Collapse library panel"><FontIcon Glyph="&#xE700;"/></Button><Button x:Name="RightPanelToggle" Style="{StaticResource PlayerIconButton}" Click="RightPanelToggle_Click" AutomationProperties.Name="Collapse information panel" ToolTipService.ToolTip="Collapse information panel"><FontIcon Glyph="&#xE946;"/></Button></StackPanel>
+
+   <Button x:Name="MoreButton" Grid.Column="3" Style="{StaticResource PlayerIconButton}" AutomationProperties.Name="Playback options" ToolTipService.ToolTip="Playback options"><FontIcon Glyph="&#xE713;" FontFamily="Segoe Fluent Icons" FontSize="{StaticResource PlayerIconSize}"/><Button.Flyout><MenuFlyout x:Name="PlayerMenu" Placement="BottomEdgeAlignedRight" ShouldConstrainToRootBounds="False" Opening="PlayerMenu_Opening"/></Button.Flyout></Button>
+
+   <Button x:Name="SettingsButton" Grid.Column="4" Style="{StaticResource PlayerIconButton}" AutomationProperties.Name="Change Appearance" ToolTipService.ToolTip="Change Appearance"><FontIcon Glyph="&#xE70F;" FontFamily="Segoe Fluent Icons" FontSize="{StaticResource PlayerIconSize}"/>
+
+    <Button.Flyout><Flyout x:Name="AppearanceFlyout" Placement="BottomEdgeAlignedRight" ShouldConstrainToRootBounds="False"><ScrollViewer MaxHeight="{StaticResource PlayerSettingsMaxHeight}"><StackPanel Width="{StaticResource PlayerSettingsWidth}" Spacing="{StaticResource PlayerSmallSpacing}">
+
+     <TextBlock Text="Appearance" Style="{StaticResource PlayerSectionTitle}"/>
+
+     <TextBlock Text="Themes color the interface only. Video stays unchanged." Style="{StaticResource PlayerLabel}" TextWrapping="Wrap"/>
+
+     <ComboBox x:Name="ThemePreset" Header="Theme" HorizontalAlignment="Stretch" SelectionChanged="Appearance_Changed" AutomationProperties.Name="Theme preset"/>
+
+     <TextBox x:Name="CustomAccent" Header="Custom accent · #RRGGBB (optional)" PlaceholderText="Use preset accent" LostFocus="CustomAccent_LostFocus" AutomationProperties.Name="Custom accent color"/>
+
+     <Expander Header="Choose custom accent" HorizontalAlignment="Stretch"><ColorPicker x:Name="AccentPicker" IsAlphaEnabled="False" IsColorChannelTextInputVisible="False" ColorChanged="AccentPicker_ColorChanged" AutomationProperties.Name="Accent color picker"/></Expander>
+
+     <CheckBox x:Name="GlowEnabled" Content="Soft accent glow" Checked="Appearance_Changed" Unchecked="Appearance_Changed"/>
+
+     <Slider x:Name="GlowIntensity" Header="Glow intensity" Minimum="0" Maximum="1" StepFrequency="0.05" ValueChanged="GlowIntensity_Changed" AutomationProperties.Name="Glow intensity"/>
+
+     <ComboBox x:Name="DensityChoice" Header="Density" HorizontalAlignment="Stretch" SelectionChanged="Appearance_Changed"><ComboBoxItem Content="Compact"/><ComboBoxItem Content="Comfortable"/></ComboBox>
+
+     <CheckBox x:Name="TranslucencyEnabled" Content="Subtle translucent window backdrop" Checked="Appearance_Changed" Unchecked="Appearance_Changed"/>
+
+     <TextBlock Text="Backdrop depends on Windows support and accessibility settings." Style="{StaticResource PlayerLabel}" TextWrapping="Wrap"/>
+
+     <TextBlock x:Name="AppearanceFeedback" Style="{StaticResource PlayerLabel}" TextWrapping="Wrap" AutomationProperties.LiveSetting="Polite"/>
+
+     <Button Content="Reset appearance" Click="ResetAppearance_Click" HorizontalAlignment="Left"/>
+
+    </StackPanel></ScrollViewer></Flyout></Button.Flyout>
+
+   </Button>
+
+   <Grid.Resources><Flyout x:Name="PlaybackSettingsFlyout" Placement="BottomEdgeAlignedRight" ShouldConstrainToRootBounds="False"><StackPanel Width="{StaticResource PlayerSettingsWidth}" Spacing="{StaticResource PlayerSmallSpacing}"><TextBlock Text="Playback settings" Style="{StaticResource PlayerSectionTitle}"/><NumberBox x:Name="HideDelayInput" Header="Fullscreen controls hide delay (seconds)" Minimum="1" Maximum="30" Value="3" SpinButtonPlacementMode="Compact" ValueChanged="PlaybackSetting_Changed" AutomationProperties.Name="Fullscreen controls hide delay"/><NumberBox x:Name="SeekIntervalInput" Header="Arrow-key seek interval (seconds)" Minimum="1" Maximum="300" Value="5" SpinButtonPlacementMode="Compact" ValueChanged="PlaybackSetting_Changed" AutomationProperties.Name="Arrow-key seek interval"/><TextBlock Text="Pointer activity reveals controls; they hide after this delay even while paused. Open menus keep them visible. Arrow seeking uses the same interval in both directions." Style="{StaticResource PlayerLabel}" TextWrapping="Wrap"/></StackPanel></Flyout></Grid.Resources>
+
+  </Grid>
+
+  <Grid x:Name="MediaRegion" Grid.Row="1" Padding="{StaticResource PlayerWorkspacePadding}" ColumnSpacing="{StaticResource PlayerSmallSpacing}">
+
+   <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+
+   <Border x:Name="QueuePanel" Width="{StaticResource PlayerQueueWidth}" Style="{StaticResource PlayerPanel}">
+
+    <Grid RowSpacing="{StaticResource PlayerSmallSpacing}"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+
+     <StackPanel><Button x:Name="PlaylistNav" Content="Playlist" Style="{StaticResource PlayerNavigationButton}" Click="PlaylistNav_Click" HorizontalAlignment="Stretch"/><Button x:Name="RecentNav" Content="Recent" Style="{StaticResource PlayerNavigationButton}" Click="RecentNav_Click" HorizontalAlignment="Stretch"/><Button Content="Local files…" Style="{StaticResource PlayerNavigationButton}" Click="OpenButton_Click" HorizontalAlignment="Stretch"/></StackPanel>
+
+     <Grid Grid.Row="1"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><Button Content="＋ Add video" Click="AddVideo_Click" Style="{StaticResource PlayerNavigationButton}"/><TextBlock x:Name="LibraryCount" Grid.Column="1" Style="{StaticResource PlayerLabel}" VerticalAlignment="Center"/></Grid>
+
+     <ListView x:Name="QueueList" Grid.Row="2" SelectionMode="Single" IsItemClickEnabled="True" ItemClick="QueueList_ItemClick" ContainerContentChanging="QueueList_ContainerContentChanging" AutomationProperties.Name="Media library" Padding="0">
+
+      <ListView.ItemContainerStyle><Style TargetType="ListViewItem"><Setter Property="Padding" Value="{StaticResource PlayerListItemPadding}"/><Setter Property="Margin" Value="{StaticResource PlayerListItemMargin}"/><Setter Property="CornerRadius" Value="{StaticResource PlayerDetailsCornerRadius}"/><Setter Property="HorizontalContentAlignment" Value="Stretch"/></Style></ListView.ItemContainerStyle>
+
+      <ListView.ItemTemplate><DataTemplate><Border BorderThickness="{StaticResource PlayerPanelBorderThickness}" CornerRadius="{StaticResource PlayerDetailsCornerRadius}" Padding="{StaticResource PlayerListItemPadding}" Background="{Binding IsCurrent, Converter={StaticResource ActiveLibraryBrush}, ConverterParameter=PlayerSelectedBrush}" BorderBrush="{Binding IsCurrent, Converter={StaticResource ActiveLibraryBrush}, ConverterParameter=PlayerAccentBrush}"><Grid ColumnSpacing="{StaticResource PlayerSmallSpacing}"><Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><Border Width="{StaticResource PlayerThumbnailWidth}" Height="{StaticResource PlayerThumbnailHeight}" Background="{ThemeResource PlayerElevatedPanelBrush}" CornerRadius="{StaticResource PlayerButtonCornerRadius}"><Grid><FontIcon Glyph="&#xE714;" Foreground="{ThemeResource PlayerSecondaryBrush}"/><Image Source="{Binding Thumbnail}" Stretch="UniformToFill"/></Grid></Border><StackPanel Grid.Column="1" VerticalAlignment="Center"><TextBlock Text="{Binding Title}" Foreground="{ThemeResource PlayerTextBrush}" FontSize="{StaticResource PlayerTitleFontSize}" TextTrimming="CharacterEllipsis"/><TextBlock Text="{Binding DurationLabel}" Style="{StaticResource PlayerLabel}"/></StackPanel></Grid></Border></DataTemplate></ListView.ItemTemplate>
+
+     </ListView>
+
+     <StackPanel x:Name="QueueActions" Grid.Row="3" Orientation="Horizontal" Spacing="{StaticResource PlayerSmallSpacing}"><Button Style="{StaticResource PlayerIconButton}" Click="QueueRemove_Click" AutomationProperties.Name="Remove selected item"><FontIcon Glyph="&#xE74D;" FontSize="{StaticResource PlayerIconSize}"/></Button><Button Style="{StaticResource PlayerIconButton}" Click="QueueUp_Click" AutomationProperties.Name="Move item up"><FontIcon Glyph="&#xE70E;" FontSize="{StaticResource PlayerIconSize}"/></Button><Button Style="{StaticResource PlayerIconButton}" Click="QueueDown_Click" AutomationProperties.Name="Move item down"><FontIcon Glyph="&#xE70D;" FontSize="{StaticResource PlayerIconSize}"/></Button></StackPanel>
+
+    </Grid>
+
+   </Border>
+
+   <Grid x:Name="PlayerCenter" Grid.Column="1"><Grid.RowDefinitions><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+
+    <Border x:Name="VideoHost" DoubleTapped="VideoHost_DoubleTapped" Background="{ThemeResource PlayerVideoBrush}" SizeChanged="VideoHost_SizeChanged"><StackPanel x:Name="EmptyState" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="{StaticResource PlayerSmallSpacing}" Margin="{StaticResource PlayerDetailsPadding}"><TextBlock x:Name="EmptyTitle" Text="Open a video" FontSize="{StaticResource PlayerEmptyTitleFontSize}" Foreground="{ThemeResource PlayerTitleBrush}" HorizontalAlignment="Center" TextWrapping="Wrap"/><TextBlock x:Name="EmptyDescription" Text="Double-click to open a video · drop a file or press Ctrl+O" Style="{StaticResource PlayerLabel}" TextAlignment="Center" TextWrapping="Wrap"/></StackPanel></Border>
+
+    <Grid x:Name="TransportViewport" Grid.Row="1" SizeChanged="TransportViewport_SizeChanged">
+    <Grid.Clip><RectangleGeometry x:Name="TransportClip"/></Grid.Clip>
+    <Border x:Name="TransportFrame" VerticalAlignment="Top" Style="{StaticResource PlayerPanel}" Margin="{StaticResource PlayerTransportMargin}">
+
+     <Grid x:Name="TransportStrip" MinHeight="{StaticResource PlayerTransportHeight}" RowSpacing="{StaticResource PlayerSmallSpacing}"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+
+      <Grid ColumnSpacing="{StaticResource PlayerSmallSpacing}"><Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="TimeText" Text="00:00" Style="{StaticResource PlayerLabel}" VerticalAlignment="Center"/><Slider x:Name="SeekSlider" Grid.Column="1" Style="{StaticResource PlayerSlider}" Minimum="0" Maximum="1" IsEnabled="False" TabIndex="2" StepFrequency="1" SmallChange="1" LargeChange="5" ValueChanged="SeekSlider_ValueChanged"/><TextBlock x:Name="DurationText" Grid.Column="2" Text="00:00" Style="{StaticResource PlayerLabel}" VerticalAlignment="Center"/></Grid>
+
+      <Grid Grid.Row="1"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+
+       <Button x:Name="LibraryButton" Style="{StaticResource PlayerIconButton}" Click="LibraryButton_Click" AutomationProperties.Name="Open library" ToolTipService.ToolTip="Library"><FontIcon Glyph="&#xE8FD;" FontSize="{StaticResource PlayerIconSize}"/><Button.Flyout><Flyout x:Name="LibraryFlyout" ShouldConstrainToRootBounds="False"><StackPanel Width="{StaticResource PlayerQueueWidth}" Spacing="{StaticResource PlayerSmallSpacing}"><Button Content="Playlist" Click="PlaylistNav_Click"/><Button Content="Recent" Click="RecentNav_Click"/><ListView x:Name="NarrowLibraryList" MaxHeight="{StaticResource PlayerSettingsMaxHeight}" IsItemClickEnabled="True" ItemClick="QueueList_ItemClick" DisplayMemberPath="Title" AutomationProperties.Name="Library files"/></StackPanel></Flyout></Button.Flyout></Button>
+
+       <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="{StaticResource PlayerSmallSpacing}" VerticalAlignment="Center"><Button x:Name="PreviousButton" Style="{StaticResource PlayerIconButton}" Click="PreviousButton_Click" AutomationProperties.Name="Previous file"><FontIcon Glyph="&#xE892;" FontSize="{StaticResource PlayerIconSize}"/></Button><Button x:Name="PlayPauseButton" Style="{StaticResource PlayerPlayButton}" Click="PlayPauseButton_Click" IsEnabled="False" AutomationProperties.Name="Play" TabIndex="1"><FontIcon x:Name="PlayPauseIcon" Glyph="&#xE768;" FontFamily="Segoe Fluent Icons" FontSize="{StaticResource PlayerPlayIconSize}"/></Button><Button x:Name="NextButton" Style="{StaticResource PlayerIconButton}" Click="NextButton_Click" AutomationProperties.Name="Next file"><FontIcon Glyph="&#xE893;" FontSize="{StaticResource PlayerIconSize}"/></Button></StackPanel>
+
+       <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="{StaticResource PlayerVolumeSpacing}" HorizontalAlignment="Right" VerticalAlignment="Center"><FontIcon x:Name="VolumeIcon" Glyph="&#xE767;" FontSize="{StaticResource PlayerIconSize}" Foreground="{ThemeResource PlayerSecondaryBrush}" IsHitTestVisible="False"/><Slider x:Name="VolumeSlider" Style="{StaticResource PlayerSlider}" Width="{StaticResource PlayerVolumeWidth}" Minimum="0" Maximum="100" Value="100" TabIndex="3" StepFrequency="1" SmallChange="1" LargeChange="10" ValueChanged="VolumeSlider_ValueChanged" AutomationProperties.Name="Volume"/><Button x:Name="PlaybackInfoButton" Style="{StaticResource PlayerIconButton}" AutomationProperties.Name="Media information" ToolTipService.ToolTip="Media information"><FontIcon Glyph="&#xE946;" FontSize="{StaticResource PlayerInfoIconSize}"/>                <Button.Flyout>
+
+                    <Flyout x:Name="PlaybackInfoFlyout" Placement="BottomEdgeAlignedRight" ShouldConstrainToRootBounds="False">
+
+                        <Flyout.FlyoutPresenterStyle>
+
+                            <Style TargetType="FlyoutPresenter">
+
+                                <Setter Property="Background" Value="{ThemeResource PlayerShellBrush}"/>
+
+                                <Setter Property="Padding" Value="{StaticResource PlayerDetailsPadding}"/>
+
+                                <Setter Property="CornerRadius" Value="{StaticResource PlayerDetailsCornerRadius}"/>
+
+                                <Setter Property="MinWidth" Value="{StaticResource PlayerDetailsMinWidth}"/>
+
+                            </Style>
+
+                        </Flyout.FlyoutPresenterStyle>
+
+                        <StackPanel Spacing="{StaticResource PlayerSmallSpacing}">
+
+                            <TextBlock Text="Media information" FontSize="{StaticResource PlayerTitleFontSize}" FontWeight="SemiBold" Foreground="{ThemeResource PlayerTextBrush}"/>
+
+                            <TextBlock x:Name="PlaybackStatusText" Text="Ready" FontSize="{StaticResource PlayerTitleFontSize}" Foreground="{ThemeResource PlayerSecondaryBrush}"/>
+
+                            <TextBlock x:Name="HwdecText" Text="Decoder: idle" FontSize="{StaticResource PlayerTitleFontSize}" Foreground="{ThemeResource PlayerSecondaryBrush}"/>
+
+                            <TextBlock x:Name="MediaDetailsText" Style="{StaticResource PlayerLabel}" TextWrapping="Wrap" MaxWidth="{StaticResource PlayerDetailsMaxWidth}"/>
+
+                            <TextBlock x:Name="VersionText" Style="{StaticResource PlayerLabel}"/>
+
+                            <HyperlinkButton Content="Third-party notices" Click="Notices_Click" Padding="0" HorizontalAlignment="Left" AutomationProperties.Name="Read third-party notices"/>
+
+                            <TextBox x:Name="NoticesText" Visibility="Collapsed" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" MaxWidth="{StaticResource PlayerDetailsMaxWidth}" MaxHeight="{StaticResource PlayerNoticesHeight}" AutomationProperties.Name="Third-party notices"/>
+
+                        </StackPanel>
+
+                    </Flyout>
+
+                </Button.Flyout></Button><Button x:Name="TransportOptionsButton" Style="{StaticResource PlayerIconButton}" Click="TransportOptions_Click" AutomationProperties.Name="Playback options" ToolTipService.ToolTip="Subtitles, audio and playback options"><FontIcon Glyph="&#xE713;" FontSize="{StaticResource PlayerIconSize}"/></Button><Button x:Name="FullscreenButton" Style="{StaticResource PlayerIconButton}" Click="FullscreenButton_Click" AutomationProperties.Name="Fullscreen" TabIndex="4"><FontIcon x:Name="FullscreenIcon" Glyph="&#xE740;" FontSize="{StaticResource PlayerIconSize}"/></Button></StackPanel>
+
+      </Grid>
+
+     </Grid>
+
+    </Border>
+    </Grid>
+
+   </Grid>
+
+   <Border x:Name="InfoPanel" Grid.Column="2" Width="{StaticResource PlayerInfoWidth}" Style="{StaticResource PlayerPanel}"><ScrollViewer><StackPanel Spacing="{StaticResource PlayerSmallSpacing}"><TextBlock Text="Media information" Style="{StaticResource PlayerSectionTitle}"/><Image x:Name="MediaThumbnail" Height="{StaticResource PlayerInfoThumbnailHeight}" Stretch="Uniform" Visibility="Collapsed"/><TextBlock x:Name="MediaTitle" Text="No media selected" Style="{StaticResource PlayerSectionTitle}" TextWrapping="Wrap"/><TextBlock x:Name="MediaSummary" Style="{StaticResource PlayerLabel}" TextWrapping="Wrap"/><TextBlock x:Name="MediaResolution" Text="Resolution    Unavailable" Style="{StaticResource PlayerLabel}" TextWrapping="Wrap"/><Border Height="1" Background="{ThemeResource PlayerSeparatorBrush}"/><TextBlock x:Name="MediaMetadata" Style="{StaticResource PlayerLabel}" TextWrapping="Wrap"/></StackPanel></ScrollViewer></Border>
+
+  </Grid>
+
+
+ </Grid>
+
+</Window>
+

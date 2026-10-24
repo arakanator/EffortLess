@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EffortLess.Core", "src\EffortLess.Core\EffortLess.Core.csproj", "{2D3C4E5F-0001-4B7A-9C1D-111111111111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EffortLess.App", "src\EffortLess.App\EffortLess.App.csproj", "{2D3C4E5F-0002-4B7A-9C1D-222222222222}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EffortLess.Core.Tests", "tests\EffortLess.Core.Tests\EffortLess.Core.Tests.csproj", "{2D3C4E5F-0003-4B7A-9C1D-333333333333}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D3C4E5F-0001-4B7A-9C1D-111111111111}.Debug|x64.ActiveCfg = Debug|x64
+		{2D3C4E5F-0001-4B7A-9C1D-111111111111}.Debug|x64.Build.0 = Debug|x64
+		{2D3C4E5F-0001-4B7A-9C1D-111111111111}.Release|x64.ActiveCfg = Release|x64
+		{2D3C4E5F-0001-4B7A-9C1D-111111111111}.Release|x64.Build.0 = Release|x64
+		{2D3C4E5F-0002-4B7A-9C1D-222222222222}.Debug|x64.ActiveCfg = Debug|x64
+		{2D3C4E5F-0002-4B7A-9C1D-222222222222}.Debug|x64.Build.0 = Debug|x64
+		{2D3C4E5F-0002-4B7A-9C1D-222222222222}.Release|x64.ActiveCfg = Release|x64
+		{2D3C4E5F-0002-4B7A-9C1D-222222222222}.Release|x64.Build.0 = Release|x64
+		{2D3C4E5F-0003-4B7A-9C1D-333333333333}.Debug|x64.ActiveCfg = Debug|x64
+		{2D3C4E5F-0003-4B7A-9C1D-333333333333}.Debug|x64.Build.0 = Debug|x64
+		{2D3C4E5F-0003-4B7A-9C1D-333333333333}.Release|x64.ActiveCfg = Release|x64
+		{2D3C4E5F-0003-4B7A-9C1D-333333333333}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+EndGlobal

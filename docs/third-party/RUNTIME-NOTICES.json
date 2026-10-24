@@ -1,0 +1,16 @@
+{
+  "runtime": "Microsoft.NETCore.App",
+  "version": "10.0.13",
+  "files": [
+    {
+      "file": "dotnet-runtime-LICENSE.txt",
+      "source": "https://raw.githubusercontent.com/dotnet/runtime/v10.0.13/LICENSE.TXT",
+      "sha256": "cfc21f5e8bd655ae997eec916138b707b1d290b83272c02a95c9f821b8c87310"
+    },
+    {
+      "file": "dotnet-runtime-THIRD-PARTY-NOTICES.txt",
+      "source": "https://raw.githubusercontent.com/dotnet/runtime/v10.0.13/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "66f1d4e44973185519bb4aa8a9718eb22fc7af2cc532e3ae9cfc4c127ee7fc54"
+    }
+  ]
+}

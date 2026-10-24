@@ -1,0 +1,128 @@
+[
+  {
+    "package": "Microsoft.Web.WebView2/1.0.3179.45",
+    "file": "nuget/microsoft.web.webview2/1.0.3179.45/LICENSE.txt",
+    "sha256": "0af8f1b807512aae39c2ac1aa4d0cae65cabecb6fd554b8439a5162a0d6eca55",
+    "source": "https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.3179.45"
+  },
+  {
+    "package": "Microsoft.Web.WebView2/1.0.3179.45",
+    "file": "nuget/microsoft.web.webview2/1.0.3179.45/NOTICE.txt",
+    "sha256": "106423785c5b7eba0a8e61d1837f2132e9c828e20ad530f565d981c1df60dd90",
+    "source": "https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.3179.45"
+  },
+  {
+    "package": "Microsoft.Windows.SDK.BuildTools.MSIX/1.7.20250829.1",
+    "file": "nuget/microsoft.windows.sdk.buildtools.msix/1.7.20250829.1/NOTICE.txt",
+    "sha256": "f09ebf5de6a5c8e7ebc900bb2e52af2f75e13610a1cf91e1514530e448d956c3",
+    "source": "https://www.nuget.org/packages/Microsoft.Windows.SDK.BuildTools.MSIX/1.7.20250829.1"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK/1.8.260921001",
+    "file": "nuget/microsoft.windowsappsdk/1.8.260921001/license.txt",
+    "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK/1.8.260921001"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK/1.8.260921001",
+    "file": "nuget/microsoft.windowsappsdk/1.8.260921001/NOTICE.txt",
+    "sha256": "e25393c0d340a1821827b093fa4dbbfcccd8feb7bf769e7fa773e3955cd5314b",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK/1.8.260921001"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.AI/1.8.79",
+    "file": "nuget/microsoft.windowsappsdk.ai/1.8.79/license.txt",
+    "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.AI/1.8.79"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Base/1.8.251216001",
+    "file": "nuget/microsoft.windowsappsdk.base/1.8.251216001/license.txt",
+    "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.Base/1.8.251216001"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Base/1.8.251216001",
+    "file": "nuget/microsoft.windowsappsdk.base/1.8.251216001/NOTICE.txt",
+    "sha256": "e25393c0d340a1821827b093fa4dbbfcccd8feb7bf769e7fa773e3955cd5314b",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.Base/1.8.251216001"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.DWrite/1.8.25122902",
+    "file": "nuget/microsoft.windowsappsdk.dwrite/1.8.25122902/license.txt",
+    "sha256": "f9ed00147604bdc48c7e62d127d73245781ce53903cef9c3863f8a7ef8120cc2",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.DWrite/1.8.25122902"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Foundation/1.8.260803002",
+    "file": "nuget/microsoft.windowsappsdk.foundation/1.8.260803002/license.txt",
+    "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.Foundation/1.8.260803002"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.260708001",
+    "file": "nuget/microsoft.windowsappsdk.interactiveexperiences/1.8.260708001/license.txt",
+    "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.260708001"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.ML/1.8.2223",
+    "file": "nuget/microsoft.windowsappsdk.ml/1.8.2223/license.txt",
+    "sha256": "656aab74c15aa9f9964bcdcc993eb2755cbdb4822d5e0e3bc61d2e281897f758",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.ML/1.8.2223"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.ML/1.8.2223",
+    "file": "nuget/microsoft.windowsappsdk.ml/1.8.2223/ThirdPartyNotices.txt",
+    "sha256": "e00f828e0a33de591a355ae6606d2625f5758da7d2c844db7821c9dd3e3647b6",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.ML/1.8.2223"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Runtime/1.8.260921001",
+    "file": "nuget/microsoft.windowsappsdk.runtime/1.8.260921001/license.txt",
+    "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.Runtime/1.8.260921001"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Runtime/1.8.260921001",
+    "file": "nuget/microsoft.windowsappsdk.runtime/1.8.260921001/NOTICE.txt",
+    "sha256": "e25393c0d340a1821827b093fa4dbbfcccd8feb7bf769e7fa773e3955cd5314b",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.Runtime/1.8.260921001"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Widgets/1.8.251231004",
+    "file": "nuget/microsoft.windowsappsdk.widgets/1.8.251231004/license.txt",
+    "sha256": "f9ed00147604bdc48c7e62d127d73245781ce53903cef9c3863f8a7ef8120cc2",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.Widgets/1.8.251231004"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.WinUI/1.8.260803003",
+    "file": "nuget/microsoft.windowsappsdk.winui/1.8.260803003/license.txt",
+    "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.WinUI/1.8.260803003"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.WinUI/1.8.260803003",
+    "file": "nuget/microsoft.windowsappsdk.winui/1.8.260803003/NOTICE.txt",
+    "sha256": "e25393c0d340a1821827b093fa4dbbfcccd8feb7bf769e7fa773e3955cd5314b",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.WinUI/1.8.260803003"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.WinUI/1.8.260803003",
+    "file": "nuget/microsoft.windowsappsdk.winui/1.8.260803003/tools/NOTICE.txt",
+    "sha256": "4a9321fd173ebf4e8bbc79130794d4c3fe233acccbf7db8765e0addb8fbfb8ca",
+    "source": "https://www.nuget.org/packages/Microsoft.WindowsAppSDK.WinUI/1.8.260803003"
+  },
+  {
+    "package": "System.Numerics.Tensors/9.0.0",
+    "file": "nuget/system.numerics.tensors/9.0.0/LICENSE.TXT",
+    "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+    "source": "https://www.nuget.org/packages/System.Numerics.Tensors/9.0.0"
+  },
+  {
+    "package": "System.Numerics.Tensors/9.0.0",
+    "file": "nuget/system.numerics.tensors/9.0.0/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
+    "source": "https://www.nuget.org/packages/System.Numerics.Tensors/9.0.0"
+  }
+]

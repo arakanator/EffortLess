@@ -1,0 +1,22 @@
+EffortLess 0.2.4-rc.1
+PRIVATE TEST BUILD / LOCAL DEVELOPMENT DISTRIBUTION
+
+For the owner's private testing on compatible Windows 11 x64 computers only.
+Do not publish, upload or describe this unsigned package as public/commercial
+release-ready. No public-distribution licensing conversion was performed.
+
+The current libmpv build is GPL-enabled and its recipe enables GPL/version3
+FFmpeg components. Existing native copyrights/licenses are retained. Complete
+corresponding source/build configuration, dependency notices and an application
+license decision must be revisited before sharing/public release.
+
+This installer includes self-contained .NET/WinUI runtimes and unchanged pinned
+libmpv. The signed app-local x64 Vulkan loader comes from the official LunarG
+runtime archive with checksum/provenance and its archive license. It is not a
+copy from this computer's System32. No Vulkan SDK installation is needed.
+
+A supported Windows 11 x64 OS with compatible graphics/audio drivers is required.
+The installer uses a per-user LocalAppData/Programs destination and a Start Menu
+shortcut/uninstall entry. No background services, telemetry, updater, scheduled
+tasks, startup registration, shell extensions or file associations are added.
+Uninstall preserves personal preferences/history/logs and screenshots.

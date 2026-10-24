@@ -1,0 +1,272 @@
+[
+  {
+    "package": "Microsoft.Web.WebView2",
+    "version": "1.0.3179.45",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "LICENSE.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://aka.ms/webview",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "Microsoft.Windows.SDK.BuildTools",
+    "version": "10.0.26100.4948",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "UNKNOWN",
+    "licenseType": null,
+    "authors": "Microsoft",
+    "projectUrl": "https://aka.ms/WinSDKProjectURL",
+    "licenseUrl": "https://aka.ms/WinSDKLicenseURL"
+  },
+  {
+    "package": "Microsoft.Windows.SDK.BuildTools.MSIX",
+    "version": "1.7.20250829.1",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "sdk_license.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://aka.ms/WinSDKProjectURL",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK",
+    "version": "1.8.260921001",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "license.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://github.com/microsoft/windowsappsdk",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.AI",
+    "version": "1.8.79",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "license.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://github.com/microsoft/windowsappsdk",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Base",
+    "version": "1.8.251216001",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "license.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://github.com/microsoft/windowsappsdk",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.DWrite",
+    "version": "1.8.25122902",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "license.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://aka.ms/WindowsAppSDK",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Foundation",
+    "version": "1.8.260803002",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "license.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://aka.ms/windowsappsdk",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.InteractiveExperiences",
+    "version": "1.8.260708001",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "license.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://aka.ms/windowsappsdk",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.ML",
+    "version": "1.8.2223",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "license.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://github.com/microsoft/windowsappsdk",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Runtime",
+    "version": "1.8.260921001",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "license.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://github.com/microsoft/windowsappsdk",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Widgets",
+    "version": "1.8.251231004",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "license.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://github.com/microsoft/windowsappsdk",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.WinUI",
+    "version": "1.8.260803003",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "license.txt",
+    "licenseType": "file",
+    "authors": "Microsoft",
+    "projectUrl": "https://github.com/microsoft/windowsappsdk",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl"
+  },
+  {
+    "package": "System.Numerics.Tensors",
+    "version": "9.0.0",
+    "scope": "app dependency; payload membership must be checked",
+    "license": "MIT",
+    "licenseType": "expression",
+    "authors": "Microsoft",
+    "projectUrl": "https://dot.net/",
+    "licenseUrl": "https://licenses.nuget.org/MIT"
+  },
+  {
+    "package": "Microsoft.CodeCoverage",
+    "version": "17.14.1",
+    "scope": "test/build dependency",
+    "license": "MIT",
+    "licenseType": "expression",
+    "authors": "Microsoft",
+    "projectUrl": "https://github.com/microsoft/vstest",
+    "licenseUrl": "https://licenses.nuget.org/MIT"
+  },
+  {
+    "package": "Microsoft.NET.Test.Sdk",
+    "version": "17.14.1",
+    "scope": "test/build dependency",
+    "license": "MIT",
+    "licenseType": "expression",
+    "authors": "Microsoft",
+    "projectUrl": "https://github.com/microsoft/vstest",
+    "licenseUrl": "https://licenses.nuget.org/MIT"
+  },
+  {
+    "package": "Microsoft.TestPlatform.ObjectModel",
+    "version": "17.14.1",
+    "scope": "test/build dependency",
+    "license": "MIT",
+    "licenseType": "expression",
+    "authors": "Microsoft",
+    "projectUrl": "https://github.com/microsoft/vstest",
+    "licenseUrl": "https://licenses.nuget.org/MIT"
+  },
+  {
+    "package": "Microsoft.TestPlatform.TestHost",
+    "version": "17.14.1",
+    "scope": "test/build dependency",
+    "license": "MIT",
+    "licenseType": "expression",
+    "authors": "Microsoft",
+    "projectUrl": "https://github.com/microsoft/vstest",
+    "licenseUrl": "https://licenses.nuget.org/MIT"
+  },
+  {
+    "package": "Newtonsoft.Json",
+    "version": "13.0.3",
+    "scope": "test/build dependency",
+    "license": "MIT",
+    "licenseType": "expression",
+    "authors": "James Newton-King",
+    "projectUrl": "https://www.newtonsoft.com/json",
+    "licenseUrl": "https://licenses.nuget.org/MIT"
+  },
+  {
+    "package": "xunit",
+    "version": "2.9.3",
+    "scope": "test/build dependency",
+    "license": "Apache-2.0",
+    "licenseType": "expression",
+    "authors": "jnewkirk,bradwilson",
+    "projectUrl": null,
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0"
+  },
+  {
+    "package": "xunit.abstractions",
+    "version": "2.0.3",
+    "scope": "test/build dependency",
+    "license": "UNKNOWN",
+    "licenseType": null,
+    "authors": "James Newkirk,Brad Wilson",
+    "projectUrl": "https://github.com/xunit/xunit",
+    "licenseUrl": "https://raw.githubusercontent.com/xunit/xunit/master/license.txt"
+  },
+  {
+    "package": "xunit.analyzers",
+    "version": "1.18.0",
+    "scope": "test/build dependency",
+    "license": "Apache-2.0",
+    "licenseType": "expression",
+    "authors": "jnewkirk,bradwilson,marcind",
+    "projectUrl": null,
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0"
+  },
+  {
+    "package": "xunit.assert",
+    "version": "2.9.3",
+    "scope": "test/build dependency",
+    "license": "Apache-2.0",
+    "licenseType": "expression",
+    "authors": "jnewkirk,bradwilson",
+    "projectUrl": null,
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0"
+  },
+  {
+    "package": "xunit.core",
+    "version": "2.9.3",
+    "scope": "test/build dependency",
+    "license": "Apache-2.0",
+    "licenseType": "expression",
+    "authors": "jnewkirk,bradwilson",
+    "projectUrl": null,
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0"
+  },
+  {
+    "package": "xunit.extensibility.core",
+    "version": "2.9.3",
+    "scope": "test/build dependency",
+    "license": "Apache-2.0",
+    "licenseType": "expression",
+    "authors": "jnewkirk,bradwilson",
+    "projectUrl": null,
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0"
+  },
+  {
+    "package": "xunit.extensibility.execution",
+    "version": "2.9.3",
+    "scope": "test/build dependency",
+    "license": "Apache-2.0",
+    "licenseType": "expression",
+    "authors": "jnewkirk,bradwilson",
+    "projectUrl": null,
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0"
+  },
+  {
+    "package": "xunit.runner.visualstudio",
+    "version": "3.1.5",
+    "scope": "test/build dependency",
+    "license": "Apache-2.0",
+    "licenseType": "expression",
+    "authors": "jnewkirk,bradwilson",
+    "projectUrl": null,
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0"
+  }
+]
