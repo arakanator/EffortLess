@@ -198,3 +198,18 @@ The pre-replacement Release x64 baseline was rerun after public source publicati
 zero build warnings/errors and 228 passed tests, zero failures/skips. These test
 results still use the old private-development DLL and do not validate a replacement.
 The replacement must independently pass them and real installed playback checks.
+
+## Authenticated producer-log recovery
+
+A further authenticated attempt recovered the old workflow's console log via
+`gh run view 37080134687 --repo shinchiro/mpv-winbuild-cmake --log`. This is
+distinct from the expired one-day per-package log artifacts. The console
+records container digest
+sha256:2b81f07c567b051455b9539770a71b53dd3add5f9ef52eca95ac01a2272e9fdf
+and selected fetched Git-head updates. Many unchanged dependency inputs came
+from prior caches; their complete as-built revisions/configuration/source trees
+are not established by that console. The historical rolling-gist lookup by the
+recorded abbreviated force-pushed revision did not return a recoverable object.
+Thus the original DLL's corresponding-source closure remains incomplete; the
+authorized replacement build remains the active route. No message was sent to
+upstream and no unverified binary was published.

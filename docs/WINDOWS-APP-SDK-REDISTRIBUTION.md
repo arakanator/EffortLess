@@ -79,3 +79,17 @@ https://www.gnu.org/licenses/gpl-faq.en.html#WindowsRuntimeAndGPL
 A framework-dependent installation through Microsoft's supported runtime
 installer is a technical alternative, not an automatic legal determination
 that every WinUI component qualifies for GPL's system-library exception.
+
+Microsoft's authoritative Windows SDK REDIST list explicitly includes both
+Microsoft.Windows.SDK.NET.dll and WinRT.Runtime.dll in its .NET targeting-pack
+paths. This closes the question of whether these two names are redistributable
+under the SDK agreement, subject to that agreement's requirements and restrictions:
+https://learn.microsoft.com/en-us/legal/windows-sdk/redist
+This name-level permission is distinct from GPL compatibility and does not
+remove the need for a supported licensing arrangement for the combined installer.
+
+A framework-dependent WinUI packaging probe built with zero errors/warnings via
+WindowsAppSDKSelfContained=false while leaving .NET self-contained. It omits the
+large native app-local WinUI/AI/ML payload but still includes managed projections,
+C#/WinRT and bootstrapper files. This probe is not the release configuration and
+is not a claim that framework-dependent deployment alone resolves licensing.
