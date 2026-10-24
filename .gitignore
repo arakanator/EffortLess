@@ -28,6 +28,7 @@ native/win-x64/*.dll
 *.wixpdb
 *.msi
 *.msix
+!docs/third-party/nuget/microsoft.windows.sdk.buildtools.msix/
 *.msixbundle
 *.nupkg
 .idea/
