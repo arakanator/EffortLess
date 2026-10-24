@@ -41,6 +41,13 @@ jobs:
           path: .cache/native-ccache
           key: windows-native-ccache-v1-${{ github.run_id }}
           restore-keys: windows-native-ccache-v1-
+      - name: Verify source-signature bridge before compilation
+        shell: msys2 {0}
+        run: |
+          mkdir -p .cache/signature-probe
+          curl --fail --location --output .cache/signature-probe/source.tar.zst https://mirror.msys2.org/mingw/sources/mingw-w64-brotli-1.2.1-1.src.tar.zst
+          curl --fail --location --output .cache/signature-probe/source.tar.zst.sig https://mirror.msys2.org/mingw/sources/mingw-w64-brotli-1.2.1-1.src.tar.zst.sig
+          python -c "import sys;sys.path.insert(0,'native/rebuild');from pathlib import Path;from collect import verify_source;verify_source(Path('.cache/signature-probe/source.tar.zst'));print('Trusted MSYS2 source-signature verification passed')"
       - name: Build LGPL-compatible libmpv and FFmpeg; collect sources
         shell: msys2 {0}
         run: bash native/rebuild/build.sh

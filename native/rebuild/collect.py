@@ -15,7 +15,7 @@ import tomllib
 def run(*args):
     result = subprocess.run(args, capture_output=True, text=True, encoding="utf-8", errors="replace")
     if result.returncode:
-        raise RuntimeError(f"Command failed: {args[0]} {args[1:]}\n{result.stderr[-3000:]}")
+        raise RuntimeError(f"Command failed: {args[0]} {args[1:]}\n{result.stdout[-3000:]}\n{result.stderr[-3000:]}")
     return result.stdout
 
 
@@ -39,6 +39,18 @@ def fields(text):
             key, value = line.split(" = ", 1)
             result.setdefault(key, []).append(value)
     return result
+
+
+def verify_source(source):
+    # Equivalent trust requirements to pacman-key: require a valid signature
+    # AND full/ultimate trust in pacman's existing, populated MSYS2 keyring.
+    status = run(str(native('/usr/bin/gpg.exe')), '--homedir', '/etc/pacman.d/gnupg',
+                 '--batch', '--no-permission-warning', '--status-fd', '1', '--verify',
+                 posix(str(source) + '.sig'), posix(source))
+    if ('[GNUPG:] VALIDSIG ' not in status or
+            not re.search(r'\[GNUPG:\] TRUST_(FULLY|ULTIMATE)', status) or
+            re.search(r'REVKEYSIG|EXPKEYSIG|EXPSIG|BADSIG', status)):
+        raise RuntimeError('Source signature lacks trusted validity: ' + source.name + '\n' + status)
 
 
 SYSTEM = {n + ".dll" for n in (
@@ -131,7 +143,7 @@ def collect_package(name, output):
     for suffix in ("", ".sig"):
         run("curl", "--fail", "--location", "--retry", "2", "--proto", "=https",
             "--proto-redir", "=https", "--output", str(source) + suffix, url + suffix)
-    run("bash", "/usr/bin/pacman-key", "--verify", posix(str(source) + ".sig"), posix(source))
+    verify_source(source)
     entries = run("bsdtar", "-tf", str(source)).splitlines()
     recipe = next((e for e in entries if Path(e).name == "PKGBUILD"), None)
     srcinfo = next((e for e in entries if Path(e).name == ".SRCINFO"), None)
