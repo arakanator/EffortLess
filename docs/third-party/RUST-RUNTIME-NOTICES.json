@@ -1,0 +1,90 @@
+{
+  "purpose": "Rust standard-library attributions for libdovi, based on exact compiler version recorded in its MSYS2 BUILDINFO",
+  "rustVersion": "1.97.0",
+  "source": "https://static.rust-lang.org/dist/rustc-1.97.0-x86_64-pc-windows-gnu.tar.xz",
+  "archiveSha256": "c5b717977488eb02b56fa89c3629a7b7ebdaf1c6aecc3a6897cb924aa128c138",
+  "upstreamChecksumVerified": true,
+  "files": [
+    {
+      "file": "rust/1.97.0/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/LICENSE-APACHE"
+    },
+    {
+      "file": "rust/1.97.0/COPYRIGHT",
+      "sha256": "172020dbfd5b53a226dfde77616190a48dcff519b0bc0e6deb91a8450782c4af",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/COPYRIGHT"
+    },
+    {
+      "file": "rust/1.97.0/LICENSE-MIT",
+      "sha256": "b71bd43a069ca0641a9ecfe585ca7b3c53b5cc1608f8b68321168698e28b5ea1",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/LICENSE-MIT"
+    },
+    {
+      "file": "rust/1.97.0/COPYRIGHT-library.html",
+      "sha256": "0a65bb747c49c7bb816cbc7188319bd6e4e8d08091c1190b8a3c0971c47968ed",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/COPYRIGHT-library.html"
+    },
+    {
+      "file": "rust/1.97.0/licenses/Apache-2.0.txt",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/Apache-2.0.txt"
+    },
+    {
+      "file": "rust/1.97.0/licenses/Unicode-3.0.txt",
+      "sha256": "f5062c9a188d81dfe66b56db4182dcf9e4b17c0d9b0d311a8e20b3a1b075c443",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/Unicode-3.0.txt"
+    },
+    {
+      "file": "rust/1.97.0/licenses/CC-BY-SA-4.0.txt",
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/CC-BY-SA-4.0.txt"
+    },
+    {
+      "file": "rust/1.97.0/licenses/OFL-1.1.txt",
+      "sha256": "8eea8287e5876b539670cadb82e99f9a7afddec6f6730811be1daf25d2e9bcfd",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/OFL-1.1.txt"
+    },
+    {
+      "file": "rust/1.97.0/licenses/GCC-exception-3.1.txt",
+      "sha256": "a3966c9410ef94a1efbfa9ec04e9c1994026a70623fbf0885ce36737bfba3b54",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/GCC-exception-3.1.txt"
+    },
+    {
+      "file": "rust/1.97.0/licenses/NCSA.txt",
+      "sha256": "39cb0234065c92b9e6cee3830cbb52b1aa289aa8fe9ba2e66730fec5cf05c630",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/NCSA.txt"
+    },
+    {
+      "file": "rust/1.97.0/licenses/ISC.txt",
+      "sha256": "0ff61769b238634e042ab759dddfd104a8e69d091e3600ae3410e401a6164381",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/ISC.txt"
+    },
+    {
+      "file": "rust/1.97.0/licenses/MIT.txt",
+      "sha256": "b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/MIT.txt"
+    },
+    {
+      "file": "rust/1.97.0/licenses/BSD-2-Clause.txt",
+      "sha256": "f32fb3b417a194167cfad068223fc975ba96c5960513a10f66a3c28720aec1df",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/BSD-2-Clause.txt"
+    },
+    {
+      "file": "rust/1.97.0/licenses/LLVM-exception.txt",
+      "sha256": "e34c58338bd89d43e709e226610d8f32b3e3c47f4ad9a99a8dc1d4ac7842488e",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/LLVM-exception.txt"
+    },
+    {
+      "file": "rust/1.97.0/licenses/GPL-3.0-or-later.txt",
+      "sha256": "05315fce6c35f79b8a35454828995fa26336f235895ac64557abc028f4ffcea2",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/GPL-3.0-or-later.txt"
+    },
+    {
+      "file": "rust/1.97.0/licenses/GPL-2.0-only.txt",
+      "sha256": "54b212ba1f97f6948fa5486239ab505dd820b02e50cbfd296b4062c8609a70af",
+      "member": "rustc-1.97.0-x86_64-pc-windows-gnu/rustc/share/doc/rust/licenses/GPL-2.0-only.txt"
+    }
+  ],
+  "compilerBinariesBundled": false
+}

@@ -33,6 +33,19 @@ if ($PublicRelease) {
     if ($taskReviewedVulkan.Count -ne 1 -or (Get-FileHash -LiteralPath $VulkanLoader).Hash -ne $taskReviewedVulkan[0].sha256) {
         throw 'Public packaging must use the reviewed native Vulkan loader bytes.'
     }
+    $taskRustNotices = Get-Content -LiteralPath (Join-Path $taskRepository 'docs\third-party\RUST-RUNTIME-NOTICES.json') -Raw | ConvertFrom-Json
+    if ($taskNativeManifest.rustRuntimeVersion -and $taskNativeManifest.rustRuntimeVersion -ne $taskRustNotices.rustVersion) {
+        throw 'Rust runtime notices do not match the compiler recorded for the native dependency.'
+    }
+    foreach ($taskNoticeInventory in @('NUGET-NOTICES.json','RUST-RUNTIME-NOTICES.json')) {
+        $taskInventory = Get-Content -LiteralPath (Join-Path $taskRepository ('docs\third-party\' + $taskNoticeInventory)) -Raw | ConvertFrom-Json
+        $taskNoticeFiles = if ($taskNoticeInventory -eq 'NUGET-NOTICES.json') { $taskInventory } else { $taskInventory.files }
+        foreach ($taskNotice in $taskNoticeFiles) {
+            if ((Get-FileHash -LiteralPath (Join-Path $taskRepository ('docs\third-party\' + $taskNotice.file))).Hash -ne $taskNotice.sha256) {
+                throw "Third-party notice hash mismatch: $($taskNotice.file)"
+            }
+        }
+    }
 }
 Push-Location -LiteralPath $taskRepository
 try {

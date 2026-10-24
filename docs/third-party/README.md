@@ -38,3 +38,10 @@ identified through exact payload-byte matching. Windows-SDK-license.rtf preserve
 the Microsoft-hosted text linked by its package licenseUrl; the notice inventory
 records resolved URL/hash and the still-open redistribution-scope assessment.
 See ../RUNTIME-PROVENANCE-BASELINE.json for the pre-native-rebuild payload mapping.
+
+Rust 1.97.0 standard-library notices are retained under rust/1.97.0, including
+COPYRIGHT-library.html and its referenced license texts. libdovi 3.4.0-1's exact
+MSYS2 BUILDINFO records Rust 1.97.0-1. The upstream Rust compiler archive checksum
+was verified before extracting only license/copyright material; no Rust compiler
+binaries are bundled. RUST-RUNTIME-NOTICES.json records URLs, hashes and members.
+Public packaging checks this version against the reviewed native build inventory.
