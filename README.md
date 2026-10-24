@@ -2,10 +2,10 @@
 
 A customizable Windows media player powered by libmpv. Current version: **0.3.0-rc.1**.
 
-> **Public release on hold:** source/public-installer licensing checks are not yet
-> complete. See [publication audit](docs/PUBLICATION-AUDIT.md) and
-> [release procedure](docs/PUBLIC-RELEASE-PROCEDURE.md). No public GitHub download
-> or GPL-compliance claim is being made for the existing private installer.
+> **Source available; installer pending.** The application source is published
+> under GPL-3.0-or-later. A public Windows installer is pending native dependency
+> corresponding-source and runtime licensing verification. There is no approved
+> installer download yet. See the [publication audit](docs/PUBLICATION-AUDIT.md).
 
 Windows 11 x64 media player using C#/.NET 10, WinUI 3 and libmpv. The approved
 native HWND renderer and integrated dark XAML strip remain the foundation.

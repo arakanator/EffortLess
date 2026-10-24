@@ -1,6 +1,7 @@
 # Public publication audit — October 24, 2026
 
-**Decision: BLOCKED. No public repository or release installer was published.**
+**Decision: source-only publication approved; public binary installer BLOCKED.**
+The owner authorized public source independently of installer completion.
 This is a release-gate report, not a claim of legal compliance or a complete SBOM.
 The existing private installer and working playback architecture remain unchanged.
 
@@ -170,3 +171,21 @@ not certification that those gates are resolved.
 
 Native acquisition, playback architecture, features and existing installer bytes
 are unchanged. The notice correction and packaging guard do not change playback.
+
+## Source-only publication checkpoint
+
+The existing repository contains 134 tracked files, rather than the earlier
+approximate count of 114. The four pre-publication commits and all 128 reachable
+file blobs were reviewed. Gitleaks 8.30.1 scanned all four commits (1.21 MB) with
+zero findings. An additional complete-blob scan found no credential-shaped data,
+private Windows user paths, PE executables, installers, private media or archives.
+The three original icon assets were reproduced byte-for-byte from the project
+script. Included third-party texts are licensing/attribution documents; there are
+no vendor font files or reference-image assets. This is an evidence-based bounded
+review, not a guarantee that automated scanners find every possible secret.
+
+Original source can be published under its applied GPL-3.0-or-later license
+independently of distributing an unverified native/runtime binary. The README
+clearly marks installer verification pending, and no unverified installer asset
+or download link is included. Native rebuild work is newly authorized; the
+old DLL will not be used in a public release.

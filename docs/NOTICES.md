@@ -8,8 +8,8 @@
 - Microsoft.Windows.SDK.BuildTools 10.0.26100.4948.
 - WinUI/Windows App SDK and .NET runtimes are copied into the unpackaged App output.
 
-NuGet packages retain their upstream license metadata. This project has not
-selected a distribution license.
+NuGet packages retain their upstream license metadata. Original application source uses GPL-3.0-or-later (see ../LICENSE); third-party
+components retain their own terms. Combined-installer verification is pending.
 
 ## libmpv
 
@@ -44,9 +44,9 @@ remain to be collected. See DISTRIBUTION-DECISION.md in the source documentation
 https://github.com/shinchiro/mpv-winbuild-cmake/blob/05a60b3cfd04e3e3b89918f4a27f3dde2935dff2/packages/ffmpeg.cmake
 https://ffmpeg.org/legal.html
 
-Before distributing the native binary or application, collect the complete
+Before distributing native binaries or a combined installer, collect the complete
 corresponding source/build configuration and applicable dependency notices and
-resolve the application's distribution license. This local candidate makes no claim
+verify combined-installer license compatibility. This local candidate makes no claim
 of proprietary distribution compatibility or complete redistribution compliance.
 Native binaries and generated test utilities remain ignored by Git; the pinned
 acquisition script/checksums and mpv notices are kept in source control.

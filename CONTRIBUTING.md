@@ -1,6 +1,6 @@
 # Contributing
 
-Public collaboration is pending the licensing and publication gates documented in
+Source contributions are welcome. Binary publication remains gated by
 docs/PUBLICATION-AUDIT.md. Original application contributions use GPL-3.0-or-later as described in LICENSE
 and docs/LICENSING.md; third-party materials keep their existing terms.
 

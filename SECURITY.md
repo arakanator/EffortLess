@@ -1,7 +1,8 @@
 # Security
 
-EffortLess is currently a private test candidate pending publication/licensing
-checks. There is no public release or supported security-update channel yet.
+EffortLess source is public; the Windows installer is pending dependency licensing
+verification. There is no published binary release or supported security-update
+channel yet.
 
 Media parsers run in the application process; media decoding is not sandboxed.
 Open only media you trust. Keep Windows and graphics/audio drivers updated.
