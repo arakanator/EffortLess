@@ -80,7 +80,7 @@ mpv_options=(
     -Ddirect3d=disabled -Dlibarchive=disabled -Dlibbluray=disabled
     -Ddvdnav=disabled -Dcdda=disabled -Ddvbin=disabled
     -Dlua=disabled -Djavascript=disabled -Drubberband=disabled
-    -Dvapoursynth=disabled -Dlibavdevice=disabled
+    -Dvapoursynth=disabled -Dlibavdevice=enabled
     -Duchardet=enabled -Dlcms2=enabled
 )
 printf '%q ' meson setup build "${mpv_options[@]}" > "$work/records/mpv-options.sh"

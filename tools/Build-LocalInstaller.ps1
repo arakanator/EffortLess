@@ -49,12 +49,13 @@ if ($PublicRelease) {
 }
 Push-Location -LiteralPath $taskRepository
 try {
+    $taskPublicBuildOptions = if ($PublicRelease) { @('-p:DebugType=none','-p:DebugSymbols=false','-p:ContinuousIntegrationBuild=true') } else { @() }
     & dotnet clean EffortLess.sln -c Release -p:Platform=x64 --verbosity quiet
     if ($LASTEXITCODE -ne 0) { throw 'Release clean failed.' }
-    & dotnet build EffortLess.sln -c Release -p:Platform=x64 --no-restore -warnaserror
+    & dotnet build EffortLess.sln -c Release -p:Platform=x64 --no-restore -warnaserror @taskPublicBuildOptions
     if ($LASTEXITCODE -ne 0) { throw 'Strict Release build failed.' }
     # A new publish directory cannot retain obsolete files from an earlier build.
-    & dotnet publish src\EffortLess.App\EffortLess.App.csproj -c Release -p:Platform=x64 --no-restore --no-build -o $taskOutput
+    & dotnet publish src\EffortLess.App\EffortLess.App.csproj -c Release -p:Platform=x64 --no-restore --no-build -o $taskOutput @taskPublicBuildOptions
     if ($LASTEXITCODE -ne 0) { throw 'Fresh release publish failed.' }
     & (Join-Path $PSScriptRoot 'Verify-RuntimeNotices.ps1') -RuntimeConfig (Join-Path $taskOutput 'EffortLess.runtimeconfig.json')
     # Unpackaged WinUI's publish target omits its generated XBF/PRI content.

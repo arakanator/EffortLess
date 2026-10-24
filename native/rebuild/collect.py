@@ -124,8 +124,8 @@ def collect_package(name, output):
     build = fields(buildinfo)
     directory = output / "sources" / base
     directory.mkdir(parents=True, exist_ok=True)
-    # Epoch is part of the installed version, but not the archive filename.
-    filename = base + "-" + version.split(":")[-1] + ".src.tar.zst"
+    # MSYS2 renders an epoch as '~' in Windows-safe archive filenames.
+    filename = base + "-" + version.replace(":", "~") + ".src.tar.zst"
     source = directory / filename
     url = "https://mirror.msys2.org/mingw/sources/" + filename
     for suffix in ("", ".sig"):
