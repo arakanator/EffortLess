@@ -8,7 +8,7 @@ Run the manual `Verified native rebuild` GitHub Actions workflow. It uses UCRT64
 and builds official mpv and FFmpeg source at these resolved commit IDs:
 
 - mpv v0.41.0: `41f6a645068483470267271e1d09966ca3b9f413`
-- FFmpeg n8.0.1: `894da5ca7d742e4429ffb2af534fcda0103ef593`
+- FFmpeg n8.0.3: `8ae0b34901ba60a802f183ee75a250a9fc3e09a5`
 
 The annotated release tags were resolved through their official GitHub APIs.
 Action implementations are pinned to verified full commit IDs. The first build
@@ -40,3 +40,7 @@ The workflow uploads logs on failure, with no DLL artifact. A successful native
 artifact includes matching source materials and is a candidate for parent review;
 it is not a GitHub Release or an accepted EffortLess installer. Windows runtime
 packaging and application regression/installed-copy testing are separate gates.
+
+FFmpeg 8.0.3 was selected within the compatible 8.0 branch after checking the
+upstream security fixes: https://ffmpeg.org/security.html. This is not a claim
+that a decoder build or the application is free of all vulnerabilities.

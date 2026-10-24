@@ -6,7 +6,7 @@ repo="$(pwd)"
 work="$repo/.cache/native-rebuild"
 prefix="$work/prefix"
 mpv_revision=41f6a645068483470267271e1d09966ca3b9f413
-ffmpeg_revision=894da5ca7d742e4429ffb2af534fcda0103ef593
+ffmpeg_revision=8ae0b34901ba60a802f183ee75a250a9fc3e09a5
 export SOURCE_DATE_EPOCH=1762473600
 mkdir -p "$work" "$prefix" "$work/records"
 exec > >(tee "$work/records/build.log") 2>&1
