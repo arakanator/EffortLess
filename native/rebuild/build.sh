@@ -49,8 +49,9 @@ ffmpeg_options=(
 )
 printf '%q ' ./configure "${ffmpeg_options[@]}" > "$work/records/ffmpeg-options.sh"
 ./configure "${ffmpeg_options[@]}"
-grep -qx 'CONFIG_GPL=no' ffbuild/config.mak
-grep -qx 'CONFIG_NONFREE=no' ffbuild/config.mak
+grep -qx '#define CONFIG_GPL 0' config.h
+grep -qx '#define CONFIG_NONFREE 0' config.h
+grep -qx '#define CONFIG_VERSION3 1' config.h
 make -j"$(nproc)"
 make install
 cp config.h ffbuild/config.mak ffbuild/config.log "$work/records/"
