@@ -126,7 +126,7 @@ def cargo_sources(source, entries, output):
     return records
 
 
-def collect_package(name, output):
+def collect_package(name, output, shipped):
     version = run("pacman", "-Q", name).strip().split()[1]
     archive, info, text = package_archive(name, version, native("/var/cache/pacman/pkg"))
     if "ffmpeg" in name:
@@ -153,7 +153,7 @@ def collect_package(name, output):
     expected_recipe = build.get("pkgbuild_sha256sum", [])
     if len(expected_recipe) != 1 or hashlib.sha256(recipe_bytes).hexdigest() != expected_recipe[0]:
         raise RuntimeError("Source recipe does not match binary BUILDINFO: " + filename)
-    upstream = [e for e in entries if e.endswith((".tar.gz", ".tar.xz", ".tar.bz2", ".tar.zst", ".tgz", ".zip", ".tar"))]
+    upstream = [e for e in entries if e.endswith((".tar.gz", ".tar.xz", ".tar.bz2", ".tar.lz", ".tar.zst", ".tgz", ".zip", ".tar"))]
     # Do not count patches or a recipe-only download as corresponding source.
     if not upstream and not any("/objects/" in e for e in entries):
         raise RuntimeError("Full upstream source absent: " + filename)
@@ -172,18 +172,49 @@ def collect_package(name, output):
         raise RuntimeError("No copyright/license files for runtime package: " + name)
     labels = info.get("license", [])
     evidence = "\n".join(p.read_text(encoding="utf-8", errors="replace") for p in licenses)
-    gcc_exception = "gcc" in name and "GCC RUNTIME LIBRARY EXCEPTION" in evidence.upper()
+    gcc_exception = base == 'mingw-w64-gcc' and "GCC RUNTIME LIBRARY EXCEPTION" in evidence.upper()
+    component_route = None
+    # Package labels also cover command-line tools and optional GPL plugins.
+    # Assess only an explicit DLL allowlist, retaining every package notice.
+    reviewed = {
+        'mingw-w64-gettext': ({'libintl-8.dll', 'libasprintf-0.dll'},
+            '7ef2cdfe58e0c0460657b6598b49af29d4e03c1e41cbaf0e1da1eb8ad74b95d0', 'LGPL-2.1-or-later libraries; GPL programs excluded'),
+        'mingw-w64-libiconv': ({'libiconv-2.dll', 'libcharset-1.dll'},
+            '4ae66e61d1c6593c84c47105b368d579bcee1af566dbb959ec63a0c48425dcf4', 'LGPL-2.1-or-later libraries; GPL program/documentation excluded'),
+        'mingw-w64-lcms2': ({'liblcms2-2.dll'},
+            '6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31', 'MIT core; separate GPL fast-float/threaded plugins excluded'),
+    }
+    if base in reviewed:
+        allowed, digest, component_route = reviewed[base]
+        if not shipped or not set(shipped) <= allowed or not any(sha(p) == digest for p in licenses):
+            raise RuntimeError('Component license assessment no longer matches: ' + name)
+    custom_hashes = {
+        'mingw-w64-fontconfig': '51a51aa9823704fd90bccc616cdd17ebabb5b2b3e9cbde886ca02c7002288067',
+        'mingw-w64-libvorbis': 'ec1815db59fcd302846df949d7424876cb2e2dc5ed1606c5fb0b36787b1cf43a',
+    }
+    reviewed_custom = base in custom_hashes and any(sha(p) == custom_hashes[base] for p in licenses)
+    if base == 'mingw-w64-uchardet':
+        # Verify the actual alternative-license grant, not MPL-1.1 alone.
+        archive_member = next(e for e in upstream if e.endswith('uchardet-0.0.8.tar.xz'))
+        with tempfile.TemporaryDirectory() as scratch:
+            nested = Path(scratch) / 'uchardet.tar.xz'
+            nested.write_bytes(subprocess.check_output(['bsdtar', '-xOf', str(source), archive_member]))
+            with tarfile.open(nested) as archive:
+                grant = archive.extractfile('uchardet-0.0.8/src/uchardet.cpp').read()
+        if hashlib.sha256(grant).hexdigest() != 'f4bc95e2b06032e718e76aefe5b10d5a27103046304af480673f926a2364bf45':
+            raise RuntimeError('uchardet LGPL alternative grant changed')
+        component_route = 'LGPL-2.1-or-later alternative, verified upstream source header'
     bzip2_license = name.endswith('-bzip2') and any(
         sha(p) == 'c6dbbf828498be844a89eaa3b84adbab3199e342eb5cb2ed2f0d4ba7ec0f38a3' for p in licenses)
     for label in labels:
         upper = label.upper()
         # OR permits selecting a compatible branch; AND with GPL-only does not.
-        if re.search(r"(?<!L)GPL", upper) and not gcc_exception:
+        if re.search(r"(?<!L)GPL", upper) and not gcc_exception and not component_route:
             if not (" OR " in upper and " AND " not in upper and re.search(r"MIT|BSD|APACHE|ISC|LGPL|FTL", upper)):
                 raise RuntimeError("GPL-only package needs component-level assessment: " + name + " " + label)
         if not re.search(r"LGPL|GPL|MIT|BSD|APACHE|ISC|ZLIB|FTL|MPL|X11|UNICODE|CC0|BSL|UNLICENSE|PUBLIC", upper):
             if not ((upper == "CUSTOM" and "Permission is hereby granted" in evidence) or
-                    (gcc_exception and "GFDL" in upper) or (upper == 'CUSTOM' and bzip2_license)):
+                    (gcc_exception and "GFDL" in upper) or (upper == 'CUSTOM' and (bzip2_license or reviewed_custom))):
                 raise RuntimeError("Unsupported license evidence: " + name + " " + label)
     if not labels:
         raise RuntimeError("Missing license metadata: " + name)
@@ -196,7 +227,8 @@ def collect_package(name, output):
             "recipeMatchesBuildInfo": True, "binaryPackageSha256": sha(archive),
             "sourceContainsUpstreamArchives": upstream,
             "additionalRustSources": crates,
-            "gccRuntimeExceptionVerified": gcc_exception}
+            "gccRuntimeExceptionVerified": gcc_exception,
+            "shippedDlls": sorted(shipped), "componentLicenseAssessment": component_route}
 
 
 def main():
@@ -256,7 +288,7 @@ def main():
                     destination.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy2(path, destination)
     (diagnostic / 'native-package-metadata.json').write_text(json.dumps(probes, indent=2)+'\n', encoding='utf-8')
-    records = [collect_package(name, output) for name in sorted(packages)]
+    records = [collect_package(name, output, [d['file'].lower() for d in dlls if d['package'] == name]) for name in sorted(packages)]
     for name in ("mpv", "ffmpeg"):
         source = native(getattr(args, name + "_source"))
         destination = output / "sources" / "custom" / (name + ".tar")

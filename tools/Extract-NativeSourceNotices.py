@@ -49,7 +49,7 @@ def extract(root, output):
                 continue
             if wanted(entry):
                 save(entry, subprocess.check_output(["tar", "-xOf", str(source), entry]))
-            elif entry.endswith((".tar.gz", ".tgz", ".tar.xz", ".tar.bz2", ".tar", ".zip")):
+            elif entry.endswith((".tar.gz", ".tgz", ".tar.xz", ".tar.bz2", ".tar.lz", ".tar.zst", ".tar", ".zip")):
                 with tempfile.TemporaryDirectory() as scratch:
                     nested = Path(scratch) / "upstream"
                     with nested.open("wb") as stream:
@@ -59,6 +59,12 @@ def extract(root, output):
                             for item in archive.infolist():
                                 if not item.is_dir() and wanted(item.filename):
                                     save(item.filename, archive.read(item), entry)
+                    elif entry.endswith((".tar.lz", ".tar.zst")):
+                        # libarchive supports lzip/zstd; Python tarfile does not
+                        # consistently support these on the build host.
+                        for member in subprocess.check_output(["tar", "-tf", str(nested)], text=True).splitlines():
+                            if not member.endswith("/") and wanted(member):
+                                save(member, subprocess.check_output(["tar", "-xOf", str(nested), member]), entry)
                     else:
                         with tarfile.open(nested) as archive:
                             for item in archive:

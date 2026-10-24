@@ -44,3 +44,20 @@ packaging and application regression/installed-copy testing are separate gates.
 FFmpeg 8.0.3 was selected within the compatible 8.0 branch after checking the
 upstream security fixes: https://ffmpeg.org/security.html. This is not a claim
 that a decoder build or the application is free of all vulnerabilities.
+
+### Component-level license selections
+
+The collector records the DLL filenames assessed, not just package-wide labels.
+gettext's shipped libintl/libasprintf DLLs and libiconv/libcharset are LGPL;
+the packages' GPL programs are excluded. Little CMS core is MIT; its separately
+built GPL fast-float/threaded plugins must not enter the payload. These selections
+require exact reviewed notice hashes and explicit DLL allowlists. Source recipes
+must match each binary package's BUILDINFO. All notices remain preserved.
+Uchardet 0.0.8's source header explicitly permits the LGPL 2.1-or-later alternative;
+its abbreviated MPL-only package label is not used as the license grant. GCC's
+runtime exception applies to the libgcc/libstdc++ runtime from the GCC source
+package; package-wide GFDL documentation is not part of those DLLs. Fontconfig
+and Vorbis custom permissive notices are pinned by their reviewed text hashes.
+
+Source archives may contain lzip-compressed upstream tarballs (notably gettext);
+these count as source and the notice extraction tool uses libarchive for lzip.
