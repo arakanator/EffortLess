@@ -32,6 +32,8 @@ jobs:
             mingw-w64-ucrt-x86_64-libvorbis
             mingw-w64-ucrt-x86_64-uchardet
             mingw-w64-ucrt-x86_64-lcms2
+            mingw-w64-ucrt-x86_64-zlib
+            mingw-w64-ucrt-x86_64-libiconv
       - name: Build LGPL-compatible libmpv and FFmpeg; collect sources
         shell: msys2 {0}
         run: bash native/rebuild/build.sh

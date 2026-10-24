@@ -43,6 +43,7 @@ ffmpeg_options=(
     --enable-shared --disable-static --disable-doc --disable-debug
     --disable-gpl --disable-nonfree --enable-version3 --disable-autodetect
     --enable-libdav1d --enable-libopus --enable-libvpx --enable-libvorbis
+    --enable-zlib --enable-iconv
     --enable-schannel --enable-d3d11va --enable-dxva2 --disable-ffplay
     "--extra-cflags=-O2 -ffile-prefix-map=$work=."
     --extra-ldflags=-Wl,--no-insert-timestamp
@@ -52,11 +53,15 @@ printf '%q ' ./configure "${ffmpeg_options[@]}" > "$work/records/ffmpeg-options.
 grep -qx '#define CONFIG_GPL 0' config.h
 grep -qx '#define CONFIG_NONFREE 0' config.h
 grep -qx '#define CONFIG_VERSION3 1' config.h
+grep -qx '#define CONFIG_PNG_ENCODER 1' config_components.h
+grep -qx '#define CONFIG_H264_DECODER 1' config_components.h
+grep -qx '#define CONFIG_HEVC_DECODER 1' config_components.h
 make -j"$(nproc)"
 make install
 cp config.h ffbuild/config.mak ffbuild/config.log "$work/records/"
 "$prefix/bin/ffmpeg.exe" -L > "$work/records/ffmpeg-license.txt" 2>&1
 grep -q 'Lesser General Public' "$work/records/ffmpeg-license.txt"
+"$prefix/bin/ffmpeg.exe" -hide_banner -f lavfi -i color=size=32x32:duration=0.1 -frames:v 1 "$work/records/png-codec-probe.png"
 
 cd "$work/mpv"
 mpv_options=(
