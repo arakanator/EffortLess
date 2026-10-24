@@ -1,4 +1,6 @@
 * text=auto
+*.sh text eol=lf
+*.yml text eol=lf
 # Preserve upstream license bytes so recorded SHA-256 values survive cloning.
 LICENSE -text
 docs/third-party/** -text

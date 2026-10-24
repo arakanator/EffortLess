@@ -1,0 +1,53 @@
+name: Verified native rebuild
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native:
+    runs-on: windows-2022
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: msys2/setup-msys2@ec48f7c5447b3140e2b088413ae3a55687bccb6e
+        with:
+          msystem: UCRT64
+          update: true
+          cache: false
+          install: >-
+            git curl make patch diffutils tar unzip libarchive
+            mingw-w64-ucrt-x86_64-gcc
+            mingw-w64-ucrt-x86_64-meson
+            mingw-w64-ucrt-x86_64-ninja
+            mingw-w64-ucrt-x86_64-pkgconf
+            mingw-w64-ucrt-x86_64-python
+            mingw-w64-ucrt-x86_64-nasm
+            mingw-w64-ucrt-x86_64-libass
+            mingw-w64-ucrt-x86_64-libplacebo
+            mingw-w64-ucrt-x86_64-dav1d
+            mingw-w64-ucrt-x86_64-opus
+            mingw-w64-ucrt-x86_64-libvpx
+            mingw-w64-ucrt-x86_64-libvorbis
+            mingw-w64-ucrt-x86_64-uchardet
+            mingw-w64-ucrt-x86_64-lcms2
+      - name: Build LGPL-compatible libmpv and FFmpeg; collect sources
+        shell: msys2 {0}
+        run: bash native/rebuild/build.sh
+      - name: Build logs (no binaries on failure)
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: native-build-logs
+          path: .cache/native-rebuild/records
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Native candidate and matching source materials
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: native-candidate-with-sources
+          path: .cache/native-rebuild/result
+          retention-days: 14
+          if-no-files-found: error
+          compression-level: 0
