@@ -1,6 +1,7 @@
 param(
     [string]$Wix = (Join-Path $PSScriptRoot '..\.cache\wix-tool\wix.exe'),
-    [string]$VulkanLoader = (Join-Path $PSScriptRoot '..\native\win-x64\vulkan-1.dll')
+    [string]$VulkanLoader = (Join-Path $PSScriptRoot '..\native\win-x64\vulkan-1.dll'),
+    [switch]$PublicRelease
 )
 $ErrorActionPreference = 'Stop'
 $taskRepository = [IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
@@ -10,6 +11,29 @@ $taskVersion = ([xml](Get-Content -LiteralPath (Join-Path $taskRepository 'Direc
 $taskMsiVersion = $taskVersion.Split('-')[0]
 $Wix = (Resolve-Path -LiteralPath $Wix).Path
 $VulkanLoader = (Resolve-Path -LiteralPath $VulkanLoader).Path
+$taskNativeManifest = Get-Content -LiteralPath (Join-Path $taskRepository 'native\win-x64\manifest.json') -Raw | ConvertFrom-Json
+if ($PublicRelease) {
+    if ($taskNativeManifest.nativeReviewCompleted -ne $true -or
+        $taskNativeManifest.licenseRoute -ne 'LGPL-compatible' -or
+        -not $taskNativeManifest.sourceArchiveRelativePath -or -not $taskNativeManifest.sourceArchiveSha256) {
+        throw 'Public packaging requires the reviewed replacement native build and matching source archive; the old development DLL is ineligible.'
+    }
+    $taskSourceArchive = [IO.Path]::GetFullPath((Join-Path $taskRepository $taskNativeManifest.sourceArchiveRelativePath))
+    if (-not $taskSourceArchive.StartsWith($taskRepository + '\', [StringComparison]::OrdinalIgnoreCase) -or
+        (Get-FileHash -LiteralPath $taskSourceArchive).Hash -ne $taskNativeManifest.sourceArchiveSha256) {
+        throw 'Native corresponding-source archive path/hash mismatch.'
+    }
+    foreach ($taskDll in $taskNativeManifest.dlls) {
+        if ([IO.Path]::GetFileName($taskDll.file) -ne $taskDll.file -or
+            (Get-FileHash -LiteralPath (Join-Path $taskRepository ('native\win-x64\' + $taskDll.file))).Hash -ne $taskDll.sha256) {
+            throw 'Reviewed native dependency bytes differ from the source/build inventory.'
+        }
+    }
+    $taskReviewedVulkan = @($taskNativeManifest.dlls | Where-Object file -EQ 'vulkan-1.dll')
+    if ($taskReviewedVulkan.Count -ne 1 -or (Get-FileHash -LiteralPath $VulkanLoader).Hash -ne $taskReviewedVulkan[0].sha256) {
+        throw 'Public packaging must use the reviewed native Vulkan loader bytes.'
+    }
+}
 Push-Location -LiteralPath $taskRepository
 try {
     & dotnet clean EffortLess.sln -c Release -p:Platform=x64 --verbosity quiet
@@ -37,10 +61,10 @@ try {
         if (-not (Test-Path -LiteralPath (Join-Path $taskOutput $taskRequired) -PathType Leaf)) { throw "Missing runtime/notices: $taskRequired" }
     }
     $taskVulkanManifest = Get-Content -LiteralPath native\win-x64\vulkan-manifest.json -Raw | ConvertFrom-Json
-    if ((Get-FileHash -LiteralPath $VulkanLoader).Hash -ne $taskVulkanManifest.dllSha256) { throw 'Vulkan loader differs from the pinned official archive.' }
+    if (-not $PublicRelease -and (Get-FileHash -LiteralPath $VulkanLoader).Hash -ne $taskVulkanManifest.dllSha256) { throw 'Vulkan loader differs from the pinned official archive.' }
     $taskVulkanVersion = (Get-Item -LiteralPath $VulkanLoader).VersionInfo.FileVersion
     $taskVulkanSignature = Get-AuthenticodeSignature -LiteralPath $VulkanLoader
-    if ($taskVulkanSignature.Status -ne 'Valid') { throw 'The pinned upstream Vulkan loader must have a valid signature.' }
+    if (-not $PublicRelease -and $taskVulkanSignature.Status -ne 'Valid') { throw 'The pinned upstream Vulkan loader must have a valid signature.' }
     $taskPayload = Join-Path $taskStage 'payload'
     [IO.Directory]::CreateDirectory($taskPayload) | Out-Null
     Get-ChildItem -LiteralPath $taskOutput -Force | Copy-Item -Destination $taskPayload -Recurse
@@ -50,12 +74,18 @@ try {
     Get-ChildItem -LiteralPath $taskPayload -Recurse -File -Filter '*.pdb' | Remove-Item
     $taskArmResource = Join-Path $taskPayload 'Microsoft.Windows.Workloads.Resources_ec.dll'
     if (Test-Path -LiteralPath $taskArmResource) { Remove-Item -LiteralPath $taskArmResource }
-    foreach ($taskDocument in @('LOCAL-DEVELOPMENT-ONLY.txt','LOCAL-INSTALLER.md','DISTRIBUTION-DECISION.md','NOTICES.md')) {
+    $taskDocuments = if ($PublicRelease) { @('NOTICES.md') } else { @('LOCAL-DEVELOPMENT-ONLY.txt','LOCAL-INSTALLER.md','DISTRIBUTION-DECISION.md','NOTICES.md') }
+    foreach ($taskDocument in $taskDocuments) {
         Copy-Item -LiteralPath (Join-Path $taskRepository "docs\$taskDocument") -Destination (Join-Path $taskPayload $taskDocument)
     }
     Copy-Item -LiteralPath (Join-Path $taskRepository 'docs\third-party') -Destination (Join-Path $taskPayload 'third-party') -Recurse
     Copy-Item -LiteralPath (Join-Path $taskRepository 'LICENSE') -Destination (Join-Path $taskPayload 'LICENSE')
     Copy-Item -LiteralPath (Join-Path $taskRepository 'ADDITIONAL-PERMISSION.md') -Destination (Join-Path $taskPayload 'ADDITIONAL-PERMISSION.md')
+    if ($PublicRelease) {
+        Copy-Item -LiteralPath (Join-Path $taskRepository 'native\win-x64\licenses') -Destination (Join-Path $taskPayload 'third-party\native') -Recurse
+        "EffortLess $taskVersion Windows x64 release candidate.`r`nSource: https://github.com/arakanator/EffortLess`r`nNative corresponding-source archive: $($taskNativeManifest.sourceArchiveRelativePath | Split-Path -Leaf)`r`nSHA-256: $($taskNativeManifest.sourceArchiveSha256)`r`nNative build: $($taskNativeManifest.buildWorkflowUrl)`r`nGPL source and Windows runtime permission are included; each third-party component retains its own terms." |
+            Set-Content -LiteralPath (Join-Path $taskPayload 'SOURCE-AND-LICENSES.txt') -Encoding utf8
+    }
     $taskMachineDependency = [ordered]@{
         purpose = 'PRIVATE TEST BUILD / LOCAL DEVELOPMENT DISTRIBUTION; owner-controlled computers only'
         file = 'native/win-x64/vulkan-1.dll'
@@ -69,6 +99,13 @@ try {
         libmpvUnchanged = $taskNativeManifest.dllSha256
     }
     $taskMachineDependency | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $taskPayload 'LOCAL-NATIVE-DEPENDENCIES.json') -Encoding utf8
+    if ($PublicRelease) {
+        # Replace the historical local-only provenance record with the reviewed inventory.
+        $taskMachineDependency = $taskNativeManifest
+        $taskNativeManifest | ConvertTo-Json -Depth 20 | Set-Content -LiteralPath (Join-Path $taskPayload 'LOCAL-NATIVE-DEPENDENCIES.json') -Encoding utf8
+        & python tools\Audit-RuntimePayload.py $taskPayload --output (Join-Path $taskPayload 'RUNTIME-PROVENANCE.json')
+        if ($LASTEXITCODE -ne 0) { throw 'Runtime package byte-provenance audit failed.' }
+    }
     & python tools\Audit-NativeDependencies.py $taskPayload --library-cache .cache\pe-audit-lib --output (Join-Path $taskPayload 'NATIVE-DEPENDENCY-AUDIT.json')
     if ($LASTEXITCODE -ne 0) { throw 'Native dependency/architecture audit failed.' }
     $taskFiles = @(Get-ChildItem -LiteralPath $taskPayload -Recurse -File | Sort-Object FullName)
@@ -114,7 +151,14 @@ try {
     $taskNamespaces.AddNamespace('w', $taskNs)
     $taskPackage = $taskXml.SelectSingleNode('/w:Wix/w:Package', $taskNamespaces)
     $taskPackage.SetAttribute('Version', $taskMsiVersion)
-    $taskPackage.SelectSingleNode('w:WixVariable', $taskNamespaces).SetAttribute('Value', (Join-Path $taskRepository 'docs\PRIVATE-TEST-NOTICE.rtf'))
+    $taskLicenseRtf = Join-Path $taskRepository 'docs\PRIVATE-TEST-NOTICE.rtf'
+    if ($PublicRelease) {
+        $taskLicenseRtf = Join-Path $taskStage 'Installer-License.rtf'
+        & powershell.exe -NoProfile -STA -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'Create-InstallerLicense.ps1') -Output $taskLicenseRtf
+        if ($LASTEXITCODE -ne 0) { throw 'Installer third-party license presentation failed.' }
+        $taskPackage.SelectSingleNode('w:Launch', $taskNamespaces).SetAttribute('Message', 'EffortLess requires Windows 11 x64.')
+    }
+    $taskPackage.SelectSingleNode('w:WixVariable', $taskNamespaces).SetAttribute('Value', $taskLicenseRtf)
     $taskFeature = $taskPackage.SelectSingleNode('w:Feature', $taskNamespaces)
     $taskPackage.SelectSingleNode('w:Icon', $taskNamespaces).SetAttribute('SourceFile', (Join-Path $taskPayload 'Assets\EffortLess.ico'))
     # No public support/download URLs are authored.
@@ -171,7 +215,7 @@ try {
     Add-LocalElement $taskFeature 'ComponentRef' @{ Id='DesktopShortcut' } | Out-Null
     $taskAuthoring = Join-Path $taskStage 'LocalPlayer.wxs'
     $taskXml.Save($taskAuthoring)
-    $taskArtifacts = Join-Path $taskRepository 'artifacts\local-development'
+    $taskArtifacts = Join-Path $taskRepository $(if ($PublicRelease) { 'artifacts\release-candidate' } else { 'artifacts\local-development' })
     [IO.Directory]::CreateDirectory($taskArtifacts) | Out-Null
     $taskMsi = Join-Path $taskArtifacts "EffortLess-Setup-$taskVersion-x64.msi"
     $taskOldRollForward = $env:DOTNET_ROLL_FORWARD
@@ -182,7 +226,7 @@ try {
     }
     finally { $env:DOTNET_ROLL_FORWARD = $taskOldRollForward }
     $taskResult = [ordered]@{
-        marking='PRIVATE TEST BUILD / LOCAL DEVELOPMENT DISTRIBUTION'; publicDistributionApproved=$false
+        marking=$(if ($PublicRelease) { 'PUBLIC RELEASE CANDIDATE; installed-copy acceptance pending' } else { 'PRIVATE TEST BUILD / LOCAL DEVELOPMENT DISTRIBUTION' }); publicDistributionApproved=$false
         installer=$taskMsi; sha256=(Get-FileHash -LiteralPath $taskMsi).Hash.ToLowerInvariant()
         staging=$taskStage; payloadFiles=$taskFiles.Count; localNativeDependency=$taskMachineDependency
         applicationVersion=$taskVersion; installerVersion=$taskMsiVersion; freshReleaseOutput=$taskOutput

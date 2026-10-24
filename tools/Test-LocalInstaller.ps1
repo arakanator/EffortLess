@@ -1,7 +1,8 @@
-param([switch]$Cycle, [switch]$Upgrade)
+param([switch]$Cycle, [switch]$Upgrade, [string]$BuildResult)
 $ErrorActionPreference = 'Stop'
 $taskRepository = [IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
-$taskResult = Get-Content -Raw (Join-Path $taskRepository 'artifacts\local-development\build-result.json') | ConvertFrom-Json
+if (-not $BuildResult) { $BuildResult = Join-Path $taskRepository 'artifacts\local-development\build-result.json' }
+$taskResult = Get-Content -LiteralPath $BuildResult -Raw | ConvertFrom-Json
 $taskMsi = [IO.Path]::GetFullPath($taskResult.installer)
 if (-not $taskMsi.StartsWith($taskRepository + '\', [StringComparison]::OrdinalIgnoreCase) -or
     (Get-FileHash -LiteralPath $taskMsi).Hash -ne $taskResult.sha256) { throw 'Installer path/hash mismatch.' }

@@ -50,6 +50,11 @@ SYSTEM = {n + ".dll" for n in (
     "ucrtbase user32 userenv uxtheme version win32u winhttp winmm wintrust wintypes "
     "wldap32 ws2_32 wtsapi32"
 ).split()}
+SYSTEM.update({"cabinet.dll", "clbcatq.dll", "d2d1.dll", "dbghelp.dll", "imagehlp.dll",
+               "mfuuid.dll", "mmdevapi.dll", "msvcp_win.dll", "oleacc.dll", "usp10.dll",
+               "wininet.dll", "winspool.drv", "urlmon.dll", "windowscodecs.dll", "shcore.dll",
+               "bcp47langs.dll", "coremessaging.dll", "mscms.dll", "uiautomationcore.dll",
+               "xmllite.dll", "avicap32.dll", "dxcore.dll"})
 
 
 def package_archive(name, version, cache):
