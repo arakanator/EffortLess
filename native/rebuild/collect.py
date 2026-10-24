@@ -169,7 +169,23 @@ def collect_package(name, output, shipped):
             shutil.copy2(path, destination)
             licenses.append(destination)
     if not licenses:
-        raise RuntimeError("No copyright/license files for runtime package: " + name)
+        # Some MSYS2 recipes omit share/licenses even when upstream supplies
+        # complete notices. Recover those bytes from the signature-verified,
+        # recipe-matched upstream source; never invent substitute license text.
+        for entry in upstream:
+            with tempfile.TemporaryDirectory() as scratch:
+                nested = Path(scratch) / 'upstream'
+                nested.write_bytes(subprocess.check_output(['bsdtar', '-xOf', str(source), entry]))
+                for member in run('bsdtar', '-tf', str(nested)).splitlines():
+                    leaf = Path(member).name
+                    if not member.endswith('/') and re.match(r'(?i)^(licen[cs]e|copying|copyright|notice|patents)([._-]|$)', leaf):
+                        identity = hashlib.sha256((entry + '!/' + member).encode()).hexdigest()[:16]
+                        destination = output / 'licenses' / name / (identity + '-' + leaf)
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        destination.write_bytes(subprocess.check_output(['bsdtar', '-xOf', str(nested), member]))
+                        licenses.append(destination)
+        if not licenses:
+            raise RuntimeError("No upstream copyright/license files for runtime package: " + name)
     labels = info.get("license", [])
     evidence = "\n".join(p.read_text(encoding="utf-8", errors="replace") for p in licenses)
     gcc_exception = base == 'mingw-w64-gcc' and "GCC RUNTIME LIBRARY EXCEPTION" in evidence.upper()
