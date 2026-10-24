@@ -48,9 +48,37 @@ jobs:
           curl --fail --location --output .cache/signature-probe/source.tar.zst https://mirror.msys2.org/mingw/sources/mingw-w64-brotli-1.2.1-1.src.tar.zst
           curl --fail --location --output .cache/signature-probe/source.tar.zst.sig https://mirror.msys2.org/mingw/sources/mingw-w64-brotli-1.2.1-1.src.tar.zst.sig
           python -c "import sys;sys.path.insert(0,'native/rebuild');from pathlib import Path;from collect import verify_source;verify_source(Path('.cache/signature-probe/source.tar.zst'));print('Trusted MSYS2 source-signature verification passed')"
+      - name: Lock installed native build inputs
+        id: package-lock
+        shell: msys2 {0}
+        run: echo "sha=$(pacman -Q | sha256sum | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+      - name: Restore tested native compilation state
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: |
+            .cache/native-rebuild/ffmpeg
+            .cache/native-rebuild/mpv
+            .cache/native-rebuild/prefix
+            .cache/native-rebuild/records
+            .cache/native-rebuild/compiled-complete
+            .cache/native-rebuild/compiled-binaries.sha256
+          key: native-tested-v1-${{ steps.package-lock.outputs.sha }}-${{ hashFiles('native/rebuild/build.sh') }}-${{ github.run_id }}
+          restore-keys: native-tested-v1-${{ steps.package-lock.outputs.sha }}-${{ hashFiles('native/rebuild/build.sh') }}-
       - name: Build LGPL-compatible libmpv and FFmpeg; collect sources
         shell: msys2 {0}
         run: bash native/rebuild/build.sh
+      - name: Save tested native compilation state
+        if: always()
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: |
+            .cache/native-rebuild/ffmpeg
+            .cache/native-rebuild/mpv
+            .cache/native-rebuild/prefix
+            .cache/native-rebuild/records
+            .cache/native-rebuild/compiled-complete
+            .cache/native-rebuild/compiled-binaries.sha256
+          key: native-tested-v1-${{ steps.package-lock.outputs.sha }}-${{ hashFiles('native/rebuild/build.sh') }}-${{ github.run_id }}
       - name: Save compiler objects for bounded retries
         if: always()
         uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830

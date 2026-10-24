@@ -9,7 +9,7 @@ mpv_revision=41f6a645068483470267271e1d09966ca3b9f413
 ffmpeg_revision=8ae0b34901ba60a802f183ee75a250a9fc3e09a5
 export SOURCE_DATE_EPOCH=1762473600
 mkdir -p "$work" "$prefix" "$work/records"
-exec > >(tee "$work/records/build.log") 2>&1
+exec > >(tee -a "$work/records/build.log") 2>&1
 export PATH="$prefix/bin:$MINGW_PREFIX/bin:/usr/bin:$PATH"
 export PKG_CONFIG_PATH="$prefix/lib/pkgconfig:$MINGW_PREFIX/lib/pkgconfig"
 export LIBRARY_PATH="$prefix/lib:$MINGW_PREFIX/lib"
@@ -21,6 +21,25 @@ export CCACHE_COMPILERCHECK=content
 ccache --max-size=2G
 export CC='ccache gcc'
 export CXX='ccache g++'
+
+finish_collection() {
+    cd "$repo"
+    python native/rebuild/collect.py --prefix "$prefix" --mpv-source "$work/mpv" --ffmpeg-source "$work/ffmpeg" --output "$work/result"
+    cp -r "$work/records" "$work/result/records"
+    cp -r native/rebuild "$work/result/build-scripts"
+    test -f "$work/result/manifest.json"
+    cd "$work/result"
+    find . -type f ! -name SHA256SUMS -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS
+}
+if test -f "$work/compiled-complete"; then
+    # Restored only under an exact build-script hash and exact installed-package
+    # lock. This cache contains our compiled libraries AND their complete Git
+    # input trees, never the collected prebuilt vendor DLL payload.
+    cd "$work"
+    sha256sum -c compiled-binaries.sha256
+    finish_collection
+    exit 0
+fi
 
 source_checkout() {
     local name="$1" url="$2" revision="$3"
@@ -96,12 +115,10 @@ grep -qi gpu-next "$work/records/video-outputs.txt"
 grep -qi d3d11 "$work/records/video-contexts.txt"
 "$prefix/bin/mpv.exe" --no-config --ao=help > "$work/records/audio-outputs.txt" 2>&1
 grep -qi wasapi "$work/records/audio-outputs.txt"
-cd "$repo"
-python native/rebuild/collect.py --prefix "$prefix" --mpv-source "$work/mpv" --ffmpeg-source "$work/ffmpeg" --output "$work/result"
-cp -r "$work/records" "$work/result/records"
-cp -r native/rebuild "$work/result/build-scripts"
-# The collector must finish its source/license closure before any DLL artifact.
-test -f "$work/result/manifest.json"
-cd "$work/result"
-find . -type f ! -name SHA256SUMS -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS
+cp build/meson-logs/testlog.txt "$work/records/upstream-tests.txt"
+printf '{"run":"%s","commit":"%s"}\n' "${GITHUB_RUN_ID:-local}" "${GITHUB_SHA:-local}" > "$work/records/compilation-origin.json"
+cd "$work"
+find prefix/bin -type f \( -name '*.dll' -o -name '*.exe' \) -print0 | sort -z | xargs -0 sha256sum > compiled-binaries.sha256
+touch compiled-complete
+finish_collection
 echo 'Native build and source collection completed; parent playback acceptance still required.'

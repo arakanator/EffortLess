@@ -173,6 +173,8 @@ def collect_package(name, output):
     labels = info.get("license", [])
     evidence = "\n".join(p.read_text(encoding="utf-8", errors="replace") for p in licenses)
     gcc_exception = "gcc" in name and "GCC RUNTIME LIBRARY EXCEPTION" in evidence.upper()
+    bzip2_license = name.endswith('-bzip2') and any(
+        sha(p) == 'c6dbbf828498be844a89eaa3b84adbab3199e342eb5cb2ed2f0d4ba7ec0f38a3' for p in licenses)
     for label in labels:
         upper = label.upper()
         # OR permits selecting a compatible branch; AND with GPL-only does not.
@@ -181,7 +183,7 @@ def collect_package(name, output):
                 raise RuntimeError("GPL-only package needs component-level assessment: " + name + " " + label)
         if not re.search(r"LGPL|GPL|MIT|BSD|APACHE|ISC|ZLIB|FTL|MPL|X11|UNICODE|CC0|BSL|UNLICENSE|PUBLIC", upper):
             if not ((upper == "CUSTOM" and "Permission is hereby granted" in evidence) or
-                    (gcc_exception and "GFDL" in upper)):
+                    (gcc_exception and "GFDL" in upper) or (upper == 'CUSTOM' and bzip2_license)):
                 raise RuntimeError("Unsupported license evidence: " + name + " " + label)
     if not labels:
         raise RuntimeError("Missing license metadata: " + name)
@@ -236,6 +238,24 @@ def main():
                 queue.append(candidate)
             elif dependency.lower() not in SYSTEM and not dependency.lower().startswith(("api-ms-", "ext-ms-")):
                 raise RuntimeError("Unresolved non-system DLL import: " + dependency)
+    # Collect every package's actual license evidence up front. A first failing
+    # label must not hide the remaining licenses from the parent review.
+    diagnostic = output.parent / 'records'
+    diagnostic.mkdir(exist_ok=True)
+    probes = {}
+    for name in sorted(packages):
+        version = run('pacman', '-Q', name).strip().split()[1]
+        archive, info, text = package_archive(name, version, native('/var/cache/pacman/pkg'))
+        probes[name] = {'info': info, 'buildInfo': fields(run('bsdtar', '-xOf', str(archive), '.BUILDINFO'))}
+        for row in run('pacman', '-Ql', name).splitlines():
+            member = row.partition(' ')[2]
+            if '/share/licenses/' in member:
+                path = native(member)
+                if path.is_file():
+                    destination = diagnostic / 'native-package-notices' / name / member.split('/share/licenses/', 1)[1]
+                    destination.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(path, destination)
+    (diagnostic / 'native-package-metadata.json').write_text(json.dumps(probes, indent=2)+'\n', encoding='utf-8')
     records = [collect_package(name, output) for name in sorted(packages)]
     for name in ("mpv", "ffmpeg"):
         source = native(getattr(args, name + "_source"))

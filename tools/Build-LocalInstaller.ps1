@@ -29,6 +29,11 @@ if ($PublicRelease) {
             throw 'Reviewed native dependency bytes differ from the source/build inventory.'
         }
     }
+    $taskExpectedDlls = @($taskNativeManifest.dlls | ForEach-Object file | Sort-Object)
+    $taskActualDlls = @(Get-ChildItem -LiteralPath (Join-Path $taskRepository 'native\win-x64') -File -Filter '*.dll' | ForEach-Object Name | Sort-Object)
+    if (-not $taskExpectedDlls.Count -or (Compare-Object $taskExpectedDlls $taskActualDlls)) {
+        throw 'Native DLL folder differs from the reviewed closure; remove stale or unreviewed files before public packaging.'
+    }
     $taskReviewedVulkan = @($taskNativeManifest.dlls | Where-Object file -EQ 'vulkan-1.dll')
     if ($taskReviewedVulkan.Count -ne 1 -or (Get-FileHash -LiteralPath $VulkanLoader).Hash -ne $taskReviewedVulkan[0].sha256) {
         throw 'Public packaging must use the reviewed native Vulkan loader bytes.'
