@@ -215,8 +215,8 @@ def collect_package(name, output, shipped):
         with tempfile.TemporaryDirectory() as scratch:
             nested = Path(scratch) / 'uchardet.tar.xz'
             nested.write_bytes(subprocess.check_output(['bsdtar', '-xOf', str(source), archive_member]))
-            with tarfile.open(nested) as archive:
-                grant = archive.extractfile('uchardet-0.0.8/src/uchardet.cpp').read()
+            with tarfile.open(nested) as upstream_archive:
+                grant = upstream_archive.extractfile('uchardet-0.0.8/src/uchardet.cpp').read()
         if hashlib.sha256(grant).hexdigest() != 'f4bc95e2b06032e718e76aefe5b10d5a27103046304af480673f926a2364bf45':
             raise RuntimeError('uchardet LGPL alternative grant changed')
         component_route = 'LGPL-2.1-or-later alternative, verified upstream source header'
