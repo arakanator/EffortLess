@@ -1,11 +1,11 @@
 # EffortLess
 
-A customizable Windows media player powered by libmpv. Current version: **0.3.0-rc.1**.
+A customizable Windows media player powered by libmpv. Current version: **0.3.1-rc.1**.
 
-> **Source available; installer pending.** The application source is published
-> under GPL-3.0-or-later. A public Windows installer is pending native dependency
-> corresponding-source and runtime licensing verification. There is no approved
-> installer download yet. See the [publication audit](docs/PUBLICATION-AUDIT.md).
+> **Windows release candidate:** [Download EffortLess 0.3.1-rc.1](https://github.com/arakanator/EffortLess/releases/tag/v0.3.1-rc.1).
+> The per-user x64 MSI includes .NET, WinUI and the reviewed native runtime.
+> Verify the accompanying SHA256SUMS. See the [verification report](docs/RELEASE-0.3.1-rc.1.md)
+> for the remaining checks on a clean PC and different graphics/audio hardware.
 
 Windows 11 x64 media player using C#/.NET 10, WinUI 3 and libmpv. The approved
 native HWND renderer and integrated dark XAML strip remain the foundation.
@@ -15,11 +15,12 @@ The original application source is licensed under **GPL-3.0-or-later**; see
 [LICENSE](LICENSE), with the owner-approved [Windows runtime additional
 permission](ADDITIONAL-PERMISSION.md). Third-party components retain their own
 licenses and notices.
-The source license does not establish redistribution rights for the existing
-combined installer. Native binaries, private media and build artifacts are excluded
-from this repository. The existing installer remains for private testing only.
-See [licensing scope](docs/LICENSING.md), [local installer](docs/LOCAL-INSTALLER.md)
-and [publication audit](docs/PUBLICATION-AUDIT.md).
+The release replaces the old unverified native DLL with a recorded LGPL-compatible
+mpv/FFmpeg build. Matching native source, patches, recipes, notices and build records
+accompany the installer. Native binaries, private media and build caches remain
+excluded from Git. The old 0.3.0 private installer is excluded from public release.
+See [licensing scope](docs/LICENSING.md), [native replay](native/rebuild/SOURCE-REPLAY.md)
+and [notices](docs/NOTICES.md).
 
 ## Features
 
@@ -37,11 +38,9 @@ and [publication audit](docs/PUBLICATION-AUDIT.md).
 ## Build and development run
 
 Use Windows 11 x64, .NET SDK 10.0.401 (global.json), Windows SDK 10.0.26100,
-Windows/WinUI build tooling and 7-Zip. NuGet restore requires network access.
-The pinned native artifact also requires compatible `vulkan-1.dll` in its own
-folder or System32, even with D3D11. Repository output and the personal MSI include
-the pinned signed upstream loader with notices. The current native GPL build and
-combined-installer licensing still need review before public sharing.
+Windows/WinUI build tooling and PowerShell 7. NuGet restore requires network access.
+The acquisition script verifies the release runtime ZIP and every native DLL,
+including the source-matched Vulkan loader. No DLL is copied from System32.
 
 ```powershell
 pwsh -File native/acquire-libmpv.ps1
@@ -50,7 +49,7 @@ dotnet build EffortLess.sln -c Debug -p:Platform=x64 --no-restore -warnaserror
 dotnet run --project src/EffortLess.App/EffortLess.App.csproj -c Debug -p:Platform=x64 --no-restore
 ```
 
-Native acquisition accepts `-ArchivePath` and `-SevenZip`. Archive and DLL are hashed.
+Native acquisition accepts `-ArchivePath` for the matching runtime ZIP. Archive and DLLs are hashed.
 Run `EffortLess.exe` from its complete output folder. Multiple quoted paths work
 through the application-side argument adapter; installer associations remain gated:
 
@@ -70,7 +69,7 @@ dotnet test tests/EffortLess.Core.Tests/EffortLess.Core.Tests.csproj -c Release 
 
 Output: `src/EffortLess.App/bin/x64/Release/net10.0-windows10.0.26100.0/win-x64/`.
 Keep the whole folder: .NET/WinUI are self-contained; libmpv is under
-`native/win-x64`. This is not an approved redistributable package.
+`native/win-x64`. Use the installer and matching sources for the reviewed release.
 
 Native tests are opt-in. Generate fixtures with an existing FFmpeg executable;
 add a roughly ten-second H.264/AAC MP4 for the smoke suite. The generator does not
@@ -100,9 +99,10 @@ Windows installation compatibility.
 ## Keyboard
 
 Space play/pause; F fullscreen; Escape dismiss popup/leave fullscreen; M mute;
-Ctrl+O open; video-focused Left/Right seek five seconds (Shift: thirty);
+Ctrl+O open; Left/Right seek the configured interval (default five seconds);
 Up/Down volume; F6 switch video/control focus. Tab follows XAML order. Sliders keep
-their own arrows, Home/End and one-unit steps; buttons, editable text, queue and
+their own focus: seek arrows use the configured interval, volume arrows use
+one-unit steps. Buttons, editable text, queue and
 menus retain conventional input behavior.
 
 The former LightPlayer name remains only in legacy data migration, upgrade checks,

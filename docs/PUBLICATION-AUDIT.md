@@ -1,6 +1,15 @@
-# Public publication audit — October 24, 2026
+# Publication audit status — October 24, 2026
 
-**Decision: source-only publication approved; public binary installer BLOCKED.**
+The source repository is public. Remediation has produced an LGPL-compatible
+replacement native build, retained corresponding sources and a tested per-user
+installer for 0.3.1-rc.1. See [current verification](RELEASE-0.3.1-rc.1.md),
+[licensing arrangement](LICENSING.md) and [native review](../native/rebuild/native-review.json).
+The old private 0.3.0 installer is excluded. The initial assessment below is
+historical; its open items are superseded by these version-specific reports.
+
+## Historical initial assessment
+
+**Initial decision: source-only publication; old private installer blocked.**
 The owner authorized public source independently of installer completion.
 Source publication is complete; installer remediation is in progress.
 This is a release-gate report, not a claim of legal compliance or a complete SBOM.

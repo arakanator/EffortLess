@@ -30,6 +30,13 @@ do {
 if ($taskMissing.Count) { throw "Required installed runtime modules not observed: $($taskMissing -join ', ')" }
 if ($taskProcess.MainModule.FileName -ne $taskExe) { throw 'The process is not the installer destination executable.' }
 $taskSelected = @($taskModules | Where-Object { $taskModule = $_; @($taskPatterns | Where-Object { $taskModule.ModuleName -like $_ }).Count })
+$taskPackagedNames = @(Get-ChildItem -LiteralPath $taskInstall -Recurse -File | Where-Object Extension -In @('.dll','.exe') | ForEach-Object Name)
+foreach ($taskModule in $taskModules) {
+    if ($taskModule.ModuleName -in $taskPackagedNames -and
+        -not $taskModule.FileName.StartsWith($taskInstall + '\', [StringComparison]::OrdinalIgnoreCase)) {
+        throw "Packaged module was resolved outside the installation: $($taskModule.ModuleName)"
+    }
+}
 $taskRecords = foreach ($taskModule in $taskSelected) {
     if (-not $taskModule.FileName.StartsWith($taskInstall + '\', [StringComparison]::OrdinalIgnoreCase)) {
         throw "Runtime was loaded outside the installed application: $($taskModule.ModuleName)"
@@ -40,6 +47,7 @@ $taskResult = [ordered]@{
     executable='EffortLess.exe'; processId=$taskProcess.Id; installedExecutableVerified=$true
     environment='Windows-system-only PATH; .NET developer/root overrides removed'
     requiredModulesLoadedFromInstallation=$taskRecords
+    allLoadedPackagedModulePathsVerified=$true
     cleanMachineTested=$false
     limitations='This isolates runtime lookup on the development machine; clean Windows and graphics/audio driver behavior still need separate-machine checks.'
 }

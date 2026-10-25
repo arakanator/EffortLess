@@ -2,7 +2,10 @@
 
 Reviewed October 24, 2026 against the restored application package graph.
 Top-level package: Microsoft.WindowsAppSDK 1.8.260921001. This is a technical
-inventory and unresolved release-gate assessment, not legal certification.
+inventory and release-gate assessment, not legal certification. The initial open
+questions below are historical. For 0.3.1-rc.1, the owner-approved Windows runtime
+permission, LGPL-compatible native replacement and exact payload-byte audit
+supply the recorded release arrangement; see LICENSING.md and RELEASE-0.3.1-rc.1.md.
 
 ## Exact terms retained
 
