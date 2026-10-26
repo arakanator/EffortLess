@@ -35,31 +35,6 @@ and [notices](docs/NOTICES.md).
 - Keyboard navigation, accessible names, dark styling, narrow-window layout,
   empty/audio/error/end states, version and third-party notices.
 
-## Build and development run
-
-Use Windows 11 x64, .NET SDK 10.0.401 (global.json), Windows SDK 10.0.26100,
-Windows/WinUI build tooling and PowerShell 7. NuGet restore requires network access.
-The acquisition script verifies the release runtime ZIP and every native DLL,
-including the source-matched Vulkan loader. No DLL is copied from System32.
-
-```powershell
-pwsh -File native/acquire-libmpv.ps1
-dotnet restore EffortLess.sln -p:Platform=x64
-dotnet build EffortLess.sln -c Debug -p:Platform=x64 --no-restore -warnaserror
-dotnet run --project src/EffortLess.App/EffortLess.App.csproj -c Debug -p:Platform=x64 --no-restore
-```
-
-Native acquisition accepts `-ArchivePath` for the matching runtime ZIP. Archive and DLLs are hashed.
-Run `EffortLess.exe` from its complete output folder. Multiple quoted paths work
-through the application-side argument adapter; installer associations remain gated:
-
-```powershell
-& '.\src\EffortLess.App\bin\x64\Debug\net10.0-windows10.0.26100.0\win-x64\EffortLess.exe' 'D:\Media\First video.mp4' 'D:\Media\Second.mkv'
-```
-
-Preferences/history/logs: `%LOCALAPPDATA%\EffortLess`. Media filenames/error paths
-can appear in local diagnostics; there is no log upload service.
-
 ## Release and tests
 
 ```powershell
